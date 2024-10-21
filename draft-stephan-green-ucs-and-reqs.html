@@ -1457,7 +1457,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10">
-            <p id="section-toc.1-1.10.1"><a href="#section-10" class="auto internal xref">10</a>. <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
+            <p id="section-toc.1-1.10.1"><a href="#section-10" class="auto internal xref">10</a>. <a href="#name-use-cases" class="internal xref">Use Cases</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10.2.1">
                 <p id="section-toc.1-1.10.2.1.1"><a href="#section-10.1" class="auto internal xref">10.1</a>.  <a href="#name-secure-energy-management" class="internal xref">Secure Energy Management</a></p>
@@ -3250,18 +3250,36 @@ device or in a controller
 </div>
 </section>
 </div>
-<div id="security-considerations">
+<div id="use-cases">
 <section id="section-10">
-      <h2 id="name-security-considerations">
-<a href="#section-10" class="section-number selfRef">10. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+      <h2 id="name-use-cases">
+<a href="#section-10" class="section-number selfRef">10. </a><a href="#name-use-cases" class="section-name selfRef">Use Cases</a>
       </h2>
-<p id="section-10-1">Controlling Power State and power supply of entities are considered
+<p id="section-10-1">This section describes a number of relevant use cases with the purpose of elicit requirements for Energy Efficiency Management.
+This is a work in progress and additional use cases will be documented in next versions of this document.
+## Selective reduction of energy consumption in network parts proportional to traffic levels
+Traffic levels in a network follow patterns reflecting the behavior of consumers. Those patterns show periodicity in the terms of the traffic delivered, that can range from daily (from 00:00 to 23:59) to seasonal (e.g., winter to summer), showing peaks and valleys that could be exploited to reduce the consumption of energy in the network proportionally, in case the underlying network elements incorporate such capabilities. The reduction of energy consumption could be performed by leveraging on sleep modes in components up to more extreme actions such as switching off network components or modules. Such decisions are expected to no impact on the service delivered to customers, and could be accompanied by traffic relocation and / or concentration in the network.
+For this use case, the following requirements apply:
+|category|requirements|note|Priority|
+|:----|:----|:----|:----|
+|Observability|Component granularity, e.g., per line-card, per-port|Per component measurement|1|
+|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
+|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
+|Analysis|Ability of multi-layer analysis (e.g., IP plus optical)|POI Use Case|3|
+|Control&amp; Mgmt|To have devices with elastic power consumption according to the carried traffic|Dynamic Energy Saving|2|
+|Control&amp; Mgmt|Advanced sleep mode, needing some sort of low power mode when node is lightly utilized|Dynamic Energy Saving|2|
+|Control&amp; Mgmt|Ability to steer traffic based on power savings|Traffic Engineering|4|
+These requirements are under revision as this is a work in progress.
+## Additional use cases
+To be completed in next versions.
+# Security Considerations<a href="#section-10-1" class="pilcrow">¶</a></p>
+<p id="section-10-2">Controlling Power State and power supply of entities are considered
    highly sensitive actions, since they can significantly affect the
    operation of directly and indirectly connected devices.  Therefore,
    all control actions addressed in Sections 6 and 8 must be
    sufficiently protected through authentication, authorization, and
-   integrity protection mechanisms.<a href="#section-10-1" class="pilcrow">¶</a></p>
-<p id="section-10-2">Entities that are not sufficiently secure to operate directly on the
+   integrity protection mechanisms.<a href="#section-10-2" class="pilcrow">¶</a></p>
+<p id="section-10-3">Entities that are not sufficiently secure to operate directly on the
    public Internet do exist and can be a significant cause of risk, for
    example, if the remote control functions described in Sections 6 and
    8 can be exercised on those devices from anywhere on the Internet.
@@ -3269,8 +3287,8 @@ device or in a controller
    solution is providing means that allow the isolation of such devices,
    e.g., behind a sufficiently secured gateway.  Another solution is to
    allow compliant implementations to disable sensitive functions, or to
-   not implement such functions at all.<a href="#section-10-2" class="pilcrow">¶</a></p>
-<p id="section-10-3">The monitoring of energy-related quantities of an entity as addressed
+   not implement such functions at all.<a href="#section-10-3" class="pilcrow">¶</a></p>
+<p id="section-10-4">The monitoring of energy-related quantities of an entity as addressed
    in Sections 5 through 8 can be used to derive more information than
    just the received and provided energy; therefore, monitored data
    requires protection.  This protection includes authentication and
@@ -3279,7 +3297,7 @@ device or in a controller
    Privacy of stored data in an entity must be taken into account.
    Monitored data may be used as input to control, accounting, and other
    actions, so integrity of transmitted information and authentication
-   of the origin may be needed.<a href="#section-10-3" class="pilcrow">¶</a></p>
+   of the origin may be needed.<a href="#section-10-4" class="pilcrow">¶</a></p>
 <div id="secure-energy-management">
 <section id="section-10.1">
         <h3 id="name-secure-energy-management">
