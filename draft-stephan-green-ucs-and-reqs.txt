@@ -1845,28 +1845,28 @@ Table of Contents
    The EMAN (Energy MANagement) working group (WG), created in 2010 and
    now concluded, has produced multiples RFCs
 
-     * {{RFC7603}}, Energy Management (EMAN) Applicability Statement
+     * RFC7603, Energy Management (EMAN) Applicability Statement
 
-     * {{RFC7577}}, Definition of Managed Objects for Battery Monitoring
+     * RFC7577, Definition of Managed Objects for Battery Monitoring
 
-     * {{RFC7460}}, Monitoring and Control MIB for Power and Energy
+     * RFC7460, Monitoring and Control MIB for Power and Energy
 
-     * {{RFC7461}}, Energy Object Context MIB
+     * RFC7461, Energy Object Context MIB
 
-     * {{RFC7326}}, Energy Management Framework
+     * RFC7326, Energy Management Framework
 
-     * {{RFC6988}}, Requirements for Energy Management
+     * RFC6988, Requirements for Energy Management
 
-     * {{RFC6933}}, Entity MIB (Version 4)
+     * RFC6933, Entity MIB (Version 4)
 
    Note also that some other energy-related MIB modules have been
    created, but not by the EMAN Working Group
 
-     * {{RFC3433}}, Entity Sensor MIB module
+     * RFC3433, Entity Sensor MIB module
 
-     * {{RFC3621}}, Power Ethernet MIB modules
+     * RFC3621, Power Ethernet MIB modules
 
-     * {{RFC1628}}, UPS Power Monitoring MIB module
+     * RFC1628, UPS Power Monitoring MIB module
 
      * LLDP MIB module and LLDP MED MIB module
 
@@ -1875,7 +1875,7 @@ Table of Contents
    configuration.  Based on the YANG modules developments, three MIB
    modules (Entity MIB module, Entity Sensor MIB module, Entity State
    MIB module) have been converted into the "YANG Data Model for
-   Hardware Management" [RFC8348].
+   Hardware Management" RFC8348.
 
    However, Power and Energy Monitoring and Control MIB modules has not
    been converted yet into YANG modules.
@@ -1895,7 +1895,7 @@ Table of Contents
    *  A focus towards YANG, and not any longer on MIB modules
 
    *  As a consequence from the previous point, the ENTITY-MIB v4
-      [RFC6933] is replaced by the Hardware YANG module RFC8348
+      RFC6933 is replaced by the Hardware YANG module RFC8348
 
    *  battery management is removed (as batteries haves some self-
       optimization features these days)
@@ -1930,24 +1930,11 @@ Table of Contents
               <https://datatracker.ietf.org/meeting/120/materials/
               slides-120-green-input-from-operators-to-green-bof-01>.
 
-   [RFC1628]  Case, J., Ed., "UPS Management Information Base",
-              RFC 1628, DOI 10.17487/RFC1628, May 1994,
-              <https://www.rfc-editor.org/rfc/rfc1628>.
-
    [RFC3411]  Harrington, D., Presuhn, R., and B. Wijnen, "An
               Architecture for Describing Simple Network Management
               Protocol (SNMP) Management Frameworks", STD 62, RFC 3411,
               DOI 10.17487/RFC3411, December 2002,
               <https://www.rfc-editor.org/rfc/rfc3411>.
-
-   [RFC3433]  Bierman, A., Romascanu, D., and K.C. Norseth, "Entity
-              Sensor Management Information Base", RFC 3433,
-              DOI 10.17487/RFC3433, December 2002,
-              <https://www.rfc-editor.org/rfc/rfc3433>.
-
-   [RFC3621]  Berger, A. and D. Romascanu, "Power Ethernet MIB",
-              RFC 3621, DOI 10.17487/RFC3621, December 2003,
-              <https://www.rfc-editor.org/rfc/rfc3621>.
 
    [RFC5905]  Mills, D., Martin, J., Ed., Burbank, J., and W. Kasch,
               "Network Time Protocol Version 4: Protocol and Algorithms
@@ -1958,40 +1945,6 @@ Table of Contents
               and A. Bierman, Ed., "Network Configuration Protocol
               (NETCONF)", RFC 6241, DOI 10.17487/RFC6241, June 2011,
               <https://www.rfc-editor.org/rfc/rfc6241>.
-
-   [RFC6933]  Bierman, A., Romascanu, D., Quittek, J., and M.
-              Chandramouli, "Entity MIB (Version 4)", RFC 6933,
-              DOI 10.17487/RFC6933, May 2013,
-              <https://www.rfc-editor.org/rfc/rfc6933>.
-
-   [RFC6988]  Quittek, J., Ed., Chandramouli, M., Winter, R., Dietz, T.,
-              and B. Claise, "Requirements for Energy Management",
-              RFC 6988, DOI 10.17487/RFC6988, September 2013,
-              <https://www.rfc-editor.org/rfc/rfc6988>.
-
-   [RFC7326]  Parello, J., Claise, B., Schoening, B., and J. Quittek,
-              "Energy Management Framework", RFC 7326,
-              DOI 10.17487/RFC7326, September 2014,
-              <https://www.rfc-editor.org/rfc/rfc7326>.
-
-   [RFC7460]  Chandramouli, M., Claise, B., Schoening, B., Quittek, J.,
-              and T. Dietz, "Monitoring and Control MIB for Power and
-              Energy", RFC 7460, DOI 10.17487/RFC7460, March 2015,
-              <https://www.rfc-editor.org/rfc/rfc7460>.
-
-   [RFC7461]  Parello, J., Claise, B., and M. Chandramouli, "Energy
-              Object Context MIB", RFC 7461, DOI 10.17487/RFC7461, March
-              2015, <https://www.rfc-editor.org/rfc/rfc7461>.
-
-   [RFC7577]  Quittek, J., Winter, R., and T. Dietz, "Definition of
-              Managed Objects for Battery Monitoring", RFC 7577,
-              DOI 10.17487/RFC7577, July 2015,
-              <https://www.rfc-editor.org/rfc/rfc7577>.
-
-   [RFC7603]  Schoening, B., Chandramouli, M., and B. Nordman, "Energy
-              Management (EMAN) Applicability Statement", RFC 7603,
-              DOI 10.17487/RFC7603, August 2015,
-              <https://www.rfc-editor.org/rfc/rfc7603>.
 
    [RFC8342]  Bjorklund, M., Schoenwaelder, J., Shafer, P., Watsen, K.,
               and R. Wilton, "Network Management Datastore Architecture

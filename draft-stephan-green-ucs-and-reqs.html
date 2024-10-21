@@ -3434,34 +3434,34 @@ device or in a controller
 <p id="section-14.1-1">The EMAN (Energy MANagement) working group (WG), created in 2010 and now concluded, has produced multiples RFCs<a href="#section-14.1-1" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-14.1-2">
 <pre>
-  * {{RFC7603}}, Energy Management (EMAN) Applicability Statement
+  * RFC7603, Energy Management (EMAN) Applicability Statement
 
-  * {{RFC7577}}, Definition of Managed Objects for Battery Monitoring
+  * RFC7577, Definition of Managed Objects for Battery Monitoring
 
-  * {{RFC7460}}, Monitoring and Control MIB for Power and Energy
+  * RFC7460, Monitoring and Control MIB for Power and Energy
 
-  * {{RFC7461}}, Energy Object Context MIB
+  * RFC7461, Energy Object Context MIB
 
-  * {{RFC7326}}, Energy Management Framework
+  * RFC7326, Energy Management Framework
 
-  * {{RFC6988}}, Requirements for Energy Management
+  * RFC6988, Requirements for Energy Management
 
-  * {{RFC6933}}, Entity MIB (Version 4)
+  * RFC6933, Entity MIB (Version 4)
 </pre><a href="#section-14.1-2" class="pilcrow">¶</a>
 </div>
 <p id="section-14.1-3">Note also that some other energy-related MIB modules have been created, but not by the EMAN Working Group<a href="#section-14.1-3" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-14.1-4">
 <pre>
-  * {{RFC3433}}, Entity Sensor MIB module
+  * RFC3433, Entity Sensor MIB module
 
-  * {{RFC3621}}, Power Ethernet MIB modules
+  * RFC3621, Power Ethernet MIB modules
 
-  * {{RFC1628}}, UPS Power Monitoring MIB module
+  * RFC1628, UPS Power Monitoring MIB module
 
   * LLDP MIB module and LLDP MED MIB module
 </pre><a href="#section-14.1-4" class="pilcrow">¶</a>
 </div>
-<p id="section-14.1-5">Due to limitations regarding Writeable MIB module, one IESG statement published in 2014 encourages the use the NETCONF/YANG standards for configuration. Based on the YANG modules    developments, three MIB  modules (Entity MIB module, Entity Sensor MIB module, Entity State MIB module) have been converted into the "YANG Data Model for Hardware Management" <span>[<a href="#RFC8348" class="cite xref">RFC8348</a>]</span>.<a href="#section-14.1-5" class="pilcrow">¶</a></p>
+<p id="section-14.1-5">Due to limitations regarding Writeable MIB module, one IESG statement published in 2014 encourages the use the NETCONF/YANG standards for configuration. Based on the YANG modules    developments, three MIB  modules (Entity MIB module, Entity Sensor MIB module, Entity State MIB module) have been converted into the "YANG Data Model for Hardware Management" RFC8348.<a href="#section-14.1-5" class="pilcrow">¶</a></p>
 <p id="section-14.1-6">However, Power and Energy Monitoring and Control MIB modules has not been converted yet into YANG modules.<a href="#section-14.1-6" class="pilcrow">¶</a></p>
 <p id="section-14.1-7">Eleven years after the EMAN requirements RFC 6988 publication, this document re-evaluates the energy-related requirements, as a preparation for the GREEN BoF at IETF 120.<a href="#section-14.1-7" class="pilcrow">¶</a></p>
 </section>
@@ -3480,7 +3480,7 @@ device or in a controller
             <p id="section-14.2-2.2.1">A focus towards YANG, and not any longer on MIB modules<a href="#section-14.2-2.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-14.2-2.3">
-            <p id="section-14.2-2.3.1">As a consequence from the previous point, the ENTITY-MIB v4 <span>[<a href="#RFC6933" class="cite xref">RFC6933</a>]</span> is replaced by the Hardware YANG module RFC8348<a href="#section-14.2-2.3.1" class="pilcrow">¶</a></p>
+            <p id="section-14.2-2.3.1">As a consequence from the previous point, the ENTITY-MIB v4 RFC6933 is replaced by the Hardware YANG module RFC8348<a href="#section-14.2-2.3.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-14.2-2.4">
             <p id="section-14.2-2.4.1">battery management is removed (as batteries haves some self-optimization features these days)<a href="#section-14.2-2.4.1" class="pilcrow">¶</a></p>
@@ -3518,21 +3518,9 @@ device or in a controller
       <dd>
 <span class="refTitle">"Input from Operators to GREEN BoF"</span>, <time datetime="2024-07-20" class="refDate">20 July 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/meeting/120/materials/slides-120-green-input-from-operators-to-green-bof-01">https://datatracker.ietf.org/meeting/120/materials/slides-120-green-input-from-operators-to-green-bof-01</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="RFC1628">[RFC1628]</dt>
-      <dd>
-<span class="refAuthor">Case, J., Ed.</span>, <span class="refTitle">"UPS Management Information Base"</span>, <span class="seriesInfo">RFC 1628</span>, <span class="seriesInfo">DOI 10.17487/RFC1628</span>, <time datetime="1994-05" class="refDate">May 1994</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc1628">https://www.rfc-editor.org/rfc/rfc1628</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="RFC3411">[RFC3411]</dt>
       <dd>
 <span class="refAuthor">Harrington, D.</span>, <span class="refAuthor">Presuhn, R.</span>, and <span class="refAuthor">B. Wijnen</span>, <span class="refTitle">"An Architecture for Describing Simple Network Management Protocol (SNMP) Management Frameworks"</span>, <span class="seriesInfo">STD 62</span>, <span class="seriesInfo">RFC 3411</span>, <span class="seriesInfo">DOI 10.17487/RFC3411</span>, <time datetime="2002-12" class="refDate">December 2002</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3411">https://www.rfc-editor.org/rfc/rfc3411</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC3433">[RFC3433]</dt>
-      <dd>
-<span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Romascanu, D.</span>, and <span class="refAuthor">K.C. Norseth</span>, <span class="refTitle">"Entity Sensor Management Information Base"</span>, <span class="seriesInfo">RFC 3433</span>, <span class="seriesInfo">DOI 10.17487/RFC3433</span>, <time datetime="2002-12" class="refDate">December 2002</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3433">https://www.rfc-editor.org/rfc/rfc3433</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC3621">[RFC3621]</dt>
-      <dd>
-<span class="refAuthor">Berger, A.</span> and <span class="refAuthor">D. Romascanu</span>, <span class="refTitle">"Power Ethernet MIB"</span>, <span class="seriesInfo">RFC 3621</span>, <span class="seriesInfo">DOI 10.17487/RFC3621</span>, <time datetime="2003-12" class="refDate">December 2003</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3621">https://www.rfc-editor.org/rfc/rfc3621</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC5905">[RFC5905]</dt>
       <dd>
@@ -3541,34 +3529,6 @@ device or in a controller
 <dt id="RFC6241">[RFC6241]</dt>
       <dd>
 <span class="refAuthor">Enns, R., Ed.</span>, <span class="refAuthor">Bjorklund, M., Ed.</span>, <span class="refAuthor">Schoenwaelder, J., Ed.</span>, and <span class="refAuthor">A. Bierman, Ed.</span>, <span class="refTitle">"Network Configuration Protocol (NETCONF)"</span>, <span class="seriesInfo">RFC 6241</span>, <span class="seriesInfo">DOI 10.17487/RFC6241</span>, <time datetime="2011-06" class="refDate">June 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6241">https://www.rfc-editor.org/rfc/rfc6241</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC6933">[RFC6933]</dt>
-      <dd>
-<span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Romascanu, D.</span>, <span class="refAuthor">Quittek, J.</span>, and <span class="refAuthor">M. Chandramouli</span>, <span class="refTitle">"Entity MIB (Version 4)"</span>, <span class="seriesInfo">RFC 6933</span>, <span class="seriesInfo">DOI 10.17487/RFC6933</span>, <time datetime="2013-05" class="refDate">May 2013</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6933">https://www.rfc-editor.org/rfc/rfc6933</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC6988">[RFC6988]</dt>
-      <dd>
-<span class="refAuthor">Quittek, J., Ed.</span>, <span class="refAuthor">Chandramouli, M.</span>, <span class="refAuthor">Winter, R.</span>, <span class="refAuthor">Dietz, T.</span>, and <span class="refAuthor">B. Claise</span>, <span class="refTitle">"Requirements for Energy Management"</span>, <span class="seriesInfo">RFC 6988</span>, <span class="seriesInfo">DOI 10.17487/RFC6988</span>, <time datetime="2013-09" class="refDate">September 2013</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6988">https://www.rfc-editor.org/rfc/rfc6988</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC7326">[RFC7326]</dt>
-      <dd>
-<span class="refAuthor">Parello, J.</span>, <span class="refAuthor">Claise, B.</span>, <span class="refAuthor">Schoening, B.</span>, and <span class="refAuthor">J. Quittek</span>, <span class="refTitle">"Energy Management Framework"</span>, <span class="seriesInfo">RFC 7326</span>, <span class="seriesInfo">DOI 10.17487/RFC7326</span>, <time datetime="2014-09" class="refDate">September 2014</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7326">https://www.rfc-editor.org/rfc/rfc7326</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC7460">[RFC7460]</dt>
-      <dd>
-<span class="refAuthor">Chandramouli, M.</span>, <span class="refAuthor">Claise, B.</span>, <span class="refAuthor">Schoening, B.</span>, <span class="refAuthor">Quittek, J.</span>, and <span class="refAuthor">T. Dietz</span>, <span class="refTitle">"Monitoring and Control MIB for Power and Energy"</span>, <span class="seriesInfo">RFC 7460</span>, <span class="seriesInfo">DOI 10.17487/RFC7460</span>, <time datetime="2015-03" class="refDate">March 2015</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7460">https://www.rfc-editor.org/rfc/rfc7460</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC7461">[RFC7461]</dt>
-      <dd>
-<span class="refAuthor">Parello, J.</span>, <span class="refAuthor">Claise, B.</span>, and <span class="refAuthor">M. Chandramouli</span>, <span class="refTitle">"Energy Object Context MIB"</span>, <span class="seriesInfo">RFC 7461</span>, <span class="seriesInfo">DOI 10.17487/RFC7461</span>, <time datetime="2015-03" class="refDate">March 2015</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7461">https://www.rfc-editor.org/rfc/rfc7461</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC7577">[RFC7577]</dt>
-      <dd>
-<span class="refAuthor">Quittek, J.</span>, <span class="refAuthor">Winter, R.</span>, and <span class="refAuthor">T. Dietz</span>, <span class="refTitle">"Definition of Managed Objects for Battery Monitoring"</span>, <span class="seriesInfo">RFC 7577</span>, <span class="seriesInfo">DOI 10.17487/RFC7577</span>, <time datetime="2015-07" class="refDate">July 2015</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7577">https://www.rfc-editor.org/rfc/rfc7577</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC7603">[RFC7603]</dt>
-      <dd>
-<span class="refAuthor">Schoening, B.</span>, <span class="refAuthor">Chandramouli, M.</span>, and <span class="refAuthor">B. Nordman</span>, <span class="refTitle">"Energy Management (EMAN) Applicability Statement"</span>, <span class="seriesInfo">RFC 7603</span>, <span class="seriesInfo">DOI 10.17487/RFC7603</span>, <time datetime="2015-08" class="refDate">August 2015</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7603">https://www.rfc-editor.org/rfc/rfc7603</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8342">[RFC8342]</dt>
       <dd>
