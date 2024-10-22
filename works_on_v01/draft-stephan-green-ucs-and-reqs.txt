@@ -32,9 +32,8 @@ Abstract
    management of energy-efficient networks, and (2) defining use cases
    for managing energy-efficient networks.
 
-   This draft merges two drafts: (draft-eman-green-rfc6988bis-
-   01)[https://datatracker.ietf.org/doc/draft-eman-green-rfc6988bis/]
-   and [GREEN-BOF-REQS].
+   This draft merges two drafts: [rfc6988bis-green] and
+   [green-bof-reqs].
 
    Discussion Venues
 
@@ -179,29 +178,31 @@ Table of Contents
        8.2.2.  Controlling Power Supply
    9.  Requirements extracted from proponents drafts
      9.1.  Operator'requirements from [charter-refinement] document
-     9.2.  Requirements extracted from [legacy-path]
-     9.3.  Requirements from [rfc6988bis-green] draft Open Issues
-     9.4.  Requirements extracted from [sustainability-insights] uses
+     9.2.  Requirements extracted from legacy-path
+     9.3.  Requirements from rfc6988bis-green draft Open Issues
+     9.4.  Requirements extracted from sustainability-insights uses
            cases
      9.5.  Framework Discussed During the BoF
    10. Use Cases
-   11. Incremental Application of the GREEN Framework
-     11.1.  Additional use cases
-   12. Security Considerations
-     12.1.  Secure Energy Management
-     12.2.  Isolation of Insufficiently Secure Entities
-     12.3.  Optional Restriction of Functions
-     12.4.  Other Aspects
-   13. IANA Considerations
-   14. Acknowledgments
-   15. Open Issues
-   16. References
-     16.1.  Normative References
-     16.2.  Informative References
-   17. Appendix
-     17.1.  In Preparation of the GREEN BoF at IETF 120
-     17.2.  High-level Differences with RFC6988
-   18. Informative References
+     10.1.  Selective reduction of energy consumption in network parts
+            proportional to traffic levels
+     10.2.  Incremental Application of the GREEN Framework
+     10.3.  Additional use cases
+   11. Security Considerations
+     11.1.  Secure Energy Management
+     11.2.  Isolation of Insufficiently Secure Entities
+     11.3.  Optional Restriction of Functions
+     11.4.  Other Aspects
+   12. IANA Considerations
+   13. Acknowledgments
+   14. Open Issues
+   15. References
+     15.1.  Normative References
+     15.2.  Informative References
+   16. Appendix
+     16.1.  In Preparation of the GREEN BoF at IETF 120
+     16.2.  High-level Differences with RFC6988
+   17. Informative References
    Authors' Addresses
 
 1.  Introduction
@@ -237,11 +238,8 @@ Table of Contents
    Terms and definitions related to energy efficiency metrics will be
    discussed in later stages for potential integration.
 
-   This draft merges two drafts: (draft-eman-green-rfc6988bis-
-   01)[https://datatracker.ietf.org/doc/draft-eman-green-rfc6988bis/]
-   and (draft-stephan-green-bof-reqs-collections-
-   02)[https://datatracker.ietf.org/doc/draft-stephan-green-bof-reqs-
-   collections/].
+   This draft merges two drafts: [rfc6988bis-green] and
+   [green-bof-reqs].
 
    At this step the specifications made by the IETF, aka in WGs like
    EMAN, on energy managements focus mainly on SMI (aka MIBs) instead of
@@ -1338,10 +1336,10 @@ Table of Contents
 9.  Requirements extracted from proponents drafts
 
    This section extracts and groups requirements from the documents of
-   the proponents of the GREEN WG creation [GREEN-BOF], [sustainability-
-   insights], [legacy-path] and [rfc6988bis-green].  The aim is to
-   determine initial sets of requirements actionable at different levels
-   of the framework presented below Section 9.5.
+   the proponents of the GREEN WG creation [GREEN-BOF],
+   [sustainability-insights], [legacy-path] and [rfc6988bis-green].  The
+   aim is to determine initial sets of requirements actionable at
+   different levels of the framework presented below Section 9.5.
 
 9.1.  Operator'requirements from [charter-refinement] document
 
@@ -1500,31 +1498,36 @@ Table of Contents
 
 9.2.  Requirements extracted from [legacy-path]
 
-    +============+============================+===========+==========+
-    | category   | requirements               | note      | Priority |
-    +============+============================+===========+==========+
-    | Inventory  | component control capacity | Per       | 1 (i)    |
-    | Management | (aka component max on/off  | component |          |
-    |            | frequency supported)       | control   |          |
-    +------------+----------------------------+-----------+----------+
-    | Analysis   | assess the gains of        | Device    | 1 (ii)   |
-    |            | introducing eco-designed   | Level     |          |
-    |            | components in a device     | Mgmt      |          |
-    +------------+----------------------------+-----------+----------+
-    | Control&   | comprehensive support of   | Network   | 1 (iii)  |
-    | Mgmt       | network-wide energy        | Level     |          |
-    |            | efficiency includes legacy | Mgmt      |          |
-    |            | devices                    |           |          |
-    +------------+----------------------------+-----------+----------+
+   TODO: This section might merge with Section 10.2 secction.
 
-                                 Table 2
+      +============+=========================+===========+==========+
+      | category   | requirements            | note      | Priority |
+      +============+=========================+===========+==========+
+      | Inventory  | component control       | Per       | 1 (i)    |
+      | Management | capacity (aka component | component |          |
+      |            | max power-on/power-off  | control   |          |
+      |            | frequency supported)    |           |          |
+      +------------+-------------------------+-----------+----------+
+      | Analysis   | assess the gains of     | Device    | 1 (ii)   |
+      |            | introducing eco-        | Level     |          |
+      |            | designed components in  | Mgmt      |          |
+      |            | a device                |           |          |
+      +------------+-------------------------+-----------+----------+
+      | Control&   | comprehensive support   | Network   | 1 (iii)  |
+      | Mgmt       | of network-wide energy  | Level     |          |
+      |            | efficiency includes     | Mgmt      |          |
+      |            | legacy devices          |           |          |
+      +------------+-------------------------+-----------+----------+
 
-   (i) Avoid control to break the component
+                                  Table 2
+
+   (i) Avoid a power-on/power-off frequency to break component parts
+   (aka laser, power parts, wire connectors ...)
 
    (ii) the gain must be measurable
 
-   (iii) network-wide solution must include legacy devices and green-wg
-   ready devices
+   (iii) network-wide energy efficiency solutions must include legacy
+   devices and green-wg ready devices
 
 9.3.  Requirements from [rfc6988bis-green] draft Open Issues
 
@@ -1675,8 +1678,11 @@ Table of Contents
    This section describes a number of relevant use cases with the
    purpose of elicit requirements for Energy Efficiency Management.
    This is a work in progress and additional use cases will be
-   documented in next versions of this document. ## Selective reduction
-   of energy consumption in network parts proportional to traffic levels
+   documented in next versions of this document.
+
+10.1.  Selective reduction of energy consumption in network parts
+       proportional to traffic levels
+
    Traffic levels in a network follow patterns reflecting the behavior
    of consumers.  Those patterns show periodicity in the terms of the
    traffic delivered, that can range from daily (from 00:00 to 23:59) to
@@ -1689,23 +1695,53 @@ Table of Contents
    Such decisions are expected to no impact on the service delivered to
    customers, and could be accompanied by traffic relocation and / or
    concentration in the network.  For this use case, the following
-   requirements apply: |category|requirements|note|Priority| |:----|:---
-   -|:----|:----| |Observability|Component granularity, e.g., per line-
-   card, per-port|Per component
-   measurement|1| |Observability|Availability of information on the
-   power consumption of the device, without needing instrumentation
-   connected to the infrastructure|Related to connected device
-   case|1| |Analysis|Common definition of energy efficiency in network
-   devices/components|Standard metric|1| |Analysis|Ability of multi-
-   layer analysis (e.g., IP plus optical)|POI Use Case|3| |Control&
-   Mgmt|To have devices with elastic power consumption according to the
-   carried traffic|Dynamic Energy Saving|2| |Control& Mgmt|Advanced
-   sleep mode, needing some sort of low power mode when node is lightly
-   utilized|Dynamic Energy Saving|2| |Control& Mgmt|Ability to steer
-   traffic based on power savings|Traffic Engineering|4| These
-   requirements are under revision as this is a work in progress.
+   requirements apply:
 
-11.  Incremental Application of the GREEN Framework
+   +===============+=========================+=============+==========+
+   | category      | requirements            | note        | Priority |
+   +===============+=========================+=============+==========+
+   | Observability | Component granularity,  | Per         | 1        |
+   |               | e.g., per line-card,    | component   |          |
+   |               | per-port                | measurement |          |
+   +---------------+-------------------------+-------------+----------+
+   | Observability | Availability of         | Related to  | 1        |
+   |               | information on the      | connected   |          |
+   |               | power consumption of    | device case |          |
+   |               | the device, without     |             |          |
+   |               | needing instrumentation |             |          |
+   |               | connected to the        |             |          |
+   |               | infrastructure          |             |          |
+   +---------------+-------------------------+-------------+----------+
+   | Analysis      | Common definition of    | Standard    | 1        |
+   |               | energy efficiency in    | metric      |          |
+   |               | network devices/        |             |          |
+   |               | components              |             |          |
+   +---------------+-------------------------+-------------+----------+
+   | Analysis      | Ability of multi-layer  | POI Use     | 3        |
+   |               | analysis (e.g., IP plus | Case        |          |
+   |               | optical)                |             |          |
+   +---------------+-------------------------+-------------+----------+
+   | Control& Mgmt | To have devices with    | Dynamic     | 2        |
+   |               | elastic power           | Energy      |          |
+   |               | consumption according   | Saving      |          |
+   |               | to the carried traffic  |             |          |
+   +---------------+-------------------------+-------------+----------+
+   | Control& Mgmt | Advanced sleep mode,    | Dynamic     | 2        |
+   |               | needing some sort of    | Energy      |          |
+   |               | low power mode when     | Saving      |          |
+   |               | node is lightly         |             |          |
+   |               | utilized                |             |          |
+   +---------------+-------------------------+-------------+----------+
+   | Control& Mgmt | Ability to steer        | Traffic     | 4        |
+   |               | traffic based on power  | Engineering |          |
+   |               | savings                 |             |          |
+   +---------------+-------------------------+-------------+----------+
+
+                                 Table 5
+
+   These requirements are under revision as this is a work in progress.
+
+10.2.  Incremental Application of the GREEN Framework
 
    This section describes an incremental example of usage showing how a
    product, a service and a network can use the framework in different
@@ -1722,9 +1758,9 @@ Table of Contents
    reduce the carbon footprint.  He is convince that he still had a part
    to play in making the digital world a greener place.
 
-   moving to GREEN energy effiency support: 3 steps (uc) :
+   Device moving gradually to GREEN energy efficiency support:
 
-   *  season 1 "baseline" : establishing a reference point of typical
+   *  step 1 "baseline" : establishing a reference point of typical
       energy usage, which is crucial for identifying inefficiencies and
       measuring improvements over time.  At this step the controler use
       only the (c) part of the framework.  It is collected from the
@@ -1745,18 +1781,42 @@ Table of Contents
    Tracking: Measure again to see if efficiency improves towards 8-10
    Gbps per watt.
 
-   *  season 2 "component": part of its hw or sw migrated to support
-      GREEN framework elements, TODO add refs to [legacy-path] sections.
+   *  step 2 "component": part of the device hw or sw migrated to
+      support GREEN framework elements, TODO add refs to [legacy-path]
+      sections.
 
-   *  season 3 "device controleur"
+   *  step 3 "device controleur"
 
-   *  season 4 "network level"
+   *  step 4 "network level"
 
-11.1.  Additional use cases
+   For this use case, the following requirements
+   apply: |category|requirements|note|Priority|
+
+      +===============+=============================+===========+===+
+      | Discovery     | Component granularity,      | Per       | 1 |
+      |               | e.g., per line-card, per-   | component |   |
+      |               | port                        |           |   |
+      +===============+=============================+===========+===+
+      | Observability | Availability of information | Related   | 1 |
+      |               | on the power consumption of | to        |   |
+      |               | the device, without needing | connected |   |
+      |               | instrumentation connected   | device    |   |
+      |               | to the infrastructure       | case      |   |
+      +---------------+-----------------------------+-----------+---+
+      | Analysis      | Common definition of energy | Standard  | 1 |
+      |               | efficiency in network       | metric    |   |
+      |               | devices/components          |           |   |
+      +---------------+-----------------------------+-----------+---+
+
+                                  Table 6
+
+   These requirements are under revision as this is a work in progress.
+
+10.3.  Additional use cases
 
    To be completed in next versions.
 
-12.  Security Considerations
+11.  Security Considerations
 
    Controlling Power State and power supply of entities are considered
    highly sensitive actions, since they can significantly affect the
@@ -1786,21 +1846,21 @@ Table of Contents
    actions, so integrity of transmitted information and authentication
    of the origin may be needed.
 
-12.1.  Secure Energy Management
+11.1.  Secure Energy Management
 
    The standard must provide privacy, integrity, and authentication
    mechanisms for all actions addressed in Sections 5 through 8.  The
    security mechanisms must meet the security requirements detailed in
    Section 1.4 of [RFC3411].
 
-12.2.  Isolation of Insufficiently Secure Entities
+11.2.  Isolation of Insufficiently Secure Entities
 
    The standard must provide means to allow the isolation of entities
    that are not sufficiently secure to operate on the public Internet,
    e.g., behind a gateway that implements sufficient security that the
    vulnerable entities are not directly exposed to the Internet.
 
-12.3.  Optional Restriction of Functions
+11.3.  Optional Restriction of Functions
 
    The standard must allow compliant implementations to disable
    sensitive functions, or to not implement such functions at all, when
@@ -1808,20 +1868,20 @@ Table of Contents
    applies particularly to the control functions described in Sections 6
    and 8.
 
-12.4.  Other Aspects
+11.4.  Other Aspects
 
    Adding new interfaces on devices increase attack surfaces.  Devices
    have brief variation of power consumption due their internal works.
    Reducing the power available may reduce their routing capacity which
    may reduce network performance and resiliency.
 
-13.  IANA Considerations
+12.  IANA Considerations
 
    This document has no IANA actions.
 
-14.  Acknowledgments
+13.  Acknowledgments
 
-15.  Open Issues
+14.  Open Issues
 
    o Do we need to keep a reference to the MIB object entPhysicalUUID
    (in section 4.4 from ENTITY-MIB v4) in case of legacy device (MIB)?
@@ -1894,9 +1954,9 @@ Table of Contents
    energy spent on behalf of a particular customer/user.  Open issue,
    marisolpalmero/GREEN-bof#89
 
-16.  References
+15.  References
 
-16.1.  Normative References
+15.1.  Normative References
 
    [IEC.61850-7-4] International Electrotechnical Commission,
    "Communication networks and systems for power utility automation --
@@ -1935,7 +1995,7 @@ Table of Contents
    https://www.itu.int/rec/T-REC-L.1310/en (https://www.itu.int/rec/T-
    REC-L.1310/en).
 
-16.2.  Informative References
+15.2.  Informative References
 
    [IEC.60050] International Electrotechnical Commission, "Electropedia:
    The World's Online Electrotechnical Vocabulary", 2013,
@@ -1948,11 +2008,11 @@ Table of Contents
    Facsimile and Leased Circuits -- Telecommunications Management
    Network - TMN management functions", February 2000.
 
-17.  Appendix
+16.  Appendix
 
    This appendix should be removed in the next version
 
-17.1.  In Preparation of the GREEN BoF at IETF 120
+16.1.  In Preparation of the GREEN BoF at IETF 120
 
    The EMAN (Energy MANagement) working group (WG), created in 2010 and
    now concluded, has produced multiples RFCs
@@ -1996,7 +2056,7 @@ Table of Contents
    document re-evaluates the energy-related requirements, as a
    preparation for the GREEN BoF at IETF 120.
 
-17.2.  High-level Differences with RFC6988
+16.2.  High-level Differences with RFC6988
 
    The following section will delve into the specific details but from a
    high level point of view, the differences between this document and
@@ -2017,13 +2077,13 @@ Table of Contents
    *  A focus on reporting lifecycle management, considering energy and
       transformation towards carbon awareness
 
-18.  Informative References
+17.  Informative References
 
    [GREEN-BOF]
               "BOF proposal for GREEN WG Creation", 10 May 2024,
               <https://github.com/marisolpalmero/GREEN-bof>.
 
-   [GREEN-BOF-REQS]
+   [green-bof-reqs]
               "Green BoF requirements collections", 3 September 2024,
               <https://datatracker.ietf.org/doc/draft-stephan-green-bof-
               reqs-collections>.
@@ -2035,6 +2095,11 @@ Table of Contents
               inventory-yang-03, 7 July 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ivy-
               network-inventory-yang-03>.
+
+   [legacy-path]
+              "Requirements for Energy Efficiency Management", 21 July
+              2024, <https://datatracker.ietf.org/doc/draft-stephan-
+              legacy-path-eco-design>.
 
    [operators-inputs]
               "Input from Operators to GREEN BoF", 20 July 2024,
@@ -2057,6 +2122,12 @@ Table of Contents
               (NETCONF)", RFC 6241, DOI 10.17487/RFC6241, June 2011,
               <https://www.rfc-editor.org/rfc/rfc6241>.
 
+   [rfc6988bis-green]
+              "Requirements for Energy Efficiency Management, 11 years
+              after the EMAN RFC6988", 21 July 2024,
+              <https://datatracker.ietf.org/doc/draft-eman-green-
+              rfc6988bis>.
+
    [RFC8342]  Bjorklund, M., Schoenwaelder, J., Shafer, P., Watsen, K.,
               and R. Wilton, "Network Management Datastore Architecture
               (NMDA)", RFC 8342, DOI 10.17487/RFC8342, March 2018,
@@ -2071,6 +2142,11 @@ Table of Contents
               YANG Data Model for Hardware Management", RFC 8348,
               DOI 10.17487/RFC8348, March 2018,
               <https://www.rfc-editor.org/rfc/rfc8348>.
+
+   [sustainability-insights]
+              "Sustainability Insights", 7 May 2024,
+              <https://datatracker.ietf.org/doc/html/draft-almprs-
+              sustainability-insights>.
 
 Authors' Addresses
 
