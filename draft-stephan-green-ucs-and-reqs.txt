@@ -5,13 +5,13 @@
 Getting Ready for Energy-Efficient Networking                 E. Stephan
 Internet-Draft                                                    Orange
 Intended status: Informational                                M. Palmero
-Expires: 24 April 2025                               Cisco Systems, Inc.
+Expires: 25 April 2025                               Cisco Systems, Inc.
                                                                B. Claise
                                                                    Q. Wu
                                                                   Huawei
                                                          L. M. Contreras
                                                               Telefonica
-                                                         21 October 2024
+                                                         22 October 2024
 
 
              Requirements for Energy Efficiency Management
@@ -77,7 +77,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 24 April 2025.
+   This Internet-Draft will expire on 25 April 2025.
 
 Copyright Notice
 
@@ -190,14 +190,17 @@ Table of Contents
      10.1.  Secure Energy Management
      10.2.  Isolation of Insufficiently Secure Entities
      10.3.  Optional Restriction of Functions
-   11. Acknowledgments
-   12. Open Issues
-   13. References
-     13.1.  Normative References
-   14. Appendix
-     14.1.  In Preparation of the GREEN BoF at IETF 120
-     14.2.  High-level Differences with RFC6988
-   15. Informative References
+   11. Security
+   12. IANA Considerations
+   13. Acknowledgments
+   14. Open Issues
+   15. References
+     15.1.  Normative References
+     15.2.  Informative References
+   16. Appendix
+     16.1.  In Preparation of the GREEN BoF at IETF 120
+     16.2.  High-level Differences with RFC6988
+   17. Informative References
    Authors' Addresses
 
 1.  Introduction
@@ -415,7 +418,7 @@ Table of Contents
      planning, and optimizing networks to ensure that the network
      elements and attached devices use energy efficiently and in a
      manner appropriate to the nature of the application and the cost
-     constraints of the organization [ITU-M3400].
+     constraints of the organization [ITU-M.3400].
 
    Energy Efficiency Management
 
@@ -1753,11 +1756,20 @@ Table of Contents
    applies particularly to the control functions described in Sections 6
    and 8.
 
-11.  Acknowledgments
+11.  Security
 
-   The authors would like to thank ...
+   Adding new interfaces on devices increase attack surfaces.  Devices
+   have brief variation of power consumption due their internal works.
+   Reducing the power available may reduce their routing capacity which
+   may reduce network performance and resiliency.
 
-12.  Open Issues
+12.  IANA Considerations
+
+   This document has no IANA actions.
+
+13.  Acknowledgments
+
+14.  Open Issues
 
    o Do we need to keep a reference to the MIB object entPhysicalUUID
    (in section 4.4 from ENTITY-MIB v4) in case of legacy device (MIB)?
@@ -1821,7 +1833,7 @@ Table of Contents
    initiative(SBTi)[https://sciencebasedtargets.org] defines and
    promotes best practice in science-based target setting.  Offering a
    range of target-setting resources and guidance, the SBTi
-   independently assesses and approves companies’ targets in line with
+   independently assesses and approves companies targets in line with
    its strict criteria.
 
    Open issue, https://github.com/marisolpalmero/GREEN-bof/issues/88
@@ -1830,9 +1842,9 @@ Table of Contents
    energy spent on behalf of a particular customer/user.  Open issue,
    marisolpalmero/GREEN-bof#89
 
-13.  References
+15.  References
 
-13.1.  Normative References
+15.1.  Normative References
 
    [IEC.61850-7-4] International Electrotechnical Commission,
    "Communication networks and systems for power utility automation --
@@ -1871,11 +1883,24 @@ Table of Contents
    https://www.itu.int/rec/T-REC-L.1310/en (https://www.itu.int/rec/T-
    REC-L.1310/en).
 
-14.  Appendix
+15.2.  Informative References
+
+   [IEC.60050] International Electrotechnical Commission, "Electropedia:
+   The World's Online Electrotechnical Vocabulary", 2013,
+   http://www.electropedia.org/iev/iev.nsf/ welcome?openform
+   (http://www.electropedia.org/iev/iev.nsf/ welcome?openform).
+
+   [ITU-M.3400] International Telecommunication Union, "ITU-T
+   Recommendation M.3400 -- Series M: TMN and Network Maintenance:
+   International Transmission Systems, Telephone Circuits, Telegraphy,
+   Facsimile and Leased Circuits -- Telecommunications Management
+   Network - TMN management functions", February 2000.
+
+16.  Appendix
 
    This appendix should be removed in the next version
 
-14.1.  In Preparation of the GREEN BoF at IETF 120
+16.1.  In Preparation of the GREEN BoF at IETF 120
 
    The EMAN (Energy MANagement) working group (WG), created in 2010 and
    now concluded, has produced multiples RFCs
@@ -1919,7 +1944,7 @@ Table of Contents
    document re-evaluates the energy-related requirements, as a
    preparation for the GREEN BoF at IETF 120.
 
-14.2.  High-level Differences with RFC6988
+16.2.  High-level Differences with RFC6988
 
    The following section will delve into the specific details but from a
    high level point of view, the differences between this document and
@@ -1940,7 +1965,11 @@ Table of Contents
    *  A focus on reporting lifecycle management, considering energy and
       transformation towards carbon awareness
 
-15.  Informative References
+17.  Informative References
+
+   [GREEN-BOF]
+              "BOF proposal for GREEN WG Creation", 10 May 2024,
+              <https://github.com/marisolpalmero/GREEN-bof>.
 
    [I-D.ietf-ivy-network-inventory-yang]
               Yu, C., Belotti, S., Bouquier, J., Peruzzini, F., and P.
@@ -1949,16 +1978,6 @@ Table of Contents
               inventory-yang-03, 7 July 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ivy-
               network-inventory-yang-03>.
-
-   [IEC.60050]
-              "International Electrotechnical Commission, Electropedia:
-              The World's Online Electrotechnical Vocabulary", 2013,
-              <http://www.electropedia.org/iev/iev.nsf/
-              welcome?openform>.
-
-   [ITU-M3400]
-              "International Telecommunication Union, ITU-T
-              Recommendation M.3400, Series M", 1 February 2000.
 
    [operators-inputs]
               "Input from Operators to GREEN BoF", 20 July 2024,
