@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-10-20T01:03:26.504947+00:00",
+  "timestamp": "2024-10-22T00:59:15.744046+00:00",
   "repo": "emile22/draft-stephan-green-ucs-and-reqs",
   "labels": [
     {
@@ -49,7 +49,27 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 4,
+      "id": "I_kwDONBw63s6bFiaD",
+      "title": "reqs segmentation",
+      "url": "https://github.com/emile22/draft-stephan-green-ucs-and-reqs/issues/4",
+      "state": "OPEN",
+      "author": "emile22",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [
+        "documentation",
+        "help wanted"
+      ],
+      "body": "Requirements are segmented into three core functions: discovery, monitoring, and control.\r\nit needs to appear in the document",
+      "createdAt": "2024-10-21T09:27:30Z",
+      "updatedAt": "2024-10-21T09:27:58Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
   "pulls": [
     {
       "number": 1,
@@ -162,6 +182,48 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDONBw63s5_XyHT",
+      "title": "Update draft-stephan-green-ucs-and-reqs.md",
+      "url": "https://github.com/emile22/draft-stephan-green-ucs-and-reqs/pull/5",
+      "state": "MERGED",
+      "author": "luismcontreras",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-10-21T20:18:44Z",
+      "updatedAt": "2024-10-21T20:56:35Z",
+      "baseRepository": "emile22/draft-stephan-green-ucs-and-reqs",
+      "baseRefName": "main",
+      "baseRefOid": "c824d247930c8017d1a7663b2f67facf54f327a4",
+      "headRepository": "luismcontreras/draft-stephan-green-ucs-and-reqs",
+      "headRefName": "patch-4",
+      "headRefOid": "d24524fbcf9025c80ed9fa98fb77fcb89bcda5bc",
+      "closedAt": "2024-10-21T20:56:35Z",
+      "mergedAt": "2024-10-21T20:56:35Z",
+      "mergedBy": "emile22",
+      "mergeCommit": {
+        "oid": "b4487ccc92d83d84b15b489e1c006467724278e2"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDONBw63s6ODV2z",
+          "commit": {
+            "abbreviatedOid": "5285d3a"
+          },
+          "author": "emile22",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "great Luis",
+          "createdAt": "2024-10-21T20:26:08Z",
+          "updatedAt": "2024-10-21T20:26:08Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
