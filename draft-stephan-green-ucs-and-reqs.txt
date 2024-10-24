@@ -5,13 +5,13 @@
 Getting Ready for Energy-Efficient Networking                 E. Stephan
 Internet-Draft                                                    Orange
 Intended status: Informational                                M. Palmero
-Expires: 25 April 2025                               Cisco Systems, Inc.
+Expires: 27 April 2025                               Cisco Systems, Inc.
                                                                B. Claise
                                                                    Q. Wu
                                                                   Huawei
                                                          L. M. Contreras
                                                               Telefonica
-                                                         22 October 2024
+                                                         24 October 2024
 
 
              Requirements for Energy Efficiency Management
@@ -74,7 +74,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 25 April 2025.
+   This Internet-Draft will expire on 27 April 2025.
 
 Copyright Notice
 
@@ -196,6 +196,8 @@ Table of Contents
    12. IANA Considerations
    13. Acknowledgments
    14. Open Issues
+     14.1.  Open Issues to be Discussed at IETF121
+     14.2.  Open Issues collected since the BoF
    15. References
      15.1.  Normative References
      15.2.  Informative References
@@ -1882,6 +1884,10 @@ Table of Contents
 13.  Acknowledgments
 
 14.  Open Issues
+
+14.1.  Open Issues to be Discussed at IETF121
+
+14.2.  Open Issues collected since the BoF
 
    o Do we need to keep a reference to the MIB object entPhysicalUUID
    (in section 4.4 from ENTITY-MIB v4) in case of legacy device (MIB)?
