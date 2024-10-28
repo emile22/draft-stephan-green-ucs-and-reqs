@@ -5,13 +5,13 @@
 Getting Ready for Energy-Efficient Networking                 E. Stephan
 Internet-Draft                                                    Orange
 Intended status: Informational                                M. Palmero
-Expires: 27 April 2025                               Cisco Systems, Inc.
+Expires: 1 May 2025                                  Cisco Systems, Inc.
                                                                B. Claise
                                                                    Q. Wu
                                                                   Huawei
                                                          L. M. Contreras
                                                               Telefonica
-                                                         24 October 2024
+                                                         28 October 2024
 
 
              Requirements for Energy Efficiency Management
@@ -74,7 +74,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 27 April 2025.
+   This Internet-Draft will expire on 1 May 2025.
 
 Copyright Notice
 
@@ -1882,6 +1882,12 @@ Table of Contents
    This document has no IANA actions.
 
 13.  Acknowledgments
+
+   The contribution of Luis M.  Contreras to this document has been
+   supported by the Smart Networks and Services Joint Undertaking (SNS
+   JU) under the European Union’s Horizon Europe research and innovation
+   projects 6Green (Grant Agreement no. 101096925) and Exigence (Grant
+   Agreement no. 101139120).
 
 14.  Open Issues
 
