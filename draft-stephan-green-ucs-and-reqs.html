@@ -1566,6 +1566,9 @@ svg :is([fill="white"], [fill^="#fff"]) {
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.15.2.2">
                 <p id="section-toc.1-1.15.2.2.1"><a href="#section-15.2" class="auto internal xref">15.2</a>.  <a href="#name-dynamic-adjustment-of-netwo" class="internal xref">Dynamic adjustment of network element throughput according to traffic levels in wireless transport networks</a></p>
 </li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.15.2.3">
+                <p id="section-toc.1-1.15.2.3.1"><a href="#section-15.3" class="auto internal xref">15.3</a>.  <a href="#name-video-streaming-use-case" class="internal xref">Video streaming use case</a></p>
+</li>
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.16">
@@ -3664,6 +3667,16 @@ Devices have brief variation of power consumption due their internal works. Redu
 <p id="section-15.2-1">Radio base stations are typically connected to the backbone network by means of fiber or wireless transport (e.g., microwave) technologies. In the specific case of wireless transport, automation frameworks have been defined <span>[<a href="#ONF-MW" class="cite xref">ONF-MW</a>]</span><span>[<a href="#RFC8432" class="cite xref">RFC8432</a>]</span><span>[<a href="#mWT025" class="cite xref">mWT025</a>]</span> for their control and management.<a href="#section-15.2-1" class="pilcrow">¶</a></p>
 <p id="section-15.2-2">One of the parameters subject of automated control is the power of the radio links. The relevance of that capability is that the power can be adjusted accordingly to the traffic observed. Wireless transport networks are typically planned to support the máximum traffic capacity in their área of aggregation, that is, the traffic peak. With that input, the number of radio links in the network element and the corresponding power per radio link (for supporting a given modulation and link length in the worst weather conditions) are configured. This is done to avoid any kind of traffic loss in the worst operational situation. However, such operational needs are sporadic, giving room for optimization during normal operational circumstances and/or low traffic periods.<a href="#section-15.2-2" class="pilcrow">¶</a></p>
 <p id="section-15.2-3">Power-related parameters are for instance defined in <span>[<a href="#RFC8561" class="cite xref">RFC8561</a>]</span>. Those power parameters can be dynamically configured to adjust the power to the observed traffic levels with some coarse granularity, but pursuing certain degrees of proportionality.<a href="#section-15.2-3" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="video-streaming-use-case">
+<section id="section-15.3">
+        <h3 id="name-video-streaming-use-case">
+<a href="#section-15.3" class="section-number selfRef">15.3. </a><a href="#name-video-streaming-use-case" class="section-name selfRef">Video streaming use case</a>
+        </h3>
+<p id="section-15.3-1">Video streaming is nowadays the major source of traffic observed in ISP networks, in a propotion of 70% or even higher. Over-the-top distribution of streaming traffic is typically done by delivering a unicast flow per end user for the content of its interest.In consequence, during the hours of higher demand, the total traffic in the network is proportional to the concurrence of users consuming the video streaming service. The amount of traffic is also dependent of the resolution of the encoded video (the higher the resolution, the higher the bit rate per video flow), which tends to be higher as long as the users devices support such higher resolutions.<a href="#section-15.3-1" class="pilcrow">¶</a></p>
+<p id="section-15.3-2">The consequence of both the growth in the number of flows to be supported simultaneously, and the higher bit rate per flow, is that the nework elements in the path between the source of the video and the user have to be dimensioned accordingly. This implies the continuous upgrade of those network elements in terms of capacity, with the need of deploying high-capacity network elements and components. Apart from the fact that this process is shortening the lifetime of network elements, the need of high capacity interfaces also increase the energy consumption (despite the effort of manufacturers in creating more efficient network element platforms). Note that nowadays there is no actual possibility of activating energy consumption proportionality (in regards the delivered traffic) to such network elements.<a href="#section-15.3-2" class="pilcrow">¶</a></p>
+<p id="section-15.3-3">As a mean of slowing down this cycle of continuos renewal, and reduce the need og higher bit rate interfaces / line cards, it seems convenient to explore mechanisms that could reduce the volume of traffic without impacting the user service expectations. Variants of multicast or different service delivery strategies can help to improve the energy efficiency associated to the video streaming service. It should be noted that another front for optimization is the one related to the deployment of cache servers in the network.<a href="#section-15.3-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
