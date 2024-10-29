@@ -1307,7 +1307,7 @@ device or in a controller
 
 The main elements in the framework are as follows:
 
-(a),(d) Inventory
+(a),(d) Discovery and Inventory
 
 (b),(c) GREEN Metrics
 
