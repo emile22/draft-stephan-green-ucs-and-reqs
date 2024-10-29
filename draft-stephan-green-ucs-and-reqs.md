@@ -1508,6 +1508,8 @@ o	Energy Metric in E2E view
 
 # Other use cases (to be decided if moved to use case section)
 
+Use cases which are not tied enough to the current GREEN chater will be moved to the GREEN WG wiki pages.
+
 ## Consideration of other domains for obtention of end-to-end metrics
 
 The technologies under the scope of IETF provide the necessary connectivity to other technological domains. For the obtnetion of metrics end-to-end it would be required to combine or compose the metrics per each of those domains.
