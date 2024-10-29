@@ -1670,7 +1670,7 @@ Table of Contents
 
    The main elements in the framework are as follows:
 
-   (a),(d) Inventory
+   (a),(d) Discovery and Inventory
 
    (b),(c) GREEN Metrics
 
