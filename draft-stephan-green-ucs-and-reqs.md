@@ -1445,6 +1445,14 @@ The contribution of Luis M. Contreras to this document has been supported by the
 
 ## Open Issues to be Discussed at IETF121
 
+o	Consider 5g vs network  slicing: 3GPP spec describong energy efficiency KPIs. 3GPP TS 28.554. Reference:https://datatracker.ietf.org/doc/rfc9543/
+o	POE use case: open issue section?
+o	Reduce traffic (video streaming)
+o	Connectivity from radio side (trying to control the traffic/related work to CCAMP)
+o	Marisol to add one use case: drift from data specifications... (somehow link to the above)
+o	Use case per Domain specific? Meanwhile, they are considered as part of the network… Servers might be considered outside of scope
+o	Energy Metric in E2E view
+
 ## Open Issues collected since the BoF
 
    o Do we need to keep a reference to the MIB object entPhysicalUUID (in section 4.4 from ENTITY-MIB v4) in case of legacy device (MIB)?
