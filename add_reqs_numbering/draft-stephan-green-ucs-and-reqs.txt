@@ -1356,10 +1356,8 @@ Table of Contents
    operators for the GREEN BoF [operators-inputs].
 
    +=====+==============+===================+=================+========+
-   |Req00|category      |requirements       |note             |Priority|
+   |id   |category      |requirements       |note             |Priority|
    +=====+==============+===================+=================+========+
-   |Req00|:----         |:----              |:----            |:----   |
-   +-----+--------------+-------------------+-----------------+--------+
    |Req00|Observability |Component          |Per component    |1       |
    |     |              |granularity, e.g., |measurement      |        |
    |     |              |per line-card,     |                 |        |
