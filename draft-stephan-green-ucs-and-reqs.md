@@ -1183,8 +1183,8 @@ This section extracts and groups requirements from the documents of the proponen
 
 The table below is a copy of the operator'requirements table of [charter-refinement]. They are based on the inputs received from operators for the GREEN BoF [operators-inputs].
 
-|Req00|category|requirements|note|Priority|
-|Req00|:----|:----|:----|:----|
+|id|category|requirements|note|Priority|
+|:----|:----|:----|:----|:----|
 |Req00|Observability|Component granularity, e.g., per line-card, per-port|Per component measurement|1|
 |Req00|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
 |Req00|Observability|Triggering of alarms when consumption deviate from a nominal usage|Alarm notification|1??|
