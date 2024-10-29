@@ -1219,11 +1219,11 @@ The table below is a copy of the operator'requirements table of [charter-refinem
 
 TODO: This section might merge with {{incremental-use-case}} secction.
 
-|category|requirements|note|Priority|
-|:----|:----|:----|:----|
-|Inventory Management|component control capacity (aka component max power-on/power-off frequency supported)|Per component control| 1 (i)|
-|Analysis|assess the gains of introducing eco-designed components in a device|Device Level Mgmt| 1 (ii)|
-|Control& Mgmt|comprehensive support of network-wide energy efficiency includes legacy devices|Network Level Mgmt| 1 (iii)|
+|id|category|requirements|note|Priority|
+|:----|:----|:----|:----|:----|
+|Req00|Inventory Management|component control capacity (aka component max power-on/power-off frequency supported)|Per component control| 1 (i)|
+|Req00|Analysis|assess the gains of introducing eco-designed components in a device|Device Level Mgmt| 1 (ii)|
+|Req00|Control& Mgmt|comprehensive support of network-wide energy efficiency includes legacy devices|Network Level Mgmt| 1 (iii)|
 
 (i) Avoid a power-on/power-off frequency to break component parts (aka laser, power parts, wire connectors ...)
 
@@ -1233,24 +1233,25 @@ TODO: This section might merge with {{incremental-use-case}} secction.
 
 ## Requirements from [rfc6988bis-green] draft Open Issues
 
-|category|requirements|note|Priority|
-|:----|:----|:----|:----|
-|Control& Mgmt|Distinguish backup sources|rfc6988bis battery| 2|
-|Inventory Management|Reporting on Other Entities, typically smart PDU or PoE|Fit in "Inventory of power components (of devices, racks, etc) including together"| 2|
-|Observability or Interaction with Other domain|Room sensor (hvac...)|Data Center Case| 4|
-|Observability|flexible (future-proof) description of the nature of the sources of the energy used |Standard metric|2 |
+|id|category|requirements|note|Priority|
+|:----|:----|:----|:----|:----|
+|Req00|Control& Mgmt|Distinguish backup sources|rfc6988bis battery| 2|
+|Req00|Inventory Management|Reporting on Other Entities, typically smart PDU or PoE|Fit in "Inventory of power components (of devices, racks, etc) including together"| 2|
+|Req00|Observability or Interaction with Other domain|Room sensor (hvac...)|Data Center Case| 4|
+|Req00|Observability|flexible (future-proof) description of the nature of the sources of the energy used |Standard metric|2 |
 
 ## Requirements extracted from [sustainability-insights] uses cases
 
 There are limited to energy consumption vs sustainability
 
-|category|requirements|note|Priority|
-|:----|:----|:----|:----|
-|Observability|Provide near-real-time energy consumption to different device types, service types, and individual users | Helps identify which devices or network functions are consuming more energy. | 2 |
-|Migration or Upgrade | Provide KPIs for energy efficiency parameters, enhance accuracy of upgrade decisions | Helps make informed decisions about upgrades based on actual usage data. |   |
-|Recycling | Report on percentage of recycled user devices and components. Enable comprehensive reporting and recycling efforts | Major driver of the circular economy, transparency is key | 4 |
-|Power Optimization | Provide KPIs for energy efficiency parameters. Perform actions to reduce energy consumption | Monitor network and application performance to optimize power usage | 4 |
-|Control& Mgmt Switch off | Stop and restart WiFi APs with the right time, space, and service granularity | Save power consumption during periods when APs are not in use.| 2|
+|id|category|requirements|note|Priority|
+|:----|:----|:----|:----|:----|
+|Req00|Observability|Provide near-real-time energy consumption to different device types, service types, and individual users | Helps identify which devices or network functions are consuming more energy. | 2 |
+|Req00|Migration or Upgrade | Provide KPIs for energy efficiency parameters, enhance accuracy of upgrade decisions | Helps make informed decisions about upgrades based on actual usage data. |   |
+|Req00|Recycling | Report on percentage of recycled user devices and components. Enable comprehensive reporting and recycling efforts | Major driver of the circular economy, transparency is key | 4 |
+|Req00|Power Optimization | Provide KPIs for energy efficiency parameters. Perform actions to reduce energy consumption | Monitor network and application performance to optimize power usage | 4 |
+|Req00|Control& Mgmt Switch off | Stop and restart WiFi APs with the right time, space, and service granularity | Save power consumption during periods when APs are not in use.| 2|
+
 
 ## Framework Discussed During the BoF {#framework}
 
@@ -1368,12 +1369,12 @@ Tracking: Measure again to see if efficiency improves towards 8-10 Gbps per watt
 - step 4 "network level"
 
 For this use case, the following requirements apply:
-|category|requirements|note|Priority|
 
-|:----|:----|:----|:----|
-|Discovery|Component granularity, e.g., per line-card, per-port|Per component |1|
-|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
-|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
+|id|category|requirements|note|Priority|
+|:----|:----|:----|:----|:----|
+|Req00|Discovery|Component granularity, e.g., per line-card, per-port|Per component |1|
+|Req00|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
+|Req00|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
 
 These requirements are under revision as this is a work in progress.
 
