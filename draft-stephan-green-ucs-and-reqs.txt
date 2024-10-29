@@ -1984,6 +1984,9 @@ Table of Contents
 
 15.  Other use cases (to be decided if moved to use case section)
 
+   Use cases which are not tied enough to the current GREEN chater will
+   be moved to the GREEN WG wiki pages.
+
 15.1.  Consideration of other domains for obtention of end-to-end
        metrics
 
