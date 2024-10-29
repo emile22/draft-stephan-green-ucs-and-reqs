@@ -1046,6 +1046,10 @@ The terms below are a sub set of the whole terminology. There are many other dra
    turning a power supply on at Power Interfaces providing power to one
    or more devices.
 
+## Controlling Switching Power Speed
+
+   The standard must provide means to avoid the speed of switching a power supply off or turning a power supply on to break component parts (aka laser, power parts, wire connectors ...),  or a too hight number of on/off switching to reduce their live duration.
+   
 ## Controlling Energy Saving and Optimization Functionalities
 
   The standard must provide means for controlling energy saving and
