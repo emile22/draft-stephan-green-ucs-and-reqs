@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-10-27T01:02:56.211997+00:00",
+  "timestamp": "2024-10-29T00:59:58.826501+00:00",
   "repo": "emile22/draft-stephan-green-ucs-and-reqs",
   "labels": [
     {
@@ -258,24 +258,26 @@
       "id": "PR_kwDONBw63s5__heS",
       "title": "Added 2 use cases in Open Issues",
       "url": "https://github.com/emile22/draft-stephan-green-ucs-and-reqs/pull/7",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "luismcontreras",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Added two new use cases in Open Issues, to be decided if they are moved to the Use Case section in the main body.",
       "createdAt": "2024-10-26T16:52:11Z",
-      "updatedAt": "2024-10-26T16:52:11Z",
+      "updatedAt": "2024-10-28T09:19:03Z",
       "baseRepository": "emile22/draft-stephan-green-ucs-and-reqs",
       "baseRefName": "main",
       "baseRefOid": "0d4f7150bcf8a7e7d25d8dfbd99d488543b74dcb",
       "headRepository": "emile22/draft-stephan-green-ucs-and-reqs",
       "headRefName": "luismcontreras-patch-1",
       "headRefOid": "ced2958851ca8a9f6ae52b2d494910c7466772fd",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-10-28T09:19:01Z",
+      "mergedAt": "2024-10-28T09:19:01Z",
+      "mergedBy": "emile22",
+      "mergeCommit": {
+        "oid": "5d2e9d55581b97316c670efdac4bf9356681c01f"
+      },
       "comments": [],
       "reviews": []
     },
@@ -284,52 +286,82 @@
       "id": "PR_kwDONBw63s5__i19",
       "title": "Added ACK for Luis' contribution",
       "url": "https://github.com/emile22/draft-stephan-green-ucs-and-reqs/pull/8",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "luismcontreras",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Added ACK with reference to EU projects for Luis' contributions",
       "createdAt": "2024-10-26T17:09:54Z",
-      "updatedAt": "2024-10-26T17:09:54Z",
+      "updatedAt": "2024-10-28T09:08:33Z",
       "baseRepository": "emile22/draft-stephan-green-ucs-and-reqs",
       "baseRefName": "main",
       "baseRefOid": "0d4f7150bcf8a7e7d25d8dfbd99d488543b74dcb",
       "headRepository": "emile22/draft-stephan-green-ucs-and-reqs",
       "headRefName": "luismcontreras-patch-2",
       "headRefOid": "813abae9662923d126918a82a7f552bd5d0b441b",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-10-28T09:08:31Z",
+      "mergedAt": "2024-10-28T09:08:31Z",
+      "mergedBy": "emile22",
+      "mergeCommit": {
+        "oid": "9b602b8dabad7b6f07eda504e7acf23007e934bc"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDONBw63s6O9CcC",
+          "commit": {
+            "abbreviatedOid": "813abae"
+          },
+          "author": "emile22",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-10-28T09:08:23Z",
+          "updatedAt": "2024-10-28T09:08:23Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 9,
       "id": "PR_kwDONBw63s5__loK",
       "title": "Addition of video streaming use case in Open Issues section",
       "url": "https://github.com/emile22/draft-stephan-green-ucs-and-reqs/pull/9",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "luismcontreras",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Addition of video streaming use case in Open Issues section. This should be complementary to the other two additional use cases proposed (network slicing, and wireless transport networks)",
       "createdAt": "2024-10-26T17:39:12Z",
-      "updatedAt": "2024-10-26T17:39:12Z",
+      "updatedAt": "2024-10-28T09:15:24Z",
       "baseRepository": "emile22/draft-stephan-green-ucs-and-reqs",
       "baseRefName": "main",
       "baseRefOid": "0d4f7150bcf8a7e7d25d8dfbd99d488543b74dcb",
       "headRepository": "emile22/draft-stephan-green-ucs-and-reqs",
       "headRefName": "luismcontreras-patch-3",
       "headRefOid": "001a65d8890aaef4b270df1f261835959a398d71",
-      "closedAt": null,
+      "closedAt": "2024-10-28T09:15:24Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDONBw63s6O9M0r",
+          "commit": {
+            "abbreviatedOid": "001a65d"
+          },
+          "author": "emile22",
+          "authorAssociation": "OWNER",
+          "state": "CHANGES_REQUESTED",
+          "body": "Hi Luis, remove trailing white space, see  https://github.com/emile22/draft-stephan-green-ucs-and-reqs/actions/runs/11533740286/job/32106996487?pr=9",
+          "createdAt": "2024-10-28T09:14:42Z",
+          "updatedAt": "2024-10-28T09:14:42Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
