@@ -5,13 +5,13 @@
 Getting Ready for Energy-Efficient Networking                 E. Stephan
 Internet-Draft                                                    Orange
 Intended status: Informational                                M. Palmero
-Expires: 2 May 2025                                  Cisco Systems, Inc.
+Expires: 3 May 2025                                  Cisco Systems, Inc.
                                                                B. Claise
                                                                    Q. Wu
                                                                   Huawei
                                                          L. M. Contreras
                                                               Telefonica
-                                                         29 October 2024
+                                                         30 October 2024
 
 
              Requirements for Energy Efficiency Management
@@ -74,7 +74,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 2 May 2025.
+   This Internet-Draft will expire on 3 May 2025.
 
 Copyright Notice
 
@@ -1729,47 +1729,62 @@ Table of Contents
    concentration in the network.  For this use case, the following
    requirements apply:
 
-   +===============+=========================+=============+==========+
-   | category      | requirements            | note        | Priority |
-   +===============+=========================+=============+==========+
-   | Observability | Component granularity,  | Per         | 1        |
-   |               | e.g., per line-card,    | component   |          |
-   |               | per-port                | measurement |          |
-   +---------------+-------------------------+-------------+----------+
-   | Observability | Availability of         | Related to  | 1        |
-   |               | information on the      | connected   |          |
-   |               | power consumption of    | device case |          |
-   |               | the device, without     |             |          |
-   |               | needing instrumentation |             |          |
-   |               | connected to the        |             |          |
-   |               | infrastructure          |             |          |
-   +---------------+-------------------------+-------------+----------+
-   | Analysis      | Common definition of    | Standard    | 1        |
-   |               | energy efficiency in    | metric      |          |
-   |               | network devices/        |             |          |
-   |               | components              |             |          |
-   +---------------+-------------------------+-------------+----------+
-   | Analysis      | Ability of multi-layer  | POI Use     | 3        |
-   |               | analysis (e.g., IP plus | Case        |          |
-   |               | optical)                |             |          |
-   +---------------+-------------------------+-------------+----------+
-   | Control& Mgmt | To have devices with    | Dynamic     | 2        |
-   |               | elastic power           | Energy      |          |
-   |               | consumption according   | Saving      |          |
-   |               | to the carried traffic  |             |          |
-   +---------------+-------------------------+-------------+----------+
-   | Control& Mgmt | Advanced sleep mode,    | Dynamic     | 2        |
-   |               | needing some sort of    | Energy      |          |
-   |               | low power mode when     | Saving      |          |
-   |               | node is lightly         |             |          |
-   |               | utilized                |             |          |
-   +---------------+-------------------------+-------------+----------+
-   | Control& Mgmt | Ability to steer        | Traffic     | 4        |
-   |               | traffic based on power  | Engineering |          |
-   |               | savings                 |             |          |
-   +---------------+-------------------------+-------------+----------+
+   +=======+===============+==================+=============+==========+
+   | id    | category      | requirements     | note        | Priority |
+   +=======+===============+==================+=============+==========+
+   | Req00 | Observability | Component        | Per         | 1        |
+   |       |               | granularity,     | component   |          |
+   |       |               | e.g., per line-  | measurement |          |
+   |       |               | card, per-port   |             |          |
+   +-------+---------------+------------------+-------------+----------+
+   | Req00 | Observability | Availability of  | Related to  | 1        |
+   |       |               | information on   | connected   |          |
+   |       |               | the power        | device case |          |
+   |       |               | consumption of   |             |          |
+   |       |               | the device,      |             |          |
+   |       |               | without needing  |             |          |
+   |       |               | instrumentation  |             |          |
+   |       |               | connected to     |             |          |
+   |       |               | the              |             |          |
+   |       |               | infrastructure   |             |          |
+   +-------+---------------+------------------+-------------+----------+
+   | Req00 | Analysis      | Common           | Standard    | 1        |
+   |       |               | definition of    | metric      |          |
+   |       |               | energy           |             |          |
+   |       |               | efficiency in    |             |          |
+   |       |               | network          |             |          |
+   |       |               | devices/         |             |          |
+   |       |               | components       |             |          |
+   +-------+---------------+------------------+-------------+----------+
+   | Req00 | Analysis      | Ability of       | POI Use     | 3        |
+   |       |               | multi-layer      | Case        |          |
+   |       |               | analysis (e.g.,  |             |          |
+   |       |               | IP plus          |             |          |
+   |       |               | optical)         |             |          |
+   +-------+---------------+------------------+-------------+----------+
+   | Req00 | Control& Mgmt | To have devices  | Dynamic     | 2        |
+   |       |               | with elastic     | Energy      |          |
+   |       |               | power            | Saving      |          |
+   |       |               | consumption      |             |          |
+   |       |               | according to     |             |          |
+   |       |               | the carried      |             |          |
+   |       |               | traffic          |             |          |
+   +-------+---------------+------------------+-------------+----------+
+   | Req00 | Control& Mgmt | Advanced sleep   | Dynamic     | 2        |
+   |       |               | mode, needing    | Energy      |          |
+   |       |               | some sort of     | Saving      |          |
+   |       |               | low power mode   |             |          |
+   |       |               | when node is     |             |          |
+   |       |               | lightly          |             |          |
+   |       |               | utilized         |             |          |
+   +-------+---------------+------------------+-------------+----------+
+   | Req00 | Control& Mgmt | Ability to       | Traffic     | 4        |
+   |       |               | steer traffic    | Engineering |          |
+   |       |               | based on power   |             |          |
+   |       |               | savings          |             |          |
+   +-------+---------------+------------------+-------------+----------+
 
-                                 Table 5
+                                  Table 5
 
    These requirements are under revision as this is a work in progress.
 
