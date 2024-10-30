@@ -141,8 +141,6 @@ The following section will delve into the specific details but from a high level
 
 - A focus on reporting lifecycle management, considering energy and transformation towards carbon awareness
 
-However, Power and Energy Monitoring and Control MIB modules has not been converted yet into YANG modules.
-
 ## Background
 
    With rising energy costs and an increasing awareness of the
@@ -1327,6 +1325,7 @@ This section describes a number of relevant use cases with the purpose of elicit
 This is a work in progress and additional use cases will be documented in next versions of this document.
 
 ## Selective reduction of energy consumption in network parts proportional to traffic levels
+
 Traffic levels in a network follow patterns reflecting the behavior of consumers. Those patterns show periodicity in the terms of the traffic delivered, that can range from daily (from 00:00 to 23:59) to seasonal (e.g., winter to summer), showing peaks and valleys that could be exploited to reduce the consumption of energy in the network proportionally, in case the underlying network elements incorporate such capabilities. The reduction of energy consumption could be performed by leveraging on sleep modes in components up to more extreme actions such as switching off network components or modules. Such decisions are expected to no impact on the service delivered to customers, and could be accompanied by traffic relocation and / or concentration in the network.
 For this use case, the following requirements apply:
 
@@ -1460,7 +1459,9 @@ o	Energy Metric in E2E view
 
 ## Open Issues collected since the BoF
 
-   o Do we need to keep a reference to the MIB object entPhysicalUUID (in section 4.4 from ENTITY-MIB v4) in case of legacy device (MIB)?
+  o Power and Energy Monitoring and Control MIB modules has not been converted yet into YANG modules. study their deployement and discuss the reuse of their mapping in Yang
+  
+  o Do we need to keep a reference to the MIB object entPhysicalUUID (in section 4.4 from ENTITY-MIB v4) in case of legacy device (MIB)?
 
    o The EMAN requirements and EMAN framework had a lot of emphasis on the "Reporting on Other Entities", typically smart PDU or PoE.
    Is this important? Should this be removed? Should it be addressed in a future charter?
