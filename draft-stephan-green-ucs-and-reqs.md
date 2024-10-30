@@ -1459,8 +1459,8 @@ o	Energy Metric in E2E view
 
 ## Open Issues collected since the BoF
 
-  o Power and Energy Monitoring and Control MIB modules has not been converted yet into YANG modules. study their deployement and discuss the reuse of their mapping in Yang
-  
+  o Power and Energy Monitoring and Control MIB modules has not been converted yet into YANG modules. Based on their deployements status, discuss their reuse and their mapping in Yang for energy monitoring
+
   o Do we need to keep a reference to the MIB object entPhysicalUUID (in section 4.4 from ENTITY-MIB v4) in case of legacy device (MIB)?
 
    o The EMAN requirements and EMAN framework had a lot of emphasis on the "Reporting on Other Entities", typically smart PDU or PoE.
