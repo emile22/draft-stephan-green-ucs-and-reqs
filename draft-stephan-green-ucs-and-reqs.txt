@@ -273,9 +273,6 @@ Table of Contents
    *  A focus on reporting lifecycle management, considering energy and
       transformation towards carbon awareness
 
-   However, Power and Energy Monitoring and Control MIB modules has not
-   been converted yet into YANG modules.
-
 1.1.  Background
 
    With rising energy costs and an increasing awareness of the
@@ -1958,6 +1955,10 @@ Table of Contents
    be considered outside of scope o Energy Metric in E2E view
 
 14.2.  Open Issues collected since the BoF
+
+   o Power and Energy Monitoring and Control MIB modules has not been
+   converted yet into YANG modules.  Based on their deployements status,
+   discuss their reuse and their mapping in Yang for energy monitoring
 
    o Do we need to keep a reference to the MIB object entPhysicalUUID
    (in section 4.4 from ENTITY-MIB v4) in case of legacy device (MIB)?
