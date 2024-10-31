@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-10-29T00:59:58.826501+00:00",
+  "timestamp": "2024-10-31T00:59:22.240329+00:00",
   "repo": "emile22/draft-stephan-green-ucs-and-reqs",
   "labels": [
     {
@@ -58,14 +58,34 @@
       "state": "OPEN",
       "author": "emile22",
       "authorAssociation": "OWNER",
-      "assignees": [],
+      "assignees": [
+        "marisolpalmero"
+      ],
       "labels": [
         "documentation",
         "help wanted"
       ],
       "body": "Requirements are segmented into three core functions: discovery, monitoring, and control.\r\nit needs to appear in the document",
       "createdAt": "2024-10-21T09:27:30Z",
-      "updatedAt": "2024-10-21T09:27:58Z",
+      "updatedAt": "2024-10-29T18:15:18Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 12,
+      "id": "I_kwDONBw63s6cSIrx",
+      "title": "Marisol to review open issues ",
+      "url": "https://github.com/emile22/draft-stephan-green-ucs-and-reqs/issues/12",
+      "state": "OPEN",
+      "author": "emile22",
+      "authorAssociation": "OWNER",
+      "assignees": [
+        "marisolpalmero"
+      ],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-10-29T18:10:58Z",
+      "updatedAt": "2024-10-29T18:14:28Z",
       "closedAt": null,
       "comments": []
     }
@@ -120,7 +140,7 @@
       "url": "https://github.com/emile22/draft-stephan-green-ucs-and-reqs/pull/2",
       "state": "MERGED",
       "author": "marisolpalmero",
-      "authorAssociation": "CONTRIBUTOR",
+      "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
@@ -162,7 +182,7 @@
       "url": "https://github.com/emile22/draft-stephan-green-ucs-and-reqs/pull/3",
       "state": "MERGED",
       "author": "marisolpalmero",
-      "authorAssociation": "CONTRIBUTOR",
+      "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
@@ -362,6 +382,90 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 10,
+      "id": "PR_kwDONBw63s6AR0xY",
+      "title": "Update draft-stephan-green-ucs-and-reqs.md",
+      "url": "https://github.com/emile22/draft-stephan-green-ucs-and-reqs/pull/10",
+      "state": "MERGED",
+      "author": "luismcontreras",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Test",
+      "createdAt": "2024-10-29T17:40:33Z",
+      "updatedAt": "2024-10-29T17:41:33Z",
+      "baseRepository": "emile22/draft-stephan-green-ucs-and-reqs",
+      "baseRefName": "main",
+      "baseRefOid": "5d83be67b5079851a6cce87d3eb65622d6a31a7d",
+      "headRepository": "emile22/draft-stephan-green-ucs-and-reqs",
+      "headRefName": "luismcontreras-patch-1",
+      "headRefOid": "e6f848d97651445e198f143a8738f4e804c54d8c",
+      "closedAt": "2024-10-29T17:41:33Z",
+      "mergedAt": "2024-10-29T17:41:33Z",
+      "mergedBy": "luismcontreras",
+      "mergeCommit": {
+        "oid": "e3e5f8cedb1ebb9881beddd993c0a5dc4fb66f15"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 11,
+      "id": "PR_kwDONBw63s6AR6h-",
+      "title": "Update draft-stephan-green-ucs-and-reqs.md",
+      "url": "https://github.com/emile22/draft-stephan-green-ucs-and-reqs/pull/11",
+      "state": "MERGED",
+      "author": "luismcontreras",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Video streaming case added",
+      "createdAt": "2024-10-29T17:54:59Z",
+      "updatedAt": "2024-10-29T17:56:47Z",
+      "baseRepository": "emile22/draft-stephan-green-ucs-and-reqs",
+      "baseRefName": "main",
+      "baseRefOid": "e3e5f8cedb1ebb9881beddd993c0a5dc4fb66f15",
+      "headRepository": "luismcontreras/draft-stephan-green-ucs-and-reqs",
+      "headRefName": "main",
+      "headRefOid": "84296765aceffc74ef45a82b768dfb5bafb5f47e",
+      "closedAt": "2024-10-29T17:56:47Z",
+      "mergedAt": "2024-10-29T17:56:47Z",
+      "mergedBy": "emile22",
+      "mergeCommit": {
+        "oid": "ef44718a9a2c8ec97b28c46014108a1daece4bad"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 13,
+      "id": "PR_kwDONBw63s6ATYFD",
+      "title": "merging the add of reqs ids",
+      "url": "https://github.com/emile22/draft-stephan-green-ucs-and-reqs/pull/13",
+      "state": "MERGED",
+      "author": "emile22",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-10-29T22:22:51Z",
+      "updatedAt": "2024-10-29T22:24:03Z",
+      "baseRepository": "emile22/draft-stephan-green-ucs-and-reqs",
+      "baseRefName": "main",
+      "baseRefOid": "d81f1fe765de7955ba01d1219e27ba9e0f5237c5",
+      "headRepository": "emile22/draft-stephan-green-ucs-and-reqs",
+      "headRefName": "add_reqs_numbering",
+      "headRefOid": "73660ea5995c94a839cb751d910b38b2768961b9",
+      "closedAt": "2024-10-29T22:24:01Z",
+      "mergedAt": "2024-10-29T22:24:01Z",
+      "mergedBy": "emile22",
+      "mergeCommit": {
+        "oid": "7893a61edd14f1c7f7b03f3fba3171cf2901b04e"
+      },
+      "comments": [],
+      "reviews": []
     }
   ]
 }
