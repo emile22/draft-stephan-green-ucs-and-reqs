@@ -171,60 +171,6 @@ Terms and definitions related to energy efficiency metrics are recalled in Appen
    optional for compliant implementations is to be defined by Standards
    Track document(s) and not in this document.
 
-## Conventional Requirements for Energy Efficiency Management
-
-   The specification of requirements for an Energy Efficiency Management standard
-   starts with Section 4, which addresses the identification of entities
-   and the granularity of reporting of energy-related information.  A
-   standard must support the unique identification of entities,
-   reporting per network, per entire device, and reporting energy-related information
-   on individual components of a device or attached devices.
-
-   Section 5 specifies requirements related to the monitoring of
-   entities.  This includes general (type, context) information and
-   specific information on Power States, Power Inlets, Power Outlets,
-   power, energy.  The control of Power State and power saving functionalities,
-  optimization functionalities by entities is covered by requirements specified in Section 6.
-
-## Specific Requirements for Energy Management
-
-   While the conventional requirements summarized above seem to be all
-   that would be needed for Energy Management, there are significant
-   differences between Energy Management and most well-known network
-   management functions.  The most significant difference is the need
-   for some devices to report on other entities.  There are two major
-   reasons for this.
-
-   o  For monitoring a particular entity, it is not always sufficient to
-      communicate only with that entity.  When the entity has no
-      instrumentation for determining power, it might still be possible
-      to obtain power values for the entity via communication with other
-      entities in its power distribution tree.  A simple example of this
-      would be the retrieval of power values from a power meter at the
-      power line into the entity.  A Power Distribution Unit (PDU) and a
-      Power over Ethernet (PoE) switch are common examples.  Both supply
-      power to other entities at sockets or ports, respectively, and are
-      often instrumented to measure power per socket or port. Also it
-      could be considered to obtain power values for the entity via
-      communication with other entities outside of the power distribution
-      tree, like for example external databases or even data sheets.
-
-   o  Similar considerations apply to controlling the power supply of an
-      entity that often needs direct or indirect communications with
-      another entity upstream in the power distribution tree.  Again, a
-      PDU and a PoE switch are common examples, if they have the
-      capability to switch power on or off at their sockets or ports,
-      respectively.
-
-   These specific issues of Energy Management, as well as other issues,
-   are covered by requirements specified in Sections 7 and 8.
-
-   The requirements in these sections need a new Energy Management
-   framework that deals with the specific nature of Energy Management.
-   The actual standards documents, such as MIB module specifications,
-   address conformance by specifying which features must, should, or may
-   be implemented by compliant implementations.
-
 # Use Cases
 This section describes a number of relevant use cases with the purpose of elicit requirements for Energy Efficiency Management.
 This is a work in progress and additional use cases will be documented in next versions of this document.
@@ -322,6 +268,45 @@ Facilitating more precise and real-time estimations of energy consumed by virtua
 
 Effective metering of virtualized network infrastructure is critical for the efficient management and operation of next-generation mobile networks [GREEN_NGNM].
 
+## Indirect Energy Monitoring and control
+
+   While the conventional requirements summarized above seem to be all
+   that would be needed for Energy Management, there are significant
+   differences between Energy Management and most well-known network
+   management functions.  The most significant difference is the need
+   for some devices to report on other entities.  There are two major
+   reasons for this.
+
+   o  For monitoring a particular entity, it is not always sufficient to
+      communicate only with that entity.  When the entity has no
+      instrumentation for determining power, it might still be possible
+      to obtain power values for the entity via communication with other
+      entities in its power distribution tree.  A simple example of this
+      would be the retrieval of power values from a power meter at the
+      power line into the entity.  A Power Distribution Unit (PDU) and a
+      Power over Ethernet (PoE) switch are common examples.  Both supply
+      power to other entities at sockets or ports, respectively, and are
+      often instrumented to measure power per socket or port. Also it
+      could be considered to obtain power values for the entity via
+      communication with other entities outside of the power distribution
+      tree, like for example external databases or even data sheets.
+
+   o  Similar considerations apply to controlling the power supply of an
+      entity that often needs direct or indirect communications with
+      another entity upstream in the power distribution tree.  Again, a
+      PDU and a PoE switch are common examples, if they have the
+      capability to switch power on or off at their sockets or ports,
+      respectively.
+
+   These specific issues of Energy Management, as well as other issues,
+   are covered by requirements specified in Sections 7 and 8.
+
+   The requirements in these sections need a new Energy Management
+   framework that deals with the specific nature of Energy Management.
+   The actual standards documents, such as MIB module specifications,
+   address conformance by specifying which features must, should, or may
+   be implemented by compliant implementations.
+
 # Requirements Extracted from Proponents Documents
 
 This section extracts and groups requirements from the documents of the GREEN WG proponents [GREEN-BOF], [sustainability-insights], [legacy-path] and [rfc6988bis-green]. The aim is to determine initial sets of requirements actionable at different levels of the framework presented below {{framework}}.
@@ -401,6 +386,21 @@ TODO: This section will groups the subsections requirements in tables to prepare
    functions are not conducted by interacting with the entity of
    interest but rather with other entities, for example, entities
    upstream in a power distribution tree.
+
+## Conventional Requirements for Energy Efficiency Management
+
+   The specification of requirements for an Energy Efficiency Management standard
+   starts with Section 5.4, which addresses the identification of entities
+   and the granularity of reporting of energy-related information.  A
+   standard must support the unique identification of entities,
+   reporting per network, per entire device, and reporting energy-related information
+   on individual components of a device or attached devices.
+
+   Section 5.5 specifies requirements related to the monitoring of
+   entities.  This includes general (type, context) information and
+   specific information on Power States, Power Inlets, Power Outlets,
+   power, energy.  The control of Power State and power saving functionalities,
+  optimization functionalities by entities is covered by requirements specified in Section 5.6.
 
 ## General Considerations Related to Energy Management
 
