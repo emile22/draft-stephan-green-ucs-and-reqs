@@ -179,11 +179,10 @@ Table of Contents
        8.2.2.  Controlling Power Supply
    9.  Requirements extracted from proponents drafts
      9.1.  Operator'requirements from [charter-refinement] document
-     9.2.  Requirements extracted from legacy-path
-     9.3.  Requirements from rfc6988bis-green draft Open Issues
-     9.4.  Requirements extracted from sustainability-insights uses
+     9.2.  Requirements from rfc6988bis-green draft Open Issues
+     9.3.  Requirements extracted from sustainability-insights uses
            cases
-     9.5.  Framework Discussed During the BoF
+     9.4.  Framework Discussed During the BoF
    10. Use Cases
      10.1.  Selective reduction of energy consumption in network parts
             proportional to traffic levels
@@ -1352,7 +1351,7 @@ Table of Contents
    the proponents of the GREEN WG creation [GREEN-BOF],
    [sustainability-insights], [legacy-path] and [rfc6988bis-green].  The
    aim is to determine initial sets of requirements actionable at
-   different levels of the framework presented below Section 9.5.
+   different levels of the framework presented below Section 9.4.
 
 9.1.  Operator'requirements from [charter-refinement] document
 
@@ -1513,48 +1512,7 @@ Table of Contents
 
                                   Table 1
 
-9.2.  Requirements extracted from [legacy-path]
-
-   TODO: This section might merge with Section 10.2 secction.
-
-   +===========+============+===================+===========+==========+
-   | id        | category   | requirements      | note      | Priority |
-   +===========+============+===================+===========+==========+
-   | Req01-INC | Inventory  | component         | Per       | 1 (i)    |
-   |           | Management | control           | component |          |
-   |           |            | capacity (aka     | control   |          |
-   |           |            | component max     |           |          |
-   |           |            | power-on/power-   |           |          |
-   |           |            | off frequency     |           |          |
-   |           |            | supported)        |           |          |
-   +-----------+------------+-------------------+-----------+----------+
-   | Req01-INC | Analysis   | assess the        | Device    | 1 (ii)   |
-   |           |            | gains of          | Level     |          |
-   |           |            | introducing       | Mgmt      |          |
-   |           |            | eco-designed      |           |          |
-   |           |            | components in a   |           |          |
-   |           |            | device            |           |          |
-   +-----------+------------+-------------------+-----------+----------+
-   | Req01-INC | Control&   | comprehensive     | Network   | 1 (iii)  |
-   |           | Mgmt       | support of        | Level     |          |
-   |           |            | network-wide      | Mgmt      |          |
-   |           |            | energy            |           |          |
-   |           |            | efficiency        |           |          |
-   |           |            | includes legacy   |           |          |
-   |           |            | devices           |           |          |
-   +-----------+------------+-------------------+-----------+----------+
-
-                                  Table 2
-
-   (i) Avoid a power-on/power-off frequency to break component parts
-   (aka laser, power parts, wire connectors ...)
-
-   (ii) the gain must be measurable
-
-   (iii) network-wide energy efficiency solutions must include legacy
-   devices and green-wg ready devices
-
-9.3.  Requirements from [rfc6988bis-green] draft Open Issues
+9.2.  Requirements from [rfc6988bis-green] draft Open Issues
 
    +===========+===============+================+=============+========+
    | id        | category      | requirements   | note        |Priority|
@@ -1588,9 +1546,9 @@ Table of Contents
    |           |               | used           |             |        |
    +-----------+---------------+----------------+-------------+--------+
 
-                                  Table 3
+                                  Table 2
 
-9.4.  Requirements extracted from [sustainability-insights] uses cases
+9.3.  Requirements extracted from [sustainability-insights] uses cases
 
    There are limited to energy consumption vs sustainability
 
@@ -1645,9 +1603,9 @@ Table of Contents
    |         |               | granularity    |              |        |
    +---------+---------------+----------------+--------------+--------+
 
-                                 Table 4
+                                 Table 3
 
-9.5.  Framework Discussed During the BoF
+9.4.  Framework Discussed During the BoF
 
    The overall framework is shown in Figure 1.
 
@@ -1793,15 +1751,15 @@ Table of Contents
    |           |               | savings          |           |        |
    +-----------+---------------+------------------+-----------+--------+
 
-                                  Table 5
+                                  Table 4
 
    These requirements are under revision as this is a work in progress.
 
 10.2.  Incremental Application of the GREEN Framework
 
-   This section describes an incremental example of usage showing how a
-   product, a service and a network can use the framework in different
-   settings.
+   This section describes an incremental example [legacy-path] of usage
+   showing how a product, a service and a network can use the framework
+   in different settings.
 
    Once upon a time there was an very old legacy router named Rusty
    equipped with outdated ethernet and ugly optical interfaces.  Despite
@@ -1845,39 +1803,66 @@ Table of Contents
 
    *  step 4 "network level"
 
-   For this use case, the following requirements apply:
+   For this use case, the following requirements apply : TODO; These
+   requirements are under revision as this is a work in progress.
 
-   +=============+===============+==================+=========+========+
-   | id          | category      | requirements     |note     |Priority|
-   +=============+===============+==================+=========+========+
-   | Req01-UCINC | Discovery     | Component        |Per      |1       |
-   |             |               | granularity,     |component|        |
-   |             |               | e.g., per line-  |         |        |
-   |             |               | card, per-port   |         |        |
-   +-------------+---------------+------------------+---------+--------+
-   | Req01-UCINC | Observability | Availability of  |Related  |1       |
-   |             |               | information on   |to       |        |
-   |             |               | the power        |connected|        |
-   |             |               | consumption of   |device   |        |
-   |             |               | the device,      |case     |        |
-   |             |               | without needing  |         |        |
-   |             |               | instrumentation  |         |        |
-   |             |               | connected to     |         |        |
-   |             |               | the              |         |        |
-   |             |               | infrastructure   |         |        |
-   +-------------+---------------+------------------+---------+--------+
-   | Req01-UCINC | Analysis      | Common           |Standard |1       |
-   |             |               | definition of    |metric   |        |
-   |             |               | energy           |         |        |
-   |             |               | efficiency in    |         |        |
-   |             |               | network          |         |        |
-   |             |               | devices/         |         |        |
-   |             |               | components       |         |        |
-   +-------------+---------------+------------------+---------+--------+
+   +================+=============+================+=========+========+
+   |id              |category     |requirements    |note     |Priority|
+   +================+=============+================+=========+========+
+   |Req01-UCINC     |Discovery    |Component       |Per      |1       |
+   |                |             |granularity,    |component|        |
+   |                |             |e.g., per line- |         |        |
+   |                |             |card, per-port  |         |        |
+   +----------------+-------------+----------------+---------+--------+
+   |Req02-UCUCINCINC|Observability|Availability of |Related  |1       |
+   |                |             |information on  |to       |        |
+   |                |             |the power       |connected|        |
+   |                |             |consumption of  |device   |        |
+   |                |             |the device,     |case     |        |
+   |                |             |without needing |         |        |
+   |                |             |instrumentation |         |        |
+   |                |             |connected to the|         |        |
+   |                |             |infrastructure  |         |        |
+   +----------------+-------------+----------------+---------+--------+
+   |Req03-UCINC     |Analysis     |Common          |Standard |1       |
+   |                |             |definition of   |metric   |        |
+   |                |             |energy          |         |        |
+   |                |             |efficiency in   |         |        |
+   |                |             |network devices/|         |        |
+   |                |             |components      |         |        |
+   +----------------+-------------+----------------+---------+--------+
+   |Req04-UCINC     |Inventory    |component       |Per      |1 (i)   |
+   |                |Management   |control capacity|component|        |
+   |                |             |(aka component  |control  |        |
+   |                |             |max power-on/   |         |        |
+   |                |             |power-off       |         |        |
+   |                |             |frequency       |         |        |
+   |                |             |supported)      |         |        |
+   +----------------+-------------+----------------+---------+--------+
+   |Req05-UCINC     |Analysis     |assess the gains|Device   |1 (ii)  |
+   |                |             |of introducing  |Level    |        |
+   |                |             |eco-designed    |Mgmt     |        |
+   |                |             |components in a |         |        |
+   |                |             |device          |         |        |
+   +----------------+-------------+----------------+---------+--------+
+   |Req06-UCINC     |Control& Mgmt|comprehensive   |Network  |1 (iii) |
+   |                |             |support of      |Level    |        |
+   |                |             |network-wide    |Mgmt     |        |
+   |                |             |energy          |         |        |
+   |                |             |efficiency      |         |        |
+   |                |             |includes legacy |         |        |
+   |                |             |devices         |         |        |
+   +----------------+-------------+----------------+---------+--------+
 
-                                  Table 6
+                                 Table 5
 
-   These requirements are under revision as this is a work in progress.
+   (i) Avoid a power-on/power-off frequency to break component parts
+   (aka laser, power parts, wire connectors ...)
+
+   (ii) the gain must be measurable
+
+   (iii) network-wide energy efficiency solutions must include legacy
+   devices and green-wg ready devices
 
 10.3.  Additional use cases
 
