@@ -171,19 +171,6 @@ Terms and definitions related to energy efficiency metrics are recalled in Appen
    optional for compliant implementations is to be defined by Standards
    Track document(s) and not in this document.
 
-   Section 3 elaborates on a set of general needs for Energy Management.
-   Requirements for an Energy Management standard are specified in
-   Sections 4 through 8.
-
-   Sections 4 through 6 contain conventional requirements specifying
-   information on entities and control functions.
-
-   Sections 7 and 8 contain requirements specific to Energy Management.
-   Due to the nature of power supply, some monitoring and control
-   functions are not conducted by interacting with the entity of
-   interest but rather with other entities, for example, entities
-   upstream in a power distribution tree.
-
 ## Conventional Requirements for Energy Efficiency Management
 
    The specification of requirements for an Energy Efficiency Management standard
@@ -402,6 +389,19 @@ The goal is to enable the resuse pieces of the energy-related requirements of RF
 
 TODO: This section will groups the subsections requirements in tables to prepare the room for establishing consensus priority.
 
+   Section 5.3 elaborates on a set of general needs for Energy Management.
+   Requirements for an Energy Management standard are specified in
+   Sections 5.4 through 5.8.
+
+   Sections 5.4 through 5.6 contain conventional requirements specifying
+   information on entities and control functions.
+
+   Sections 5.7 and 5.8 contain requirements specific to Energy Management.
+   Due to the nature of power supply, some monitoring and control
+   functions are not conducted by interacting with the entity of
+   interest but rather with other entities, for example, entities
+   upstream in a power distribution tree.
+   
 ## General Considerations Related to Energy Management
 
    The basic objective of Energy Efficiency Management is to operate sets of
