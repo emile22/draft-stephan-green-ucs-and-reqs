@@ -1213,22 +1213,6 @@ The table below is a copy of the operator'requirements table of [charter-refinem
 |Req01-OP|Sustainability & Carbon Emission|Accounting of legacy installed based GHG/energy|Accounting Cost|4|
 |Req01-OP|Sustainability & Carbon Emission|Track device/network Energy Consumption Before Operation|Manufacturing, transport(weight, volume, package)|4|
 
-## Requirements extracted from [legacy-path] {#incremental}
-
-TODO: This section might merge with {{incremental-use-case}} secction.
-
-|id|category|requirements|note|Priority|
-|:----|:----|:----|:----|:----|
-|Req01-INC|Inventory Management|component control capacity (aka component max power-on/power-off frequency supported)|Per component control| 1 (i)|
-|Req01-INC|Analysis|assess the gains of introducing eco-designed components in a device|Device Level Mgmt| 1 (ii)|
-|Req01-INC|Control& Mgmt|comprehensive support of network-wide energy efficiency includes legacy devices|Network Level Mgmt| 1 (iii)|
-
-(i) Avoid a power-on/power-off frequency to break component parts (aka laser, power parts, wire connectors ...)
-
-(ii) the gain must be measurable
-
-(iii) network-wide  energy efficiency solutions must include legacy devices and green-wg ready devices
-
 ## Requirements from [rfc6988bis-green] draft Open Issues
 
 |id|category|requirements|note|Priority|
@@ -1249,7 +1233,6 @@ There are limited to energy consumption vs sustainability
 |Req01-SIS|Recycling | Report on percentage of recycled user devices and components. Enable comprehensive reporting and recycling efforts | Major driver of the circular economy, transparency is key | 4 |
 |Req01-SIS|Power Optimization | Provide KPIs for energy efficiency parameters. Perform actions to reduce energy consumption | Monitor network and application performance to optimize power usage | 4 |
 |Req01-SIS|Control& Mgmt Switch off | Stop and restart WiFi APs with the right time, space, and service granularity | Save power consumption during periods when APs are not in use.| 2|
-
 
 ## Framework Discussed During the BoF {#framework}
 
@@ -1343,7 +1326,7 @@ These requirements are under revision as this is a work in progress.
 
 ## Incremental Application of the GREEN Framework {#incremental-use-case}
 
-This section describes an incremental example of usage showing how a product, a service and a network can use the framework in different settings.
+This section describes an incremental example [legacy-path] of usage showing how a product, a service and a network can use the framework in different settings.
 
 Once upon a time there was an very old legacy router named Rusty equipped with outdated ethernet and ugly optical interfaces. Despite his worn-out appearance, Rusty was determined to contribute to the energy efficiency effort. He dreamed of finding a way to optimize his old circuits and help reduce the power consumption of the network he had faithfully served for so many years. Though he was no longer in his prime, Rusty believed that even an old router like him could make a difference in a world striving for sustainability and help reduce the carbon footprint. He is convince that he still had a part to play in making the digital world a greener place.
 
@@ -1367,15 +1350,24 @@ Tracking: Measure again to see if efficiency improves towards 8-10 Gbps per watt
 
 - step 4 "network level"
 
-For this use case, the following requirements apply:
+For this use case, the following requirements apply :
+TODO; These requirements are under revision as this is a work in progress.
 
 |id|category|requirements|note|Priority|
 |:----|:----|:----|:----|:----|
 |Req01-UCINC|Discovery|Component granularity, e.g., per line-card, per-port|Per component |1|
-|Req01-UCINC|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
-|Req01-UCINC|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
+|Req02-UCUCINCINC|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
+|Req03-UCINC|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
+|Req04-UCINC|Inventory Management|component control capacity (aka component max power-on/power-off frequency supported)|Per component control| 1 (i)|
+|Req05-UCINC|Analysis|assess the gains of introducing eco-designed components in a device|Device Level Mgmt| 1 (ii)|
+|Req06-UCINC|Control& Mgmt|comprehensive support of network-wide energy efficiency includes legacy devices|Network Level Mgmt| 1 (iii)|
 
-These requirements are under revision as this is a work in progress.
+(i) Avoid a power-on/power-off frequency to break component parts (aka laser, power parts, wire connectors ...)
+
+(ii) the gain must be measurable
+
+(iii) network-wide  energy efficiency solutions must include legacy devices and green-wg ready devices
+
 
 ## Additional use cases
 To be completed in next versions.
