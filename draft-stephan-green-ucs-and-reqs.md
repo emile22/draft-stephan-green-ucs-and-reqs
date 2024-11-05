@@ -95,6 +95,11 @@ informative:
     title: "ETSI GR mWT 025, Wireless Backhaul Network and Services Automation: SDN SBI YANG models, V1.1.1."
     date: 2021-03-31
 
+  GREEN_NGNM:
+    title: "NGMN Alliance, GREEN FUTURE NETWORKS: METERING IN VIRTUALISED RAN INFRASTRUCTURE"
+    target: "https://www.ngmn.org/publications/metering-in-virtualised-ran-infrastructure.html"
+
+
 --- abstract
 
 This document delineates the requirements for standards specifications in Energy Efficiency Management, extending the foundational work of RFC6988 and incorporating recent insights from operator requirements and the GREEN BoF discussions. Eleven years after the publication of RFC6988, this document reassesses and updates the requirements to align with contemporary needs.
@@ -327,13 +332,13 @@ The type of the sources of energy of the power is one criteria of efficiency.
 
 There are other dimensions that must visible: As many telecom locations include battery or additionnally several backups levels (as example battery, standby generator ...) there is a requirement to known exactly when a backup power is in used and which one is.
 
-## Facilitating more precise and real-time estimations of energy consumed by virtualised or cloud-native network functions
+## Real-time Energy Metering of Virtualised or Cloud-native Network Functions
 
-Effective metering of virtualized network infrastructure is critical for the efficient management and operation of next-generation mobile networks.
+Facilitating more precise and real-time estimations of energy consumed by virtualised or cloud-native network functions.
 
-Reference: (GREEN FUTURE NETWORKS: METERING IN VIRTUALISED RAN INFRASTRUCTURE)[https://www.ngmn.org/publications/metering-in-virtualised-ran-infrastructure.html] by NGMN Alliance
+Effective metering of virtualized network infrastructure is critical for the efficient management and operation of next-generation mobile networks [GREEN_NGNM].
 
-# Requirements extracted from proponents documents
+# Requirements Extracted from Proponents Documents
 
 This section extracts and groups requirements from the documents of the GREEN WG proponents [GREEN-BOF], [sustainability-insights], [legacy-path] and [rfc6988bis-green]. The aim is to determine initial sets of requirements actionable at different levels of the framework presented below {{framework}}.
 
