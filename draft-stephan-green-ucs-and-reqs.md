@@ -401,7 +401,7 @@ TODO: This section will groups the subsections requirements in tables to prepare
    functions are not conducted by interacting with the entity of
    interest but rather with other entities, for example, entities
    upstream in a power distribution tree.
-   
+
 ## General Considerations Related to Energy Management
 
    The basic objective of Energy Efficiency Management is to operate sets of
