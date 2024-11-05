@@ -128,7 +128,14 @@ The primary objectives of this draft, which are listed in the goals and scope wi
 This draft replaces the drafts [rfc6988bis-green] and [green-bof-reqs] and groups requirements from the documents of the GREEN WG proponents [charter-refinement], [operators-inputs], [GREEN-BOF], [sustainability-insights], [legacy-path] and [rfc6988bis-green]. The aim is to determine initial sets of requirements actionable at different levels of the framework presented below {{framework}}.
 
 Requirements are named and grouped in tables and are set with individual priority (to be) determined by the GREEN WG consensus.
-Section 5 recalls [rfc6988bis-green] requirements. They will be grouped in tables too.
+
+Section 2 groups the 'core' use cases. Several of them might not be relevant for the current charter.
+
+Section 3 recalls a set of requirements established after the BoF in [charter-refinement].
+
+Section 4 recalls [rfc6988bis-green] requirements wich may fit to the GREEN WG. They still have to be grouped in tables and set with individual priorities.
+
+Section 5 recalls the raw framework discussed durin the BoF.
 
 Requirements are segmented into three core functions: discovery, monitoring, and control. Discovery functions involve identifying energy-managed networks, devices, and their components, as well as discovering the inventory of power components capabilities, optimization control capabilities, and nominal condition use. Monitoring functions encompass tracking power states, power attributes, energy consumption, network performance, and energy efficiency metrics. Control functions include managing energy-saving and optimization functions and the power states of energy-managed devices and their components.
 
@@ -384,75 +391,6 @@ The table below groups requirements from [sustainability-insights] uses cases re
 |Req03-SIS|Recycling | Report on percentage of recycled user devices and components. Enable comprehensive reporting and recycling efforts | Major driver of the circular economy, transparency is key | 4 |
 |Req04-SIS|Power Optimization | Provide KPIs for energy efficiency parameters. Perform actions to reduce energy consumption | Monitor network and application performance to optimize power usage | 4 |
 |Req05-SIS|Control& Mgmt Switch off | Stop and restart WiFi APs with the right time, space, and service granularity | Save power consumption during periods when APs are not in use.| 2|
-
-# Framework Discussed During the BoF {#framework}
-
-The overall framework is shown in {{green-framework}}.
-
-~~~~
-
-       What needs to be standardized for Framework
-
-
-(3) Network Domain Level :
-
-(a)              (b)              (c)
-Inventory        Monitor       +- DataSheets/DataBase and/or via API
-Of identity      Energy        |  Metadata and other device/component
-and Capability   Efficiency    |  /network related information:
-     ^               ^         |
-     |               |         |  .Power/Energy related metrics
-     |               |         |  .information
-     |               |         |  .origin of Energy Mix
-     |               |         |  .carbon aware based on location
-     |               |         |
-     |               |         |
-     |               |         |
-     |               |         v
-+--------------------------------------------------------------------+
-|                   *                                                |
-|     (2) controller   (collection, compute and aggregate?)          |
-|                                                                    |
-+--------------------------------------------------------------------+
-             ^              ^                   ^ |
-  (d)        |  (e)         |  (f)              | |(g)
-  Inventory  |  Monitor     |  GREEN WG:        | |GREEN WG: Control
-  Capability |  Traffic     |  Monitor power    | |(Energy saving
-             |  & power     |  Proportion,      | |Functionality
-             |  consumption |  Energy efficiency| |Localized mgmt/
-             |              |  ratio, etc)      | |network wide mgmt)
-             |              |                   | |
-             |              |                   | |
-             |              |                   | v
-+--------------------------------------------------------------------+
-|                                            *                       |
-|                  (1) Device/Component Level                        |
-|                                                                    |
-| +---------+  +-----------+  +----------------+  +----------------+ |
-| | (I)     |  | (II)      |  | (III)          |  | (IV)           | |
-| | Network |  | Device    |  | Legacy Network |  | 'Attached'(PoE | |
-| | Device  |  | Component |  | Device         |  | kind) Device   | |
-| |         |  |           |  |                |  |                | |
-| +---------+  +-----------+  +----------------+  +----------------+ |
-+--------------------------------------------------------------------+
-
-(*) Energy Efficiency Management Function is implemented inside the
-device or in a controller
-
-~~~~
-{: #green-framework title="Framework discussed during the BoF"}
-
-The main elements in the framework are as follows:
-
-(a),(d) Discovery and Inventory
-
-(b),(c) GREEN Metrics
-
-(b),(f) Monitor energy efficiency
-
-(e) Monitor power consumption and traffic (IPPM WG throughput, traffic load, etc)
-
-(g) Control Energy Saving
 
 # EMAN Requirements from RFC6988bis
 
@@ -1277,6 +1215,75 @@ Energy consumption must not be accounted twice
    controlled by other entities has the means to report the list of
    these other entities.  This need is already addressed by requirements
    in Sections 5.2.3 and 5.2.4.
+
+# Framework Discussed During the BoF {#framework}
+
+The overall framework is shown in {{green-framework}}.
+
+~~~~
+
+       What needs to be standardized for Framework
+
+
+(3) Network Domain Level :
+
+(a)              (b)              (c)
+Inventory        Monitor       +- DataSheets/DataBase and/or via API
+Of identity      Energy        |  Metadata and other device/component
+and Capability   Efficiency    |  /network related information:
+     ^               ^         |
+     |               |         |  .Power/Energy related metrics
+     |               |         |  .information
+     |               |         |  .origin of Energy Mix
+     |               |         |  .carbon aware based on location
+     |               |         |
+     |               |         |
+     |               |         |
+     |               |         v
++--------------------------------------------------------------------+
+|                   *                                                |
+|     (2) controller   (collection, compute and aggregate?)          |
+|                                                                    |
++--------------------------------------------------------------------+
+             ^              ^                   ^ |
+  (d)        |  (e)         |  (f)              | |(g)
+  Inventory  |  Monitor     |  GREEN WG:        | |GREEN WG: Control
+  Capability |  Traffic     |  Monitor power    | |(Energy saving
+             |  & power     |  Proportion,      | |Functionality
+             |  consumption |  Energy efficiency| |Localized mgmt/
+             |              |  ratio, etc)      | |network wide mgmt)
+             |              |                   | |
+             |              |                   | |
+             |              |                   | v
++--------------------------------------------------------------------+
+|                                            *                       |
+|                  (1) Device/Component Level                        |
+|                                                                    |
+| +---------+  +-----------+  +----------------+  +----------------+ |
+| | (I)     |  | (II)      |  | (III)          |  | (IV)           | |
+| | Network |  | Device    |  | Legacy Network |  | 'Attached'(PoE | |
+| | Device  |  | Component |  | Device         |  | kind) Device   | |
+| |         |  |           |  |                |  |                | |
+| +---------+  +-----------+  +----------------+  +----------------+ |
++--------------------------------------------------------------------+
+
+(*) Energy Efficiency Management Function is implemented inside the
+device or in a controller
+
+~~~~
+{: #green-framework title="Framework discussed during the BoF"}
+
+The main elements in the framework are as follows:
+
+(a),(d) Discovery and Inventory
+
+(b),(c) GREEN Metrics
+
+(b),(f) Monitor energy efficiency
+
+(e) Monitor power consumption and traffic (IPPM WG throughput, traffic load, etc)
+
+(g) Control Energy Saving
 
 # Security Considerations
 
