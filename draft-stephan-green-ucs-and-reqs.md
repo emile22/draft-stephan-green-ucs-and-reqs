@@ -298,6 +298,35 @@ For this use case, the following requirements apply:
 |Req06-UCRED|Control& Mgmt|Advanced sleep mode, needing some sort of low power mode when node is lightly utilized|Dynamic Energy Saving|2|
 |Req07-UCRED|Control& Mgmt|Ability to steer traffic based on power savings|Traffic Engineering|4|
 
+## Reporting on Lifecycle Management
+
+   Lifecycle information related to manufacturing energy costs, transport,
+   recyclability, and end-of-life disposal impacts is part of what is
+   called "embedded carbon." This information is considered to be an
+   estimated value, which might not be implemented today in the network
+   devices. It might be part of the vendor information, and to be collected
+   from datasheets or databases. In accordance with ISO 14040/44, this
+   information should be considered as part of the sustainable strategy
+   related to energy efficiency. Also, refer to the ecodesign framework
+   [(EU) 2024/1781] published in June by the European Commission.
+
+## Carbon Reporting
+
+   To report on carbon equivalents for global reporting, it is important
+   to correlate the location where the specific entity/network element
+   is operating with the corresponding carbon factor. Refer to the world
+   emission factor from the International Energy Agency (IEA), electricity
+   maps applications that reflect the carbon intensity of the electricity
+   consumed, etc.
+
+## Energy Mix
+
+Energy efficiency is not limited to reducing the energy consumption, it is common to include carbon free, solar energy, wind energy, cogeneration in the efficiency.
+
+The type of the sources of energy of the power is one criteria of efficiency.
+
+There are other dimensions that must visible: As many telecom locations include battery or additionnally several backups levels (as example battery, standby generator ...) there is a requirement to known exactly when a backup power is in used and which one is.
+
 # Requirements extracted from proponents documents
 
 This section extracts and groups requirements from the documents of the GREEN WG proponents [GREEN-BOF], [sustainability-insights], [legacy-path] and [rfc6988bis-green]. The aim is to determine initial sets of requirements actionable at different levels of the framework presented below {{framework}}.
@@ -1077,35 +1106,6 @@ This section groups the inputs from the work on RFC6988bis [rfc6988bis-green]. C
 
    The standard should provide means for reporting the number of values
    of a time series that can be stored for later reporting.
-
-## Reporting on Lifecycle Management
-
-   Lifecycle information related to manufacturing energy costs, transport,
-   recyclability, and end-of-life disposal impacts is part of what is
-   called "embedded carbon." This information is considered to be an
-   estimated value, which might not be implemented today in the network
-   devices. It might be part of the vendor information, and to be collected
-   from datasheets or databases. In accordance with ISO 14040/44, this
-   information should be considered as part of the sustainable strategy
-   related to energy efficiency. Also, refer to the ecodesign framework
-   [(EU) 2024/1781] published in June by the European Commission.
-
-# Carbon Reporting
-
-   To report on carbon equivalents for global reporting, it is important
-   to correlate the location where the specific entity/network element
-   is operating with the corresponding carbon factor. Refer to the world
-   emission factor from the International Energy Agency (IEA), electricity
-   maps applications that reflect the carbon intensity of the electricity
-   consumed, etc.
-
-## Energy Mix
-
-Energy efficiency is not limited to reducing the energy consumption, it is common to include carbon free, solar energy, wind energy, cogeneration in the efficiency.
-
-The type of the sources of energy of the power is one criteria of efficiency.
-
-There are other dimensions that must visible: As many telecom locations include battery or additionnally several backups levels (as example battery, standby generator ...) there is a requirement to known exactly when a backup power is in used and which one is.
 
 # Control of Entities
 
