@@ -108,7 +108,7 @@ The primary objectives of this draft, which are listed in the goals and scope wi
 (1) collecting and updating requirements for the management of energy-efficient networks, and
 (2) defining use cases for managing energy-efficient networks.
 
-This draft merges two drafts: [rfc6988bis-green] and [green-bof-reqs].
+This draft merges the drafts [rfc6988bis-green] and [green-bof-reqs].
 
 Discussion Venues
 
@@ -125,28 +125,18 @@ The primary objectives of this draft, which are listed in the goals and scope wi
 (1) collecting and updating requirements for the management of energy-efficient networks, and
 (2) defining use cases for managing energy-efficient networks.
 
+This draft replaces the drafts [rfc6988bis-green] and [green-bof-reqs] and groups requirements from the documents of the GREEN WG proponents [charter-refinement], [operators-inputs], [GREEN-BOF], [sustainability-insights], [legacy-path] and [rfc6988bis-green]. The aim is to determine initial sets of requirements actionable at different levels of the framework presented below {{framework}}. 
+
+Requirements are named and grouped in tables and are set with individual priority (to be) determined by the GREEN WG consensus. 
+Section 5 recalls [rfc6988bis-green] requirements. They will be grouped in tables too. 
+
 Requirements are segmented into three core functions: discovery, monitoring, and control. Discovery functions involve identifying energy-managed networks, devices, and their components, as well as discovering the inventory of power components capabilities, optimization control capabilities, and nominal condition use. Monitoring functions encompass tracking power states, power attributes, energy consumption, network performance, and energy efficiency metrics. Control functions include managing energy-saving and optimization functions and the power states of energy-managed devices and their components.
 
 This document does not mandate specific use cases for compliant implementations but rather lists a few use cases that must be supported by standards for Energy Efficiency Management.
 
-Terms and definitions related to energy efficiency metrics will be discussed in later stages for potential integration.
+Requirements and use cases are still under revision.
 
-This draft merges two drafts: [rfc6988bis-green] and [green-bof-reqs].
-
-At this step the specifications made by the IETF, aka in WGs like EMAN, on energy managements focus mainly on SMI (aka MIBs) instead of YANG and cover neither the control nor energy efficiency.
-As a consequence, the willing of this document is to resuse pieces of the energy-related requirements of RFC6988 and to map them in a framework of YANG/Netconf for energy efficiency that might reuse "YANG Data Model for Hardware Management" {{?RFC8348}}, a conversion of former Entity MIB module, Entity Sensor MIB module, Entity State MIB modules.
-
-The following section will delve into the specific details but from a high level point of view, the differences between this document and the RFC6988 are:
-
-- New definition for "Energy Efficiency Management"
-
-- A focus towards YANG, and not any longer on MIB modules
-
-- Usage of the Hardware YANG module RFC8348
-
-- A focus on reporting lifecycle management, considering energy and transformation towards carbon awareness
-
-NB: The requirements are under revision as this step of the work.
+Terms and definitions related to energy efficiency metrics are recalled in Appendix and will be discussed in later stages for potential integration in another GREEN WG document.
 
 ## Background
 
@@ -466,9 +456,13 @@ The main elements in the framework are as follows:
 
 # EMAN Requirements from RFC6988bis
 
-This section groups the inputs from the work on RFC6988bis [rfc6988bis-green]. Currently they still include a lot of verbatim text from [rfc6988] which don't fit exactly in the granularity of the current GREEN WG charter.
+This section groups the inputs of the work of RFC6988bis [rfc6988bis-green]. Currently they still include a lot of verbatim text from [rfc6988] which don't fit exactly in the granularity of the current GREEN WG charter.
 
-This section will groups the subsections requirements tables to get the consensus priority.
+At this step the specifications made by the IETF, aka in WGs like EMAN, on energy managements focus mainly on SMI (aka MIBs) instead of YANG and cover neither the control nor energy efficiency. 
+
+The goal is to enable the resuse pieces of the energy-related requirements of RFC6988 and to map them in a framework of YANG/Netconf for energy efficiency that might reuse "YANG Data Model for Hardware Management" {{?RFC8348}}, a conversion of former Entity MIB module, Entity Sensor MIB module, Entity State MIB modules.
+
+TODO: This section will groups the subsections requirements in tables to prepare the room for establishing consensus priority.
 
 ## General Considerations Related to Energy Management
 
@@ -1120,7 +1114,7 @@ This section will groups the subsections requirements tables to get the consensu
    The standard should provide means for reporting the number of values
    of a time series that can be stored for later reporting.
 
-# Control of Entities
+## Control of Entities
 
    Many entities control their Power State locally.  Other entities need
    interfaces for an Energy Management System to control their Power
@@ -1135,7 +1129,7 @@ This section will groups the subsections requirements tables to get the consensu
    shutting down the power supply abruptly may have severe consequences
    for the device.
 
-## Provisioning Power States
+### Provisioning Power States
 
    The standard must provide means for provisioning Power States of entities.
 
@@ -1146,17 +1140,17 @@ This section will groups the subsections requirements tables to get the consensu
    provide means to report the intented and applied Power States,
    with the Network Management Datastore Architecture (NMDA) {{?RFC8342}}
 
-## Controlling Power SupplyProvisioning
+### Controlling Power SupplyProvisioning
 
    The standard must provide means for switching a power supply off or
    turning a power supply on at Power Interfaces providing power to one
    or more devices.
 
-## Controlling Switching Power Speed
+### Controlling Switching Power Speed
 
    The standard must provide means to avoid the speed of switching a power supply off or turning a power supply on to break component parts (aka laser, power parts, wire connectors ...),  or a too hight number of on/off switching to reduce their live duration.
 
-## Controlling Energy Saving and Optimization Functionalities
+### Controlling Energy Saving and Optimization Functionalities
 
   The standard must provide means for controlling energy saving and
   optimization functionalities and allocating the committed component resource
@@ -1166,7 +1160,7 @@ This section will groups the subsections requirements tables to get the consensu
   In addition, the standard must provide means to support both local management and
   network wide management based on energy saving functionality.
 
-# Management of oultet Entities
+## Management of oultet Entities
 
 As discussed in Section 5, not all energy-related information may be
    available at the entity in question.  Such information may be
@@ -1175,11 +1169,11 @@ As discussed in Section 5, not all energy-related information may be
 
 The intend is to summarize them in a table in section 9.
 
-## Discovery of Power inlet Entities
+### Discovery of Power inlet Entities
 
 Energy consumption must not be accounted twice
 
-### Reporting on Other Entities
+#### Reporting on Other Entities
 
    As discussed in Section 5, not all energy-related information may be
    available at the entity in question.  Such information may be
@@ -1195,43 +1189,43 @@ Energy consumption must not be accounted twice
    an accumulated value for a set of entities.  All of the entities
    belonging to that set need to be identified.
 
-### Reports on Other Entities
+#### Reports on Other Entities
 
    The standard must provide means for an entity to report information
    on another entity.
 
-### Identity of Other Entities on Which Information Is Reported
+#### Identity of Other Entities on Which Information Is Reported
 
    For entities that report on one or more other entities, the standard
    must provide means for reporting the identity of other entities on
    which information is reported.  Note that, in some situations, a
    manual configuration might be required to populate this information.
 
-### Reporting Quantities Accumulated over Multiple Entities
+#### Reporting Quantities Accumulated over Multiple Entities
 
    The standard must provide means for reporting the list of all
    entities from which contributions are included in an accumulated
    value.
 
-### List of All Entities on Which Information Is Reported
+#### List of All Entities on Which Information Is Reported
 
    For entities that report on one or more other entities, the standard
    must provide means for reporting the complete list of all those
    entities on which energy-related information can be reported.
 
-### Content of Reports on Other Entities
+#### Content of Reports on Other Entities
 
    For entities that report on one or more other entities, the standard
    must provide means for indicating what type or types of energy-
    related information can be reported, and for which entities.
 
-## Controlling Other Entities
+### Controlling Other Entities
 
    This section specifies requirements for controlling Power States and
    power supply of entities by communicating with other entities that
    have the means for doing that control.
 
-### Controlling Power States of Other Entities
+#### Controlling Power States of Other Entities
 
    RFC6988 allow some entities have control over Power States of other entities,
    e.g., in Building automation case where a gateway to a building system may have
@@ -1246,32 +1240,32 @@ Energy consumption must not be accounted twice
    controlled by the Energy Management System has the means to report the list of
    these other entities.
 
-#### Control of Power States of Other Entities
+##### Control of Power States of Other Entities
 
    The standard must provide means for an Energy Management System to
    send Power State control commands to an entity that controls the
    Power States of entities other than the entity to which the command
    was sent.
 
-#### Identity of Other Power State Controlled Entities
+##### Identity of Other Power State Controlled Entities
 
    The standard must provide means for reporting the identities of the
    entities for which the reporting entity has the means to control
    their Power States.  Note that, in some situations, a manual
    configuration might be required to populate this information.
 
-#### List of All Power State Controlled Entities
+##### List of All Power State Controlled Entities
 
    The standard must provide means for an entity to report the list of
    all entities for which it can control the Power State.
 
-#### List of All Power State Controllers
+##### List of All Power State Controllers
 
    The standard must provide means for an entity that receives commands
    controlling its Power State from other entities to report the list of
    all those entities.
 
-### Controlling Power Supply
+#### Controlling Power Supply
 
    Some entities may have control of the power supply of other entities,
    for example, because the other entity is supplied via a Power Outlet
