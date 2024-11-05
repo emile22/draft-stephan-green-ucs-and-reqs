@@ -298,6 +298,12 @@ For this use case, the following requirements apply:
 |Req06-UCRED|Control& Mgmt|Advanced sleep mode, needing some sort of low power mode when node is lightly utilized|Dynamic Energy Saving|2|
 |Req07-UCRED|Control& Mgmt|Ability to steer traffic based on power savings|Traffic Engineering|4|
 
+## Facilitating more precise and real-time estimations of energy consumed by virtualised or cloud-native network functions
+
+Effective metering of virtualized network infrastructure is critical for the efficient management and operation of next-generation mobile networks.
+
+Reference: (GREEN FUTURE NETWORKS: METERING IN VIRTUALISED RAN INFRASTRUCTURE)[https://www.ngmn.org/publications/metering-in-virtualised-ran-infrastructure.html] by NGMN Alliance
+
 # Requirements extracted from proponents documents
 
 This section extracts and groups requirements from the documents of the GREEN WG proponents [GREEN-BOF], [sustainability-insights], [legacy-path] and [rfc6988bis-green]. The aim is to determine initial sets of requirements actionable at different levels of the framework presented below {{framework}}.
