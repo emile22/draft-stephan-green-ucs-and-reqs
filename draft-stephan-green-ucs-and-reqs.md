@@ -234,107 +234,126 @@ The following section will delve into the specific details but from a high level
    address conformance by specifying which features must, should, or may
    be implemented by compliant implementations.
 
-# Terminology
+# Use Cases
+This section describes a number of relevant use cases with the purpose of elicit requirements for Energy Efficiency Management.
+This is a work in progress and additional use cases will be documented in next versions of this document.
 
-The terms below are a sub set of the whole terminology. There are many other drafts givving additionnal definitons.
+## Incremental Application of the GREEN Framework {#incremental-use-case}
 
-   The terms specified in the terminology section are capitalized
-   throughout the document; the exceptions are the well-known terms
-   "energy" and "power".  These terms are generic and are used in
-   generated terms such as "energy-saving", "low-power", etc.
+This section describes an incremental example [legacy-path] of usage showing how a product, a service and a network can use the framework in different settings.
 
-   Embedded carbon (or embodied carbon)
+Once upon a time there was an very old legacy router named Rusty equipped with outdated ethernet and ugly optical interfaces. Despite his worn-out appearance, Rusty was determined to contribute to the energy efficiency effort. He dreamed of finding a way to optimize his old circuits and help reduce the power consumption of the network he had faithfully served for so many years. Though he was no longer in his prime, Rusty believed that even an old router like him could make a difference in a world striving for sustainability and help reduce the carbon footprint. He is convince that he still had a part to play in making the digital world a greener place.
 
-      The total amount of greenhouse gas emissions, measured in tonnes
-      of CO2 equivalent (tCO2e), associated with the entire lifecycle
-      of a product or material, from raw material extraction through
-      manufacturing, transportation, use, and end-of-life disposal or
-      recycling.
+Device moving gradually to GREEN energy efficiency support:
 
-   Embodied energy
+- step 1 "baseline" : establishing a reference point of typical energy usage, which is crucial for identifying inefficiencies and measuring improvements over time.
+  At this step the controler use only the (c) part of the framework. It is collected from the datasheet.
 
-      The total amount of energy consumed in all processes associated
-      with the production of a building material or product, from the
-      extraction and processing of raw materials, through manufacturing,
-      transportation, and installation, to the end of its useful life,
-      including disposal or recycling.
+By establishing a baseline and using benchmarking, you can determine if your networking equipment is performing normally or if it is "off" from expected performance, guiding you in making necessary improvements.
 
-   Energy
+The initial measurement of your networking equipment's energy efficiency and performance, aka Baselining, needs to be in coordination with the vendor specifications and industry standards to understand what is considered normal or optimal performance.
+example:
+Baseline: Your switches operate at 5 Gbps per watt.
+Benchmarking: Vendor specification is 8 Gbps per watt; industry standard is 10 Gbps per watt.
+Action: Implement energy-saving measures and upgrades.
+Tracking: Measure again to see if efficiency improves towards 8-10 Gbps per watt.
 
-      Energy is the capacity of a system to do work.  As used by
-      electric utilities, it is generally a reference to electrical
-      energy and is measured in kilowatt-hours (kWh) [IEEE-100].
+- step 2 "component":  part of the device hw or sw migrated to support GREEN framework elements.
 
-   Power
+- step 3 "device controleur"
 
-      Power is the time rate at which energy is emitted, transferred, or
-      received; power is usually expressed in watts (or in joules per
-      second) [IEEE-100].  (The term "power" does not refer to the
-      concept of demand, which is an averaged power value.)
+- step 4 "network level"
 
-   Power Attributes
+For this use case, the following requirements apply :
 
-      Power Attributes are measurements of electric current, voltage,
-      phase, and frequencies at a given point in an electrical power
-      system (adapted from [IEC.60050]).
+TODO; These requirements are under revision as this is a work in progress.
 
-      NOTE: Power Attributes are not intended to be "judgmental" with
-      respect to a reference or technical value and are independent of
-      any usage context.
+|id|category|requirements|note|Priority|
+|:----|:----|:----|:----|:----|
+|Req01-UCINC|Discovery|Component granularity, e.g., per line-card, per-port|Per component |1|
+|Req02-UCUCINCINC|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
+|Req03-UCINC|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
+|Req04-UCINC|Inventory Management|component control capacity (aka component max power-on/power-off frequency supported)|Per component control| 1 (i)|
+|Req05-UCINC|Analysis|assess the gains of introducing eco-designed components in a device|Device Level Mgmt| 1 (ii)|
+|Req06-UCINC|Control& Mgmt|comprehensive support of network-wide energy efficiency includes legacy devices|Network Level Mgmt| 1 (iii)|
 
-   Energy Management
+(i) Avoid a power-on/power-off frequency to break component parts (aka laser, power parts, wire connectors ...)
 
-      Energy Management is a set of functions for measuring, modeling,
-      planning, and optimizing networks to ensure that the network
-      elements and attached devices use energy efficiently and in a
-      manner appropriate to the nature of the application and the cost
-      constraints of the organization [ITU-M.3400].
+(ii) the gain must be measurable
 
-   Energy Efficiency Management
+(iii) network-wide  energy efficiency solutions must include legacy devices and green-wg ready devices
 
-     Involves deploying and managing network infrastructures with the
-     goal of optimizing energy use on network devices while improving
-     the overall network utilization.
+## Selective reduction of energy consumption in network parts proportional to traffic levels
 
-   Energy Management System
+Traffic levels in a network follow patterns reflecting the behavior of consumers. Those patterns show periodicity in the terms of the traffic delivered, that can range from daily (from 00:00 to 23:59) to seasonal (e.g., winter to summer), showing peaks and valleys that could be exploited to reduce the consumption of energy in the network proportionally, in case the underlying network elements incorporate such capabilities. The reduction of energy consumption could be performed by leveraging on sleep modes in components up to more extreme actions such as switching off network components or modules. Such decisions are expected to no impact on the service delivered to customers, and could be accompanied by traffic relocation and / or concentration in the network.
+For this use case, the following requirements apply:
 
-      An Energy Management System is a combination of hardware and
-      software used to administer a network with the primary purpose
-      being Energy Management.
+|id|category|requirements|note|Priority|
+|:----|:----|:----|:----|:----|
+|Req01-UCRED|Observability|Component granularity, e.g., per line-card, per-port|Per component measurement|1|
+|Req02-UCRED|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
+|Req03-UCRED|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
+|Req04-UCRED|Analysis|Ability of multi-layer analysis (e.g., IP plus optical)|POI Use Case|3|
+|Req05-UCRED|Control& Mgmt|To have devices with elastic power consumption according to the carried traffic|Dynamic Energy Saving|2|
+|Req06-UCRED|Control& Mgmt|Advanced sleep mode, needing some sort of low power mode when node is lightly utilized|Dynamic Energy Saving|2|
+|Req07-UCRED|Control& Mgmt|Ability to steer traffic based on power savings|Traffic Engineering|4|
 
-   Energy Monitoring
+# Requirements extracted from proponents documents
 
-      Energy Monitoring is a part of Energy Efficiency Management that deals
-      with collecting or reading information from network elements and their
-      components to aid in Energy Efficiency Management.
+This section extracts and groups requirements from the documents of the GREEN WG proponents [GREEN-BOF], [sustainability-insights], [legacy-path] and [rfc6988bis-green]. The aim is to determine initial sets of requirements actionable at different levels of the framework presented below {{framework}}.
 
-   Energy Control
+The table below groups the operator'requirements based on the inputs received from operators for the GREEN BoF [charter-refinement],[operators-inputs]. These requirements are under revision as this is a work in progress.
 
-      Energy Control is a part of Energy Management that deals with
-      controlling energy supply and Power State of network elements, as
-      well as their components.
+|id|category|requirements|note|Priority|
+|:----|:----|:----|:----|:----|
+|Req01-OP|Observability|Component granularity, e.g., per line-card, per-port|Per component measurement|1|
+|Req02-OP|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
+|Req03-OP|Observability|Triggering of alarms when consumption deviate from a nominal usage|Alarm notification|1??|
+|Req04-OP|Observability|Improvement of metering solutions (finer granularity, control of the energy efficiency and saving, interoperability, exposure)|Standardized metering??|1|
+|Req05-OP|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
+|Req06-OP|Analysis|Common methodology of measurements for fair comparison|Standard methodology|2|
+|Req07-OP|Analysis|How to provide accurate figures (context of the measurement in terms of time period, location, traffic, etc|Time based, location based visualization|2 ??|
+|Req08-OP|Analysis|Database for decision in case of large data transfer|Information Correlation|3|
+|Req09-OP|Analysis|Ability of multi-layer analysis (e.g., IP plus optical)|POI Use Case|3|
+|Req10-OP|Control& Mgmt|To have devices with elastic power consumption according to the carried traffic|Dynamic Energy Saving|2|
+|Req11-OP|Control& Mgmt|Support of network-wide energy saving and optimization functions|Network Level Mgmt|2|
+|Req12-OP|Control& Mgmt|Support of network-wide control of energy optimization APIs, allowing external applications to optimize consumption|Network Level Mgmt|2|
+|Req13-OP|Control& Mgmt|Advanced sleep mode, needing some sort of low power mode when node is lightly utilized|Dynamic Energy Saving|2|
+|Req14-OP|Control& Mgmt|Ability to steer traffic based on power savings|Traffic Engineering|4|
+|Req15-OP|Control& Mgmt|Comparison of decision vs optimal case|Intent based Concept|2|
+|Req16-OP|Control& Mgmt|Synchronous query support|Network Level Query|2|
+|Req17-OP|Inventory Management|Inventory of power components (of devices, racks, etc) including together|Component & Device Level|1|
+|Req18-OP|Interaction with other domain|Inclusion of data center networks in the picture|Data Center Case|3|
+|Req19-OP|Interaction with other domain|Inclusion of data center networks in the picture|Mobile Network Case|3|
+|Req20-OP|Sustainability & Carbon Emission|Optimize the overall CO2 footprint (i.e., energy mix based on source type) facilitating the engineering of PoP More renewable energy|More renewable energy|4|
+|Req21-OP|Sustainability & Carbon Emission|Support GHG units|Measurement Units|4|
+|Req22-OP|Sustainability & Carbon Emission|Support Energy units|More renewable energy|2 ??|
+|Req23-OP|Sustainability & Carbon EmissiCarbon, renewable|4|
+|Req24-OP|Sustainability & Carbon Emission|Accounting of legacy installed based GHG/energy|Accounting Cost|4|
+|Req25-OP|Sustainability & Carbon Emission|Track device/network Energy Consumption Before Operation|Manufacturing, transport(weight, volume, package)|4|
 
-   Power Interface
+The table below groups requirements from [rf988bis-green] draft Open Issues.
 
-      A Power Interface is an interface at which a device is connected
-      to a power transmission medium, at which it can in turn receive
-      power, provide power, or both.
+TODO: this table has to be reviewed as it overlaps with the sections above related to rfc6988
 
-   Power Inlet
+|id|category|requirements|note|Priority|
+|:----|:----|:----|:----|:----|
+|Req01-BIS|Control& Mgmt|Distinguish backup from main power sources|rfc6988bis battery(i)| 2|
+|Req02-BIS|Inventory Management|Reporting on Other Entities, typically smart PDU or PoE|Fit in "Inventory of power components (of devices, racks, etc) including together"| 2|
+|Req03-BIS|Observability or Interaction with Other domain|Room sensor (hvac...)|Data Center Case| 4|
+|Req04-BIS|Observability|flexible (future-proof) description of the nature of the sources of the energy used |Standard metric|2 |
 
-      A Power Inlet is a Power Interface at which a device can receive
-      power from other devices.
+(i) It is crucial to know when a device is powered by a backup source for many obvious reasons
 
-   Power Outlet
+The table below groups requirements from [sustainability-insights] uses cases related to energy consumption vs sustainability
 
-      A Power Outlet is a Power Interface at which a device can provide
-      power to other devices.
-
-   Power State
-
-      A Power State is a condition or mode of a device that broadly
-      characterizes its capabilities, power consumption, and
-      responsiveness to input [IEEE-1621].
+|id|category|requirements|note|Priority|
+|:----|:----|:----|:----|:----|
+|Req01-SIS|Observability|Provide near-real-time energy consumption to different device types, service types, and individual users | Helps identify which devices or network functions are consuming more energy. | 2 |
+|Req02-SIS|Migration or Upgrade | Provide KPIs for energy efficiency parameters, enhance accuracy of upgrade decisions | Helps make informed decisions about upgrades based on actual usage data. |   |
+|Req03-SIS|Recycling | Report on percentage of recycled user devices and components. Enable comprehensive reporting and recycling efforts | Major driver of the circular economy, transparency is key | 4 |
+|Req04-SIS|Power Optimization | Provide KPIs for energy efficiency parameters. Perform actions to reduce energy consumption | Monitor network and application performance to optimize power usage | 4 |
+|Req05-SIS|Control& Mgmt Switch off | Stop and restart WiFi APs with the right time, space, and service granularity | Save power consumption during periods when APs are not in use.| 2|
 
 # General Considerations Related to Energy Management
 
@@ -1009,8 +1028,11 @@ The terms below are a sub set of the whole terminology. There are many other dra
 
 ## Energy Mix
 
-   Energy efficiency is not limited to reducing the energy consumption, it is common to include carbon free, solar energy, wind energy, cogeneration in the efficiency. The type of the sources of energy of the power is one criteria of efficiency.
-   There are other dimensions that must visible: As many telecom locations include battery there is a requirement to known that the source come from a battery or directly from the grid...
+Energy efficiency is not limited to reducing the energy consumption, it is common to include carbon free, solar energy, wind energy, cogeneration in the efficiency.
+
+The type of the sources of energy of the power is one criteria of efficiency.
+   
+There are other dimensions that must visible: As many telecom locations include battery or additionnally several backups levels (as example battery, standby generator ...) there is a requirement to known exactly when a backup power is in used and which one is.
 
 # Control of Entities
 
@@ -1176,63 +1198,6 @@ Energy consumption must not be accounted twice
    these other entities.  This need is already addressed by requirements
    in Sections 5.2.3 and 5.2.4.
 
-# Requirements extracted from proponents documents
-
-This section extracts and groups requirements from the documents of the GREEN WG proponents [GREEN-BOF], [sustainability-insights], [legacy-path] and [rfc6988bis-green]. The aim is to determine initial sets of requirements actionable at different levels of the framework presented below {{framework}}.
-
-The table below groups the operator'requirements based on the inputs received from operators for the GREEN BoF [charter-refinement],[operators-inputs].
-
-|id|category|requirements|note|Priority|
-|:----|:----|:----|:----|:----|
-|Req01-OP|Observability|Component granularity, e.g., per line-card, per-port|Per component measurement|1|
-|Req02-OP|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
-|Req03-OP|Observability|Triggering of alarms when consumption deviate from a nominal usage|Alarm notification|1??|
-|Req04-OP|Observability|Improvement of metering solutions (finer granularity, control of the energy efficiency and saving, interoperability, exposure)|Standardized metering??|1|
-|Req05-OP|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
-|Req06-OP|Analysis|Common methodology of measurements for fair comparison|Standard methodology|2|
-|Req07-OP|Analysis|How to provide accurate figures (context of the measurement in terms of time period, location, traffic, etc|Time based, location based visualization|2 ??|
-|Req08-OP|Analysis|Database for decision in case of large data transfer|Information Correlation|3|
-|Req09-OP|Analysis|Ability of multi-layer analysis (e.g., IP plus optical)|POI Use Case|3|
-|Req10-OP|Control& Mgmt|To have devices with elastic power consumption according to the carried traffic|Dynamic Energy Saving|2|
-|Req11-OP|Control& Mgmt|Support of network-wide energy saving and optimization functions|Network Level Mgmt|2|
-|Req12-OP|Control& Mgmt|Support of network-wide control of energy optimization APIs, allowing external applications to optimize consumption|Network Level Mgmt|2|
-|Req13-OP|Control& Mgmt|Advanced sleep mode, needing some sort of low power mode when node is lightly utilized|Dynamic Energy Saving|2|
-|Req14-OP|Control& Mgmt|Ability to steer traffic based on power savings|Traffic Engineering|4|
-|Req15-OP|Control& Mgmt|Comparison of decision vs optimal case|Intent based Concept|2|
-|Req16-OP|Control& Mgmt|Synchronous query support|Network Level Query|2|
-|Req17-OP|Inventory Management|Inventory of power components (of devices, racks, etc) including together|Component & Device Level|1|
-|Req18-OP|Interaction with other domain|Inclusion of data center networks in the picture|Data Center Case|3|
-|Req19-OP|Interaction with other domain|Inclusion of data center networks in the picture|Mobile Network Case|3|
-|Req20-OP|Sustainability & Carbon Emission|Optimize the overall CO2 footprint (i.e., energy mix based on source type) facilitating the engineering of PoP More renewable energy|More renewable energy|4|
-|Req21-OP|Sustainability & Carbon Emission|Support GHG units|Measurement Units|4|
-|Req22-OP|Sustainability & Carbon Emission|Support Energy units|More renewable energy|2 ??|
-|Req23-OP|Sustainability & Carbon EmissiCarbon, renewable|4|
-|Req24-OP|Sustainability & Carbon Emission|Accounting of legacy installed based GHG/energy|Accounting Cost|4|
-|Req25-OP|Sustainability & Carbon Emission|Track device/network Energy Consumption Before Operation|Manufacturing, transport(weight, volume, package)|4|
-
-The table below groups requirements from [rf988bis-green] draft Open Issues.
-
-TODO: this table has to be reviewed as it overlaps with the sections above related to rfc6988
-
-|id|category|requirements|note|Priority|
-|:----|:----|:----|:----|:----|
-|Req01-BIS|Control& Mgmt|Distinguish backup from main power sources|rfc6988bis battery(i)| 2|
-|Req02-BIS|Inventory Management|Reporting on Other Entities, typically smart PDU or PoE|Fit in "Inventory of power components (of devices, racks, etc) including together"| 2|
-|Req03-BIS|Observability or Interaction with Other domain|Room sensor (hvac...)|Data Center Case| 4|
-|Req04-BIS|Observability|flexible (future-proof) description of the nature of the sources of the energy used |Standard metric|2 |
-
-(i) It is crucial to know when a device is powered by a backup source for many obvious reasons
-
-The table below groups requirements from [sustainability-insights] uses cases related to energy consumption vs sustainability
-
-|id|category|requirements|note|Priority|
-|:----|:----|:----|:----|:----|
-|Req01-SIS|Observability|Provide near-real-time energy consumption to different device types, service types, and individual users | Helps identify which devices or network functions are consuming more energy. | 2 |
-|Req02-SIS|Migration or Upgrade | Provide KPIs for energy efficiency parameters, enhance accuracy of upgrade decisions | Helps make informed decisions about upgrades based on actual usage data. |   |
-|Req03-SIS|Recycling | Report on percentage of recycled user devices and components. Enable comprehensive reporting and recycling efforts | Major driver of the circular economy, transparency is key | 4 |
-|Req04-SIS|Power Optimization | Provide KPIs for energy efficiency parameters. Perform actions to reduce energy consumption | Monitor network and application performance to optimize power usage | 4 |
-|Req05-SIS|Control& Mgmt Switch off | Stop and restart WiFi APs with the right time, space, and service granularity | Save power consumption during periods when APs are not in use.| 2|
-
 ## Framework Discussed During the BoF {#framework}
 
 The overall framework is shown in {{green-framework}}.
@@ -1302,74 +1267,6 @@ The main elements in the framework are as follows:
 
 (g) Control Energy Saving
 
-# Use Cases
-This section describes a number of relevant use cases with the purpose of elicit requirements for Energy Efficiency Management.
-This is a work in progress and additional use cases will be documented in next versions of this document.
-
-## Incremental Application of the GREEN Framework {#incremental-use-case}
-
-This section describes an incremental example [legacy-path] of usage showing how a product, a service and a network can use the framework in different settings.
-
-Once upon a time there was an very old legacy router named Rusty equipped with outdated ethernet and ugly optical interfaces. Despite his worn-out appearance, Rusty was determined to contribute to the energy efficiency effort. He dreamed of finding a way to optimize his old circuits and help reduce the power consumption of the network he had faithfully served for so many years. Though he was no longer in his prime, Rusty believed that even an old router like him could make a difference in a world striving for sustainability and help reduce the carbon footprint. He is convince that he still had a part to play in making the digital world a greener place.
-
-Device moving gradually to GREEN energy efficiency support:
-
-- step 1 "baseline" : establishing a reference point of typical energy usage, which is crucial for identifying inefficiencies and measuring improvements over time.
-  At this step the controler use only the (c) part of the framework. It is collected from the datasheet.
-
-By establishing a baseline and using benchmarking, you can determine if your networking equipment is performing normally or if it is "off" from expected performance, guiding you in making necessary improvements.
-
-The initial measurement of your networking equipment's energy efficiency and performance, aka Baselining, needs to be in coordination with the vendor specifications and industry standards to understand what is considered normal or optimal performance.
-example:
-Baseline: Your switches operate at 5 Gbps per watt.
-Benchmarking: Vendor specification is 8 Gbps per watt; industry standard is 10 Gbps per watt.
-Action: Implement energy-saving measures and upgrades.
-Tracking: Measure again to see if efficiency improves towards 8-10 Gbps per watt.
-
-- step 2 "component":  part of the device hw or sw migrated to support GREEN framework elements.
-
-- step 3 "device controleur"
-
-- step 4 "network level"
-
-For this use case, the following requirements apply :
-
-TODO; These requirements are under revision as this is a work in progress.
-
-|id|category|requirements|note|Priority|
-|:----|:----|:----|:----|:----|
-|Req01-UCINC|Discovery|Component granularity, e.g., per line-card, per-port|Per component |1|
-|Req02-UCUCINCINC|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
-|Req03-UCINC|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
-|Req04-UCINC|Inventory Management|component control capacity (aka component max power-on/power-off frequency supported)|Per component control| 1 (i)|
-|Req05-UCINC|Analysis|assess the gains of introducing eco-designed components in a device|Device Level Mgmt| 1 (ii)|
-|Req06-UCINC|Control& Mgmt|comprehensive support of network-wide energy efficiency includes legacy devices|Network Level Mgmt| 1 (iii)|
-
-(i) Avoid a power-on/power-off frequency to break component parts (aka laser, power parts, wire connectors ...)
-
-(ii) the gain must be measurable
-
-(iii) network-wide  energy efficiency solutions must include legacy devices and green-wg ready devices
-
-## Selective reduction of energy consumption in network parts proportional to traffic levels
-
-Traffic levels in a network follow patterns reflecting the behavior of consumers. Those patterns show periodicity in the terms of the traffic delivered, that can range from daily (from 00:00 to 23:59) to seasonal (e.g., winter to summer), showing peaks and valleys that could be exploited to reduce the consumption of energy in the network proportionally, in case the underlying network elements incorporate such capabilities. The reduction of energy consumption could be performed by leveraging on sleep modes in components up to more extreme actions such as switching off network components or modules. Such decisions are expected to no impact on the service delivered to customers, and could be accompanied by traffic relocation and / or concentration in the network.
-For this use case, the following requirements apply:
-
-|id|category|requirements|note|Priority|
-|:----|:----|:----|:----|:----|
-|Req01-UCRED|Observability|Component granularity, e.g., per line-card, per-port|Per component measurement|1|
-|Req02-UCRED|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
-|Req03-UCRED|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
-|Req04-UCRED|Analysis|Ability of multi-layer analysis (e.g., IP plus optical)|POI Use Case|3|
-|Req05-UCRED|Control& Mgmt|To have devices with elastic power consumption according to the carried traffic|Dynamic Energy Saving|2|
-|Req06-UCRED|Control& Mgmt|Advanced sleep mode, needing some sort of low power mode when node is lightly utilized|Dynamic Energy Saving|2|
-|Req07-UCRED|Control& Mgmt|Ability to steer traffic based on power savings|Traffic Engineering|4|
-
-These requirements are under revision as this is a work in progress.
-
-## Additional use cases
-To be completed in next versions.
 
 # Security Considerations
 
@@ -1533,7 +1430,6 @@ The consequence of both the growth in the number of flows to be supported simult
 
 As a mean of slowing down this cycle of continuos renewal, and reduce the need og higher bit rate interfaces / line cards, it seems convenient to explore mechanisms that could reduce the volume of traffic without impacting the user service expectations. Variants of multicast or different service delivery strategies can help to improve the energy efficiency associated to the video streaming service. It should be noted that another front for optimization is the one related to the deployment of cache servers in the network.
 
-
 # References
 
 ## Normative References
@@ -1598,8 +1494,111 @@ As a mean of slowing down this cycle of continuos renewal, and reduce the need o
 
 # Appendix
 
-This appendix should be removed in the next version
+This appendix should be removed when the initial set of GREEN WG documents will be stable
 
+## Terminology
+
+This section is excepted to move in the GREEN WG draft in charge of terms.
+The terms below are a sub set of the whole terminology. There are many other drafts giving additionnal definitions.
+
+   The terms specified in the terminology section are capitalized
+   throughout the document; the exceptions are the well-known terms
+   "energy" and "power".  These terms are generic and are used in
+   generated terms such as "energy-saving", "low-power", etc.
+
+   Embedded carbon (or embodied carbon)
+
+      The total amount of greenhouse gas emissions, measured in tonnes
+      of CO2 equivalent (tCO2e), associated with the entire lifecycle
+      of a product or material, from raw material extraction through
+      manufacturing, transportation, use, and end-of-life disposal or
+      recycling.
+
+   Embodied energy
+
+      The total amount of energy consumed in all processes associated
+      with the production of a building material or product, from the
+      extraction and processing of raw materials, through manufacturing,
+      transportation, and installation, to the end of its useful life,
+      including disposal or recycling.
+
+   Energy
+
+      Energy is the capacity of a system to do work.  As used by
+      electric utilities, it is generally a reference to electrical
+      energy and is measured in kilowatt-hours (kWh) [IEEE-100].
+
+   Power
+
+      Power is the time rate at which energy is emitted, transferred, or
+      received; power is usually expressed in watts (or in joules per
+      second) [IEEE-100].  (The term "power" does not refer to the
+      concept of demand, which is an averaged power value.)
+
+   Power Attributes
+
+      Power Attributes are measurements of electric current, voltage,
+      phase, and frequencies at a given point in an electrical power
+      system (adapted from [IEC.60050]).
+
+      NOTE: Power Attributes are not intended to be "judgmental" with
+      respect to a reference or technical value and are independent of
+      any usage context.
+
+   Energy Management
+
+      Energy Management is a set of functions for measuring, modeling,
+      planning, and optimizing networks to ensure that the network
+      elements and attached devices use energy efficiently and in a
+      manner appropriate to the nature of the application and the cost
+      constraints of the organization [ITU-M.3400].
+
+   Energy Efficiency Management
+
+     Involves deploying and managing network infrastructures with the
+     goal of optimizing energy use on network devices while improving
+     the overall network utilization.
+
+   Energy Management System
+
+      An Energy Management System is a combination of hardware and
+      software used to administer a network with the primary purpose
+      being Energy Management.
+
+   Energy Monitoring
+
+      Energy Monitoring is a part of Energy Efficiency Management that deals
+      with collecting or reading information from network elements and their
+      components to aid in Energy Efficiency Management.
+
+   Energy Control
+
+      Energy Control is a part of Energy Management that deals with
+      controlling energy supply and Power State of network elements, as
+      well as their components.
+
+   Power Interface
+
+      A Power Interface is an interface at which a device is connected
+      to a power transmission medium, at which it can in turn receive
+      power, provide power, or both.
+
+   Power Inlet
+
+      A Power Inlet is a Power Interface at which a device can receive
+      power from other devices.
+
+   Power Outlet
+
+      A Power Outlet is a Power Interface at which a device can provide
+      power to other devices.
+
+   Power State
+
+      A Power State is a condition or mode of a device that broadly
+      characterizes its capabilities, power consumption, and
+      responsiveness to input [IEEE-1621].
+  
 ## In Preparation of the GREEN BoF at IETF 120
 
    The EMAN (Energy MANagement) working group (WG), created in 2010 and now concluded, has produced multiples RFCs
@@ -1644,8 +1643,8 @@ The following section will delve into the specific details but from a high level
 
 - As a consequence from the previous point, the ENTITY-MIB v4 RFC6933 is replaced by the Hardware YANG module RFC8348
 
-- battery management is removed (as batteries haves some self-optimization features these days)
+- battery management is removed (as batteries haves some self-optimization features these days). Nevertheless 'Battery' will appear as a source of power of a type of backup
 
-- Less focus on the Power over Ethernet management
+- Less focus on the Power over Ethernet management, Nevertheless Reporting on Other Entities remains an open issue
 
 - A focus on reporting lifecycle management, considering energy and transformation towards carbon awareness
