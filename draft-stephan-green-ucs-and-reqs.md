@@ -298,6 +298,35 @@ For this use case, the following requirements apply:
 |Req06-UCRED|Control& Mgmt|Advanced sleep mode, needing some sort of low power mode when node is lightly utilized|Dynamic Energy Saving|2|
 |Req07-UCRED|Control& Mgmt|Ability to steer traffic based on power savings|Traffic Engineering|4|
 
+## Reporting on Lifecycle Management
+
+   Lifecycle information related to manufacturing energy costs, transport,
+   recyclability, and end-of-life disposal impacts is part of what is
+   called "embedded carbon." This information is considered to be an
+   estimated value, which might not be implemented today in the network
+   devices. It might be part of the vendor information, and to be collected
+   from datasheets or databases. In accordance with ISO 14040/44, this
+   information should be considered as part of the sustainable strategy
+   related to energy efficiency. Also, refer to the ecodesign framework
+   [(EU) 2024/1781] published in June by the European Commission.
+
+### Carbon Reporting
+
+   To report on carbon equivalents for global reporting, it is important
+   to correlate the location where the specific entity/network element
+   is operating with the corresponding carbon factor. Refer to the world
+   emission factor from the International Energy Agency (IEA), electricity
+   maps applications that reflect the carbon intensity of the electricity
+   consumed, etc.
+
+### Energy Mix
+
+Energy efficiency is not limited to reducing the energy consumption, it is common to include carbon free, solar energy, wind energy, cogeneration in the efficiency.
+
+The type of the sources of energy of the power is one criteria of efficiency.
+
+There are other dimensions that must visible: As many telecom locations include battery or additionnally several backups levels (as example battery, standby generator ...) there is a requirement to known exactly when a backup power is in used and which one is.
+
 ## Facilitating more precise and real-time estimations of energy consumed by virtualised or cloud-native network functions
 
 Effective metering of virtualized network infrastructure is critical for the efficient management and operation of next-generation mobile networks.
@@ -430,13 +459,19 @@ The main elements in the framework are as follows:
 
 (g) Control Energy Saving
 
-# General Considerations Related to Energy Management
+# EMAN Requirements from RFC6988bis
+
+This section groups the inputs from the work on RFC6988bis [rfc6988bis-green]. Currently they still include a lot of verbatim text from [rfc6988] which don't fit exactly in the granularity of the current GREEN WG charter.
+
+This section will groups the subsections requirements tables to get the consensus priority.
+
+## General Considerations Related to Energy Management
 
    The basic objective of Energy Efficiency Management is to operate sets of
    network devices using minimal energy, while maintaining a certain level of
    service.
 
-## Power States
+### Power States
 
    Entities can be set to an operational state that results in the
    lowest power level that still meets the service-level performance
@@ -464,7 +499,7 @@ The main elements in the framework are as follows:
    standby components are partially functional and can be immediately available when active component is down.
    The standby power state can be introduced to save energy while impove the overall network utilization.
 
-## Saving Energy versus Maintaining Service Level
+### Saving Energy versus Maintaining Service Level
 
    One of the objectives of Energy Efficiency Management is to reduce energy
    consumption.  While this objective is clear, attaining that goal is
@@ -478,7 +513,7 @@ The main elements in the framework are as follows:
    not needed. To measure of the trade-off between service-level object and energy
    consumption, a new set of energy efficiency metrics needs to defined.
 
-## Local versus Network-Wide Energy Management
+### Local versus Network-Wide Energy Management
 
    Many energy-saving functions are executed locally by an entity; it
    monitors its usage and dynamically adapts its power according to the
@@ -502,7 +537,7 @@ The main elements in the framework are as follows:
    is often preferable for power-saving measures based on local
    observations, such as the high or low functional load of an entity.
 
-## Energy Monitoring versus Energy Saving
+### Energy Monitoring versus Energy Saving
 
    Monitoring energy, power, and Power States alone does not reduce the
    energy needed to run an entity.  In fact, it may even increase it
@@ -530,7 +565,7 @@ The main elements in the framework are as follows:
 
 
 
-## Overview of Energy Management Requirements
+### Overview of Energy Management Requirements
 
    The following basic management functions are required:
 
@@ -576,7 +611,7 @@ The main elements in the framework are as follows:
    energy-efficient network architectures and is exercised using management interface.  Measurement of received and
    provided energy can provide useful data for energy efficiency management.
 
-# Identification of Entities
+## Identification of Entities
 
    Entities must be capable of being uniquely identified within the
    context of the management system.  This includes entities that are
@@ -605,13 +640,13 @@ The main elements in the framework are as follows:
    information for all individual components separately, while reporting
    the received and provided energy only for the entire device.
 
-## Identifying Entities
+### Identifying Entities
 
    The standard must provide means for uniquely identifying entities.
    Uniqueness must be preserved such that collisions of identities are
    avoided at potential receivers of monitored information.
 
-## Identifying Entitiy Capabilities
+### Identifying Entitiy Capabilities
 
    The standard must provide means for discovering inventory of power components
    together with their capabilities, optimization control capabilities, nominal
@@ -619,17 +654,17 @@ The main elements in the framework are as follows:
    supported power state of each network device within the network and power
    relationship between component within network device and across network devices.
 
-## Persistence of Identifiers
+### Persistence of Identifiers
 
    The standard must provide means for indicating whether identifiers of
    entities are persistent across a restart of the entity.
 
-## Change of Identifiers
+### Change of Identifiers
 
    The standard must provide means to indicate any change of entity
    identifiers.
 
-## Using Entity Identifiers of Existing YANG Modules
+### Using Entity Identifiers of Existing YANG Modules
 
    The standard must provide means for reusing entity identifiers from
    existing standards, including at least the following:
@@ -643,7 +678,7 @@ The main elements in the framework are as follows:
 
    Generic means for reusing other entity identifiers must be provided.
 
-# Information on Entities
+## Information on Entities
 
    This section describes information on entities for which the standard
    must provide means for retrieving and reporting.
@@ -657,7 +692,7 @@ The main elements in the framework are as follows:
    covers requirements related to entities' Power States.  Finally, the
    reporting of time series of values is covered by Section 5.7.
 
-## General Information on Entities
+### General Information on Entities
 
    For Energy Management, understanding the role and context of an
    entity may be required.  An Energy Management System may aggregate
@@ -668,37 +703,37 @@ The main elements in the framework are as follows:
    some mission-critical network devices from being switched to lower
    power or even from being switched off.
 
-### Type of Entity
+#### Type of Entity
 
    The standard must provide means to configure, retrieve, and report a
    textual name or a description of an entity.
 
-### Context of an Entity
+#### Context of an Entity
 
    The standard must provide means for retrieving and reporting context
    information on entities, for example, tags associated with an entity
    that indicate the entity's role.
 
-### Significance of Entities
+#### Significance of Entities
 
    The standard must provide means for retrieving and reporting the
    significance of entities within its context, for example, how
    important the entity is.
 
-### Power Priority
+#### Power Priority
 
    The standard must provide means for retrieving and reporting power
    priorities of entities.  Power priorities indicate an order in which
    Power States of entities are changed, for example, to lower Power
    States for saving power.
 
-### Grouping of Entities
+#### Grouping of Entities
 
    The standard must provide means for grouping entities.  This can be
    achieved in multiple ways, for example, by providing means to tag
    entities, assign them to domains, or assign device types to them.
 
-## Power Interfaces
+### Power Interfaces
 
    A Power Interface is an interface at which a device is connected to a
    power transmission medium, at which it can in turn receive power,
@@ -734,59 +769,59 @@ The main elements in the framework are as follows:
    voltage is often not a single value but a voltage range, such as, for
    example, (100V-120V), (100V-240V), (100V-120V,220V-240V).
 
-### List of Power Interfaces
+#### List of Power Interfaces
 
    The standard must provide means for monitoring the list of Power Interfaces of a device.
 
-### Operational Mode of Power Interfaces
+#### Operational Mode of Power Interfaces
 
    The standard must provide means for monitoring the operational mode of a Power Interface, which is either "Power Inlet" or "Power Outlet".
 
-### Corresponding Power Outlet
+#### Corresponding Power Outlet
 
    The standard must provide means for identifying the Power Outlet that
    provides the power received at a Power Inlet.
 
-### Corresponding Power Inlets
+#### Corresponding Power Inlets
 
    The standard must provide means for identifying the list of Power
    Inlets that receive the power provided at a Power Outlet.
 
-### Availability of Power
+#### Availability of Power
 
    If the Power States allow it, the standard must provide means for
    monitoring the availability of power at each Power Interface.  This
    includes indicating whether a power supply at a Power Interface is
    switched on or off.
 
-### Use of Power
+#### Use of Power
 
    The standard must provide means for monitoring each Power Interface
    if it is actually in use.  For inlets, this means that the device
    actually receives power at the inlet.  For outlets, this means that
    power is actually provided from the outlet to one or more devices.
 
-### Type of Current
+#### Type of Current
 
    The standard must provide means for reporting the type of current (AC
    or DC) for each Power Interface as well as for a device.
 
-### Nominal Voltage Range
+#### Nominal Voltage Range
 
    The standard must provide means for reporting the nominal voltage
    range for each Power Interface.
 
-### Nominal AC Frequency
+#### Nominal AC Frequency
 
    The standard must provide means for reporting the nominal AC
    frequency for each Power Interface.
 
-### Number of AC Phases
+#### Number of AC Phases
 
    The standard must provide means for reporting the number of AC phases
    for each Power Interface.
 
-## Power
+### Power
 
    Power is measured as an instantaneous value or as the average over a
    time interval.
@@ -819,20 +854,20 @@ The main elements in the framework are as follows:
    notifications from entities when their power value exceeds or falls
    below given thresholds.
 
-### Real Power / Power Factor
+#### Real Power / Power Factor
 
    The standard must provide means for reporting the real power for each
    Power Interface as well as for an entity.  Reporting power includes
    reporting the direction of power flow.
 
-### Power Measurement Interval
+#### Power Measurement Interval
 
    The standard must provide means for reporting the corresponding time
    or time interval for which a power value is reported.  The power
    value can be measured at the corresponding time or averaged over the
    corresponding time interval.
 
-### Power Measurement Method
+#### Power Measurement Method
 
    The standard must provide means to indicate the method used to obtain
    these values.  Based on how the measurement was conducted, it is
@@ -841,24 +876,24 @@ The main elements in the framework are as follows:
    such as direct power measurement, estimation based on performance
    values, or hard-coding average power values for an entity.
 
-### Accuracy of Power and Energy Values
+#### Accuracy of Power and Energy Values
 
    The standard must provide means for reporting the accuracy of
    reported power and energy values.
 
-### Actual Voltage and Current
+#### Actual Voltage and Current
 
    The standard must provide means for reporting the actual voltage and
    actual current for each Power Interface as well as for a device.  For
    AC power supply, means must be provided for reporting the actual
    voltage and actual current per phase.
 
-### High-Power/Low-Power Notifications
+#### High-Power/Low-Power Notifications
 
    The standard must provide means for creating notifications if power
    values of an entity rise above or fall below given thresholds.
 
-### Complex Power / Power Factor
+#### Complex Power / Power Factor
 
    The standard must provide means for reporting the complex power for
    each Power Interface and for each phase at a Power Interface.  In
@@ -866,25 +901,25 @@ The main elements in the framework are as follows:
    quantities need to be reported: apparent power, reactive power, and
    phase angle.  The phase angle can be substituted by the power factor.
 
-### Actual AC Frequency
+#### Actual AC Frequency
 
    The standard must provide means for reporting the actual AC frequency
    for each Power Interface.
 
-### Total Harmonic Distortion
+#### Total Harmonic Distortion
 
    The standard must provide means for reporting the Total Harmonic
    Distortion (THD) of voltage and current for each Power Interface.
    For AC power supply, means must be provided for reporting the THD per
    phase.
 
-### Power Supply Impedance
+#### Power Supply Impedance
 
    The standard must provide means for reporting the impedance of a
    power supply for each Power Interface.  For AC power supply, means
    must be provided for reporting the impedance per phase.
 
-## Power State
+### Power State
 
    Many entities have a limited number of discrete Power States.
 
@@ -910,38 +945,38 @@ The main elements in the framework are as follows:
    the time spent as well as the received and provided energy in a Power
    State.
 
-### Actual Power State
+#### Actual Power State
 
    The standard must provide means for reporting the actual Power State
    of an entity.
 
-### List of Supported Power States
+#### List of Supported Power States
 
    The standard must provide means for retrieving the list of all
    potential Power States of an entity.
 
-### Multiple Power State Sets
+#### Multiple Power State Sets
 
    The standard must provide means for supporting multiple Power State
    sets simultaneously at an entity.
 
-### List of Supported Power State Sets
+#### List of Supported Power State Sets
 
    The standard must provide means for retrieving the list of all Power
    State sets supported by an entity.
 
-### List of Supported Power States within a Set
+#### List of Supported Power States within a Set
 
    The standard must provide means for retrieving the list of all
    potential Power States of an entity for each supported Power State
    set.
 
-### Typical Power Per Power State
+#### Typical Power Per Power State
 
    The standard must provide means for retrieving the typical power for
    each supported Power State.
 
-### Power State Statistics
+#### Power State Statistics
 
    The standard must provide means for monitoring statistics per Power
    State, including the total time spent in a Power State, the number of
@@ -949,12 +984,12 @@ The main elements in the framework are as follows:
    entered.  More Power State statistics are addressed by the
    requirements in Section 5.5.3.
 
-### Power State Changes
+#### Power State Changes
 
    The standard must provide means for generating a notification when
    the actual Power State of an entity changes.
 
-## Energy
+### Energy
 
    The monitoring of electrical energy received or provided by an entity
    is a core function of Energy Management. Since energy is an
@@ -973,14 +1008,14 @@ The main elements in the framework are as follows:
   time, transition time, maximum packet throughput, maximum bit throughput
   and report these quantities.
 
-### Energy Measurement
+#### Energy Measurement
 
    The standard must provide means for reporting measured values of
    energy and the direction of the energy flow received or provided by
    an entity.  The standard must also provide the means to report the
    energy passing through each Power Interface.
 
-### Energy Efficiency Measurement
+#### Energy Efficiency Measurement
 
   The standard must provide means for measuring the trade-off between
   service-level object and energy consumption. [ETSI-ES-203-136],
@@ -993,25 +1028,25 @@ The main elements in the framework are as follows:
   energy source, etc.), different derived metrics should be computed at
   the controller level.
 
-### Power Gain Measurement
+#### Power Gain Measurement
 
   The standard must provide means for measuring power gain, which can
   be calculated by actual power to be consumed by the entity divided by the maximum
   power of the entity. In addition, the minimum power gain can also be
   measured and reported.
 
-### Time Intervals
+#### Time Intervals
 
    The standard must provide means for reporting the time interval for
    which an energy value is reported.
 
-### Energy Per Power State
+#### Energy Per Power State
 
    The standard must provide means for reporting the received and
    provided energy for each individual Power State.  This extends the
    requirements on Power State statistics described in Section 5.4.7.
 
-## Time Series of Measured Values
+### Time Series of Measured Values
 
    For some network management tasks, obtaining time series of measured
    values from entities, such as power, energy, etc., is
@@ -1062,52 +1097,23 @@ The main elements in the framework are as follows:
    issues discussed above need to be made when developing concrete
    Energy Management standards.
 
-### Time Series of Energy Values
+#### Time Series of Energy Values
 
    The standard must provide means for reporting time series of energy
    values.  If the comparison of time series between multiple entities
    is required, then time synchronization between those entities must be
    provided (for example, with the Network Time Protocol {{?RFC5905}}).
 
-### Time Series Interval Types
+#### Time Series Interval Types
 
    The standard must provide means for supporting alternative interval
    types.  The requirement in Section 5.5.2 applies to every reported
    time value.
 
-### Time Series Storage Capacity
+#### Time Series Storage Capacity
 
    The standard should provide means for reporting the number of values
    of a time series that can be stored for later reporting.
-
-# Reporting on Lifecycle Management
-
-   Lifecycle information related to manufacturing energy costs, transport,
-   recyclability, and end-of-life disposal impacts is part of what is
-   called "embedded carbon." This information is considered to be an
-   estimated value, which might not be implemented today in the network
-   devices. It might be part of the vendor information, and to be collected
-   from datasheets or databases. In accordance with ISO 14040/44, this
-   information should be considered as part of the sustainable strategy
-   related to energy efficiency. Also, refer to the ecodesign framework
-   [(EU) 2024/1781] published in June by the European Commission.
-
-## Carbon Reporting
-
-   To report on carbon equivalents for global reporting, it is important
-   to correlate the location where the specific entity/network element
-   is operating with the corresponding carbon factor. Refer to the world
-   emission factor from the International Energy Agency (IEA), electricity
-   maps applications that reflect the carbon intensity of the electricity
-   consumed, etc.
-
-## Energy Mix
-
-Energy efficiency is not limited to reducing the energy consumption, it is common to include carbon free, solar energy, wind energy, cogeneration in the efficiency.
-
-The type of the sources of energy of the power is one criteria of efficiency.
-
-There are other dimensions that must visible: As many telecom locations include battery or additionnally several backups levels (as example battery, standby generator ...) there is a requirement to known exactly when a backup power is in used and which one is.
 
 # Control of Entities
 
