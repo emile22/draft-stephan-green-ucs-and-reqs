@@ -141,6 +141,8 @@ The following section will delve into the specific details but from a high level
 
 - A focus on reporting lifecycle management, considering energy and transformation towards carbon awareness
 
+NB: These requirements are under revision as this is a work in progress.
+
 ## Background
 
    With rising energy costs and an increasing awareness of the
@@ -266,12 +268,10 @@ Tracking: Measure again to see if efficiency improves towards 8-10 Gbps per watt
 
 For this use case, the following requirements apply :
 
-TODO; These requirements are under revision as this is a work in progress.
-
 |id|category|requirements|note|Priority|
 |:----|:----|:----|:----|:----|
 |Req01-UCINC|Discovery|Component granularity, e.g., per line-card, per-port|Per component |1|
-|Req02-UCUCINCINC|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
+|Req02-UCINC|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
 |Req03-UCINC|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
 |Req04-UCINC|Inventory Management|component control capacity (aka component max power-on/power-off frequency supported)|Per component control| 1 (i)|
 |Req05-UCINC|Analysis|assess the gains of introducing eco-designed components in a device|Device Level Mgmt| 1 (ii)|
