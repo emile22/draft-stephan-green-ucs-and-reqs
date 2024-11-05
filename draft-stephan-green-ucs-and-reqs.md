@@ -327,6 +327,12 @@ The type of the sources of energy of the power is one criteria of efficiency.
 
 There are other dimensions that must visible: As many telecom locations include battery or additionnally several backups levels (as example battery, standby generator ...) there is a requirement to known exactly when a backup power is in used and which one is.
 
+## Facilitating more precise and real-time estimations of energy consumed by virtualised or cloud-native network functions
+
+Effective metering of virtualized network infrastructure is critical for the efficient management and operation of next-generation mobile networks.
+
+Reference: (GREEN FUTURE NETWORKS: METERING IN VIRTUALISED RAN INFRASTRUCTURE)[https://www.ngmn.org/publications/metering-in-virtualised-ran-infrastructure.html] by NGMN Alliance
+
 # Requirements extracted from proponents documents
 
 This section extracts and groups requirements from the documents of the GREEN WG proponents [GREEN-BOF], [sustainability-insights], [legacy-path] and [rfc6988bis-green]. The aim is to determine initial sets of requirements actionable at different levels of the framework presented below {{framework}}.
