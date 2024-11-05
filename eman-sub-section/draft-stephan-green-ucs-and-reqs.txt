@@ -101,11 +101,11 @@ Table of Contents
      2.2.  Selective reduction of energy consumption in network parts
            proportional to traffic levels
      2.3.  Reporting on Lifecycle Management
-     2.4.  Carbon Reporting
-     2.5.  Energy Mix
+       2.3.1.  Carbon Reporting
+       2.3.2.  Energy Mix
    3.  Requirements extracted from proponents documents
    4.  Framework Discussed During the BoF
-   5.  EMAN RFC6988bis inputs
+   5.  EMAN Requirements from RFC6988bis
      5.1.  General Considerations Related to Energy Management
        5.1.1.  Power States
        5.1.2.  Saving Energy versus Maintaining Service Level
@@ -528,7 +528,7 @@ Table of Contents
    the ecodesign framework [(EU) 2024/1781] published in June by the
    European Commission.
 
-2.4.  Carbon Reporting
+2.3.1.  Carbon Reporting
 
    To report on carbon equivalents for global reporting, it is important
    to correlate the location where the specific entity/network element
@@ -537,7 +537,7 @@ Table of Contents
    electricity maps applications that reflect the carbon intensity of
    the electricity consumed, etc.
 
-2.5.  Energy Mix
+2.3.2.  Energy Mix
 
    Energy efficiency is not limited to reducing the energy consumption,
    it is common to include carbon free, solar energy, wind energy,
@@ -884,12 +884,15 @@ Table of Contents
 
    (g) Control Energy Saving
 
-5.  EMAN RFC6988bis inputs
+5.  EMAN Requirements from RFC6988bis
 
    This section groups the inputs from the work on RFC6988bis
    [rfc6988bis-green].  Currently they still include a lot of verbatim
-   text from [rfc6988] which don't fit exactly the granularity of the
+   text from [rfc6988] which don't fit exactly in the granularity of the
    current GREEN WG charter.
+
+   This section will groups the subsections requirements tables to get
+   the consensus priority.
 
 5.1.  General Considerations Related to Energy Management
 
