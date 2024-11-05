@@ -100,6 +100,9 @@ Table of Contents
      2.1.  Incremental Application of the GREEN Framework
      2.2.  Selective reduction of energy consumption in network parts
            proportional to traffic levels
+     2.3.  Facilitating more precise and real-time estimations of
+           energy consumed by virtualised or cloud-native network
+           functions
    3.  Requirements extracted from proponents documents
    4.  Framework Discussed During the BoF
    5.  General Considerations Related to Energy Management
@@ -555,6 +558,17 @@ Table of Contents
    +-----------+---------------+------------------+-----------+--------+
 
                                   Table 2
+
+2.3.  Facilitating more precise and real-time estimations of energy
+      consumed by virtualised or cloud-native network functions
+
+   Effective metering of virtualized network infrastructure is critical
+   for the efficient management and operation of next-generation mobile
+   networks.
+
+   Reference: (GREEN FUTURE NETWORKS: METERING IN VIRTUALISED RAN
+   INFRASTRUCTURE)[https://www.ngmn.org/publications/metering-in-
+   virtualised-ran-infrastructure.html] by NGMN Alliance
 
 3.  Requirements extracted from proponents documents
 
@@ -2270,11 +2284,11 @@ Table of Contents
 
    [I-D.ietf-ivy-network-inventory-yang]
               Yu, C., Belotti, S., Bouquier, J., Peruzzini, F., and P.
-              Bedard, "A YANG Data Model for Network Inventory", Work in
-              Progress, Internet-Draft, draft-ietf-ivy-network-
-              inventory-yang-03, 7 July 2024,
+              Bedard, "A Base YANG Data Model for Network Inventory",
+              Work in Progress, Internet-Draft, draft-ietf-ivy-network-
+              inventory-yang-04, 5 November 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ivy-
-              network-inventory-yang-03>.
+              network-inventory-yang-04>.
 
    [legacy-path]
               "Requirements for Energy Efficiency Management", 21 July
