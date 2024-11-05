@@ -93,8 +93,6 @@ Table of Contents
 
    1.  Introduction
      1.1.  Background
-     1.2.  Conventional Requirements for Energy Efficiency Management
-     1.3.  Specific Requirements for Energy Management
    2.  Use Cases
      2.1.  Incremental Application of the GREEN Framework
      2.2.  Selective reduction of energy consumption in network parts
@@ -104,36 +102,38 @@ Table of Contents
        2.3.2.  Energy Mix
      2.4.  Real-time Energy Metering of Virtualised or Cloud-native
            Network Functions
+     2.5.  Indirect Energy Monitoring and control
    3.  Requirements Extracted from Proponents Documents
    4.  EMAN Requirements from RFC6988bis
-     4.1.  General Considerations Related to Energy Management
-       4.1.1.  Power States
-       4.1.2.  Saving Energy versus Maintaining Service Level
-       4.1.3.  Local versus Network-Wide Energy Management
-       4.1.4.  Energy Monitoring versus Energy Saving
-       4.1.5.  Overview of Energy Management Requirements
-     4.2.  Identification of Entities
-       4.2.1.  Identifying Entities
-       4.2.2.  Identifying Entitiy Capabilities
-       4.2.3.  Persistence of Identifiers
-       4.2.4.  Change of Identifiers
-       4.2.5.  Using Entity Identifiers of Existing YANG Modules
-     4.3.  Information on Entities
-       4.3.1.  General Information on Entities
-       4.3.2.  Power Interfaces
-       4.3.3.  Power
-       4.3.4.  Power State
-       4.3.5.  Energy
-       4.3.6.  Time Series of Measured Values
-     4.4.  Control of Entities
-       4.4.1.  Provisioning Power States
-       4.4.2.  Controlling Power SupplyProvisioning
-       4.4.3.  Controlling Switching Power Speed
-       4.4.4.  Controlling Energy Saving and Optimization
+     4.1.  Conventional Requirements for Energy Efficiency Management
+     4.2.  General Considerations Related to Energy Management
+       4.2.1.  Power States
+       4.2.2.  Saving Energy versus Maintaining Service Level
+       4.2.3.  Local versus Network-Wide Energy Management
+       4.2.4.  Energy Monitoring versus Energy Saving
+       4.2.5.  Overview of Energy Management Requirements
+     4.3.  Identification of Entities
+       4.3.1.  Identifying Entities
+       4.3.2.  Identifying Entitiy Capabilities
+       4.3.3.  Persistence of Identifiers
+       4.3.4.  Change of Identifiers
+       4.3.5.  Using Entity Identifiers of Existing YANG Modules
+     4.4.  Information on Entities
+       4.4.1.  General Information on Entities
+       4.4.2.  Power Interfaces
+       4.4.3.  Power
+       4.4.4.  Power State
+       4.4.5.  Energy
+       4.4.6.  Time Series of Measured Values
+     4.5.  Control of Entities
+       4.5.1.  Provisioning Power States
+       4.5.2.  Controlling Power SupplyProvisioning
+       4.5.3.  Controlling Switching Power Speed
+       4.5.4.  Controlling Energy Saving and Optimization
                Functionalities
-     4.5.  Management of oultet Entities
-       4.5.1.  Discovery of Power inlet Entities
-       4.5.2.  Controlling Other Entities
+     4.6.  Management of oultet Entities
+       4.6.1.  Discovery of Power inlet Entities
+       4.6.2.  Controlling Other Entities
    5.  Framework Discussed During the BoF
    6.  Security Considerations
      6.1.  Secure Energy Management
@@ -246,61 +246,6 @@ Table of Contents
    specified by these standards will be mandatory, recommended, or
    optional for compliant implementations is to be defined by Standards
    Track document(s) and not in this document.
-
-1.2.  Conventional Requirements for Energy Efficiency Management
-
-   The specification of requirements for an Energy Efficiency Management
-   standard starts with Section 4, which addresses the identification of
-   entities and the granularity of reporting of energy-related
-   information.  A standard must support the unique identification of
-   entities, reporting per network, per entire device, and reporting
-   energy-related information on individual components of a device or
-   attached devices.
-
-   Section 5 specifies requirements related to the monitoring of
-   entities.  This includes general (type, context) information and
-   specific information on Power States, Power Inlets, Power Outlets,
-   power, energy.  The control of Power State and power saving
-   functionalities, optimization functionalities by entities is covered
-   by requirements specified in Section 6.
-
-1.3.  Specific Requirements for Energy Management
-
-   While the conventional requirements summarized above seem to be all
-   that would be needed for Energy Management, there are significant
-   differences between Energy Management and most well-known network
-   management functions.  The most significant difference is the need
-   for some devices to report on other entities.  There are two major
-   reasons for this.
-
-   o For monitoring a particular entity, it is not always sufficient to
-   communicate only with that entity.  When the entity has no
-   instrumentation for determining power, it might still be possible to
-   obtain power values for the entity via communication with other
-   entities in its power distribution tree.  A simple example of this
-   would be the retrieval of power values from a power meter at the
-   power line into the entity.  A Power Distribution Unit (PDU) and a
-   Power over Ethernet (PoE) switch are common examples.  Both supply
-   power to other entities at sockets or ports, respectively, and are
-   often instrumented to measure power per socket or port.  Also it
-   could be considered to obtain power values for the entity via
-   communication with other entities outside of the power distribution
-   tree, like for example external databases or even data sheets.
-
-   o Similar considerations apply to controlling the power supply of an
-   entity that often needs direct or indirect communications with
-   another entity upstream in the power distribution tree.  Again, a PDU
-   and a PoE switch are common examples, if they have the capability to
-   switch power on or off at their sockets or ports, respectively.
-
-   These specific issues of Energy Management, as well as other issues,
-   are covered by requirements specified in Sections 7 and 8.
-
-   The requirements in these sections need a new Energy Management
-   framework that deals with the specific nature of Energy Management.
-   The actual standards documents, such as MIB module specifications,
-   address conformance by specifying which features must, should, or may
-   be implemented by compliant implementations.
 
 2.  Use Cases
 
@@ -538,6 +483,44 @@ Table of Contents
    Effective metering of virtualized network infrastructure is critical
    for the efficient management and operation of next-generation mobile
    networks [GREEN_NGNM].
+
+2.5.  Indirect Energy Monitoring and control
+
+   While the conventional requirements summarized above seem to be all
+   that would be needed for Energy Management, there are significant
+   differences between Energy Management and most well-known network
+   management functions.  The most significant difference is the need
+   for some devices to report on other entities.  There are two major
+   reasons for this.
+
+   o For monitoring a particular entity, it is not always sufficient to
+   communicate only with that entity.  When the entity has no
+   instrumentation for determining power, it might still be possible to
+   obtain power values for the entity via communication with other
+   entities in its power distribution tree.  A simple example of this
+   would be the retrieval of power values from a power meter at the
+   power line into the entity.  A Power Distribution Unit (PDU) and a
+   Power over Ethernet (PoE) switch are common examples.  Both supply
+   power to other entities at sockets or ports, respectively, and are
+   often instrumented to measure power per socket or port.  Also it
+   could be considered to obtain power values for the entity via
+   communication with other entities outside of the power distribution
+   tree, like for example external databases or even data sheets.
+
+   o Similar considerations apply to controlling the power supply of an
+   entity that often needs direct or indirect communications with
+   another entity upstream in the power distribution tree.  Again, a PDU
+   and a PoE switch are common examples, if they have the capability to
+   switch power on or off at their sockets or ports, respectively.
+
+   These specific issues of Energy Management, as well as other issues,
+   are covered by requirements specified in Sections 7 and 8.
+
+   The requirements in these sections need a new Energy Management
+   framework that deals with the specific nature of Energy Management.
+   The actual standards documents, such as MIB module specifications,
+   address conformance by specifying which features must, should, or may
+   be implemented by compliant implementations.
 
 3.  Requirements Extracted from Proponents Documents
 
@@ -838,13 +821,30 @@ Table of Contents
    interest but rather with other entities, for example, entities
    upstream in a power distribution tree.
 
-4.1.  General Considerations Related to Energy Management
+4.1.  Conventional Requirements for Energy Efficiency Management
+
+   The specification of requirements for an Energy Efficiency Management
+   standard starts with Section 5.4, which addresses the identification
+   of entities and the granularity of reporting of energy-related
+   information.  A standard must support the unique identification of
+   entities, reporting per network, per entire device, and reporting
+   energy-related information on individual components of a device or
+   attached devices.
+
+   Section 5.5 specifies requirements related to the monitoring of
+   entities.  This includes general (type, context) information and
+   specific information on Power States, Power Inlets, Power Outlets,
+   power, energy.  The control of Power State and power saving
+   functionalities, optimization functionalities by entities is covered
+   by requirements specified in Section 5.6.
+
+4.2.  General Considerations Related to Energy Management
 
    The basic objective of Energy Efficiency Management is to operate
    sets of network devices using minimal energy, while maintaining a
    certain level of service.
 
-4.1.1.  Power States
+4.2.1.  Power States
 
    Entities can be set to an operational state that results in the
    lowest power level that still meets the service-level performance
@@ -876,7 +876,7 @@ Table of Contents
    power state can be introduced to save energy while impove the overall
    network utilization.
 
-4.1.2.  Saving Energy versus Maintaining Service Level
+4.2.2.  Saving Energy versus Maintaining Service Level
 
    One of the objectives of Energy Efficiency Management is to reduce
    energy consumption.  While this objective is clear, attaining that
@@ -891,7 +891,7 @@ Table of Contents
    between service-level object and energy consumption, a new set of
    energy efficiency metrics needs to defined.
 
-4.1.3.  Local versus Network-Wide Energy Management
+4.2.3.  Local versus Network-Wide Energy Management
 
    Many energy-saving functions are executed locally by an entity; it
    monitors its usage and dynamically adapts its power according to the
@@ -916,7 +916,7 @@ Table of Contents
    is often preferable for power-saving measures based on local
    observations, such as the high or low functional load of an entity.
 
-4.1.4.  Energy Monitoring versus Energy Saving
+4.2.4.  Energy Monitoring versus Energy Saving
 
    Monitoring energy, power, and Power States alone does not reduce the
    energy needed to run an entity.  In fact, it may even increase it
@@ -941,7 +941,7 @@ Table of Contents
 
    o choosing the time of the next maintenance cycle for an entity
 
-4.1.5.  Overview of Energy Management Requirements
+4.2.5.  Overview of Energy Management Requirements
 
    The following basic management functions are required:
 
@@ -996,7 +996,7 @@ Table of Contents
    management interface.  Measurement of received and provided energy
    can provide useful data for energy efficiency management.
 
-4.2.  Identification of Entities
+4.3.  Identification of Entities
 
    Entities must be capable of being uniquely identified within the
    context of the management system.  This includes entities that are
@@ -1028,13 +1028,13 @@ Table of Contents
    information for all individual components separately, while reporting
    the received and provided energy only for the entire device.
 
-4.2.1.  Identifying Entities
+4.3.1.  Identifying Entities
 
    The standard must provide means for uniquely identifying entities.
    Uniqueness must be preserved such that collisions of identities are
    avoided at potential receivers of monitored information.
 
-4.2.2.  Identifying Entitiy Capabilities
+4.3.2.  Identifying Entitiy Capabilities
 
    The standard must provide means for discovering inventory of power
    components together with their capabilities, optimization control
@@ -1043,17 +1043,17 @@ Table of Contents
    device within the network and power relationship between component
    within network device and across network devices.
 
-4.2.3.  Persistence of Identifiers
+4.3.3.  Persistence of Identifiers
 
    The standard must provide means for indicating whether identifiers of
    entities are persistent across a restart of the entity.
 
-4.2.4.  Change of Identifiers
+4.3.4.  Change of Identifiers
 
    The standard must provide means to indicate any change of entity
    identifiers.
 
-4.2.5.  Using Entity Identifiers of Existing YANG Modules
+4.3.5.  Using Entity Identifiers of Existing YANG Modules
 
    The standard must provide means for reusing entity identifiers from
    existing standards, including at least the following:
@@ -1071,7 +1071,7 @@ Table of Contents
 
    Generic means for reusing other entity identifiers must be provided.
 
-4.3.  Information on Entities
+4.4.  Information on Entities
 
    This section describes information on entities for which the standard
    must provide means for retrieving and reporting.
@@ -1085,7 +1085,7 @@ Table of Contents
    covers requirements related to entities' Power States.  Finally, the
    reporting of time series of values is covered by Section 5.7.
 
-4.3.1.  General Information on Entities
+4.4.1.  General Information on Entities
 
    For Energy Management, understanding the role and context of an
    entity may be required.  An Energy Management System may aggregate
@@ -1096,37 +1096,37 @@ Table of Contents
    some mission-critical network devices from being switched to lower
    power or even from being switched off.
 
-4.3.1.1.  Type of Entity
+4.4.1.1.  Type of Entity
 
    The standard must provide means to configure, retrieve, and report a
    textual name or a description of an entity.
 
-4.3.1.2.  Context of an Entity
+4.4.1.2.  Context of an Entity
 
    The standard must provide means for retrieving and reporting context
    information on entities, for example, tags associated with an entity
    that indicate the entity's role.
 
-4.3.1.3.  Significance of Entities
+4.4.1.3.  Significance of Entities
 
    The standard must provide means for retrieving and reporting the
    significance of entities within its context, for example, how
    important the entity is.
 
-4.3.1.4.  Power Priority
+4.4.1.4.  Power Priority
 
    The standard must provide means for retrieving and reporting power
    priorities of entities.  Power priorities indicate an order in which
    Power States of entities are changed, for example, to lower Power
    States for saving power.
 
-4.3.1.5.  Grouping of Entities
+4.4.1.5.  Grouping of Entities
 
    The standard must provide means for grouping entities.  This can be
    achieved in multiple ways, for example, by providing means to tag
    entities, assign them to domains, or assign device types to them.
 
-4.3.2.  Power Interfaces
+4.4.2.  Power Interfaces
 
    A Power Interface is an interface at which a device is connected to a
    power transmission medium, at which it can in turn receive power,
@@ -1162,62 +1162,62 @@ Table of Contents
    voltage is often not a single value but a voltage range, such as, for
    example, (100V-120V), (100V-240V), (100V-120V,220V-240V).
 
-4.3.2.1.  List of Power Interfaces
+4.4.2.1.  List of Power Interfaces
 
    The standard must provide means for monitoring the list of Power
    Interfaces of a device.
 
-4.3.2.2.  Operational Mode of Power Interfaces
+4.4.2.2.  Operational Mode of Power Interfaces
 
    The standard must provide means for monitoring the operational mode
    of a Power Interface, which is either "Power Inlet" or "Power
    Outlet".
 
-4.3.2.3.  Corresponding Power Outlet
+4.4.2.3.  Corresponding Power Outlet
 
    The standard must provide means for identifying the Power Outlet that
    provides the power received at a Power Inlet.
 
-4.3.2.4.  Corresponding Power Inlets
+4.4.2.4.  Corresponding Power Inlets
 
    The standard must provide means for identifying the list of Power
    Inlets that receive the power provided at a Power Outlet.
 
-4.3.2.5.  Availability of Power
+4.4.2.5.  Availability of Power
 
    If the Power States allow it, the standard must provide means for
    monitoring the availability of power at each Power Interface.  This
    includes indicating whether a power supply at a Power Interface is
    switched on or off.
 
-4.3.2.6.  Use of Power
+4.4.2.6.  Use of Power
 
    The standard must provide means for monitoring each Power Interface
    if it is actually in use.  For inlets, this means that the device
    actually receives power at the inlet.  For outlets, this means that
    power is actually provided from the outlet to one or more devices.
 
-4.3.2.7.  Type of Current
+4.4.2.7.  Type of Current
 
    The standard must provide means for reporting the type of current (AC
    or DC) for each Power Interface as well as for a device.
 
-4.3.2.8.  Nominal Voltage Range
+4.4.2.8.  Nominal Voltage Range
 
    The standard must provide means for reporting the nominal voltage
    range for each Power Interface.
 
-4.3.2.9.  Nominal AC Frequency
+4.4.2.9.  Nominal AC Frequency
 
    The standard must provide means for reporting the nominal AC
    frequency for each Power Interface.
 
-4.3.2.10.  Number of AC Phases
+4.4.2.10.  Number of AC Phases
 
    The standard must provide means for reporting the number of AC phases
    for each Power Interface.
 
-4.3.3.  Power
+4.4.3.  Power
 
    Power is measured as an instantaneous value or as the average over a
    time interval.
@@ -1250,20 +1250,20 @@ Table of Contents
    notifications from entities when their power value exceeds or falls
    below given thresholds.
 
-4.3.3.1.  Real Power / Power Factor
+4.4.3.1.  Real Power / Power Factor
 
    The standard must provide means for reporting the real power for each
    Power Interface as well as for an entity.  Reporting power includes
    reporting the direction of power flow.
 
-4.3.3.2.  Power Measurement Interval
+4.4.3.2.  Power Measurement Interval
 
    The standard must provide means for reporting the corresponding time
    or time interval for which a power value is reported.  The power
    value can be measured at the corresponding time or averaged over the
    corresponding time interval.
 
-4.3.3.3.  Power Measurement Method
+4.4.3.3.  Power Measurement Method
 
    The standard must provide means to indicate the method used to obtain
    these values.  Based on how the measurement was conducted, it is
@@ -1272,24 +1272,24 @@ Table of Contents
    such as direct power measurement, estimation based on performance
    values, or hard-coding average power values for an entity.
 
-4.3.3.4.  Accuracy of Power and Energy Values
+4.4.3.4.  Accuracy of Power and Energy Values
 
    The standard must provide means for reporting the accuracy of
    reported power and energy values.
 
-4.3.3.5.  Actual Voltage and Current
+4.4.3.5.  Actual Voltage and Current
 
    The standard must provide means for reporting the actual voltage and
    actual current for each Power Interface as well as for a device.  For
    AC power supply, means must be provided for reporting the actual
    voltage and actual current per phase.
 
-4.3.3.6.  High-Power/Low-Power Notifications
+4.4.3.6.  High-Power/Low-Power Notifications
 
    The standard must provide means for creating notifications if power
    values of an entity rise above or fall below given thresholds.
 
-4.3.3.7.  Complex Power / Power Factor
+4.4.3.7.  Complex Power / Power Factor
 
    The standard must provide means for reporting the complex power for
    each Power Interface and for each phase at a Power Interface.  In
@@ -1297,25 +1297,25 @@ Table of Contents
    quantities need to be reported: apparent power, reactive power, and
    phase angle.  The phase angle can be substituted by the power factor.
 
-4.3.3.8.  Actual AC Frequency
+4.4.3.8.  Actual AC Frequency
 
    The standard must provide means for reporting the actual AC frequency
    for each Power Interface.
 
-4.3.3.9.  Total Harmonic Distortion
+4.4.3.9.  Total Harmonic Distortion
 
    The standard must provide means for reporting the Total Harmonic
    Distortion (THD) of voltage and current for each Power Interface.
    For AC power supply, means must be provided for reporting the THD per
    phase.
 
-4.3.3.10.  Power Supply Impedance
+4.4.3.10.  Power Supply Impedance
 
    The standard must provide means for reporting the impedance of a
    power supply for each Power Interface.  For AC power supply, means
    must be provided for reporting the impedance per phase.
 
-4.3.4.  Power State
+4.4.4.  Power State
 
    Many entities have a limited number of discrete Power States.
 
@@ -1341,38 +1341,38 @@ Table of Contents
    the time spent as well as the received and provided energy in a Power
    State.
 
-4.3.4.1.  Actual Power State
+4.4.4.1.  Actual Power State
 
    The standard must provide means for reporting the actual Power State
    of an entity.
 
-4.3.4.2.  List of Supported Power States
+4.4.4.2.  List of Supported Power States
 
    The standard must provide means for retrieving the list of all
    potential Power States of an entity.
 
-4.3.4.3.  Multiple Power State Sets
+4.4.4.3.  Multiple Power State Sets
 
    The standard must provide means for supporting multiple Power State
    sets simultaneously at an entity.
 
-4.3.4.4.  List of Supported Power State Sets
+4.4.4.4.  List of Supported Power State Sets
 
    The standard must provide means for retrieving the list of all Power
    State sets supported by an entity.
 
-4.3.4.5.  List of Supported Power States within a Set
+4.4.4.5.  List of Supported Power States within a Set
 
    The standard must provide means for retrieving the list of all
    potential Power States of an entity for each supported Power State
    set.
 
-4.3.4.6.  Typical Power Per Power State
+4.4.4.6.  Typical Power Per Power State
 
    The standard must provide means for retrieving the typical power for
    each supported Power State.
 
-4.3.4.7.  Power State Statistics
+4.4.4.7.  Power State Statistics
 
    The standard must provide means for monitoring statistics per Power
    State, including the total time spent in a Power State, the number of
@@ -1380,12 +1380,12 @@ Table of Contents
    entered.  More Power State statistics are addressed by the
    requirements in Section 5.5.3.
 
-4.3.4.8.  Power State Changes
+4.4.4.8.  Power State Changes
 
    The standard must provide means for generating a notification when
    the actual Power State of an entity changes.
 
-4.3.5.  Energy
+4.4.5.  Energy
 
    The monitoring of electrical energy received or provided by an entity
    is a core function of Energy Management.  Since energy is an
@@ -1404,14 +1404,14 @@ Table of Contents
    interruption time, transition time, maximum packet throughput,
    maximum bit throughput and report these quantities.
 
-4.3.5.1.  Energy Measurement
+4.4.5.1.  Energy Measurement
 
    The standard must provide means for reporting measured values of
    energy and the direction of the energy flow received or provided by
    an entity.  The standard must also provide the means to report the
    energy passing through each Power Interface.
 
-4.3.5.2.  Energy Efficiency Measurement
+4.4.5.2.  Energy Efficiency Measurement
 
    The standard must provide means for measuring the trade-off between
    service-level object and energy consumption.  [ETSI-ES-203-136],
@@ -1425,25 +1425,25 @@ Table of Contents
    heat, energy source, etc.), different derived metrics should be
    computed at the controller level.
 
-4.3.5.3.  Power Gain Measurement
+4.4.5.3.  Power Gain Measurement
 
    The standard must provide means for measuring power gain, which can
    be calculated by actual power to be consumed by the entity divided by
    the maximum power of the entity.  In addition, the minimum power gain
    can also be measured and reported.
 
-4.3.5.4.  Time Intervals
+4.4.5.4.  Time Intervals
 
    The standard must provide means for reporting the time interval for
    which an energy value is reported.
 
-4.3.5.5.  Energy Per Power State
+4.4.5.5.  Energy Per Power State
 
    The standard must provide means for reporting the received and
    provided energy for each individual Power State.  This extends the
    requirements on Power State statistics described in Section 5.4.7.
 
-4.3.6.  Time Series of Measured Values
+4.4.6.  Time Series of Measured Values
 
    For some network management tasks, obtaining time series of measured
    values from entities, such as power, energy, etc., is required.
@@ -1493,25 +1493,25 @@ Table of Contents
    issues discussed above need to be made when developing concrete
    Energy Management standards.
 
-4.3.6.1.  Time Series of Energy Values
+4.4.6.1.  Time Series of Energy Values
 
    The standard must provide means for reporting time series of energy
    values.  If the comparison of time series between multiple entities
    is required, then time synchronization between those entities must be
    provided (for example, with the Network Time Protocol [RFC5905]).
 
-4.3.6.2.  Time Series Interval Types
+4.4.6.2.  Time Series Interval Types
 
    The standard must provide means for supporting alternative interval
    types.  The requirement in Section 5.5.2 applies to every reported
    time value.
 
-4.3.6.3.  Time Series Storage Capacity
+4.4.6.3.  Time Series Storage Capacity
 
    The standard should provide means for reporting the number of values
    of a time series that can be stored for later reporting.
 
-4.4.  Control of Entities
+4.5.  Control of Entities
 
    Many entities control their Power State locally.  Other entities need
    interfaces for an Energy Management System to control their Power
@@ -1526,7 +1526,7 @@ Table of Contents
    shutting down the power supply abruptly may have severe consequences
    for the device.
 
-4.4.1.  Provisioning Power States
+4.5.1.  Provisioning Power States
 
    The standard must provide means for provisioning Power States of
    entities.
@@ -1538,20 +1538,20 @@ Table of Contents
    provide means to report the intented and applied Power States, with
    the Network Management Datastore Architecture (NMDA) [RFC8342]
 
-4.4.2.  Controlling Power SupplyProvisioning
+4.5.2.  Controlling Power SupplyProvisioning
 
    The standard must provide means for switching a power supply off or
    turning a power supply on at Power Interfaces providing power to one
    or more devices.
 
-4.4.3.  Controlling Switching Power Speed
+4.5.3.  Controlling Switching Power Speed
 
    The standard must provide means to avoid the speed of switching a
    power supply off or turning a power supply on to break component
    parts (aka laser, power parts, wire connectors ...), or a too hight
    number of on/off switching to reduce their live duration.
 
-4.4.4.  Controlling Energy Saving and Optimization Functionalities
+4.5.4.  Controlling Energy Saving and Optimization Functionalities
 
    The standard must provide means for controlling energy saving and
    optimization functionalities and allocating the committed component
@@ -1563,7 +1563,7 @@ Table of Contents
    management and network wide management based on energy saving
    functionality.
 
-4.5.  Management of oultet Entities
+4.6.  Management of oultet Entities
 
    As discussed in Section 5, not all energy-related information may be
    available at the entity in question.  Such information may be
@@ -1572,11 +1572,11 @@ Table of Contents
 
    The intend is to summarize them in a table in section 9.
 
-4.5.1.  Discovery of Power inlet Entities
+4.6.1.  Discovery of Power inlet Entities
 
    Energy consumption must not be accounted twice
 
-4.5.1.1.  Reporting on Other Entities
+4.6.1.1.  Reporting on Other Entities
 
    As discussed in Section 5, not all energy-related information may be
    available at the entity in question.  Such information may be
@@ -1592,43 +1592,43 @@ Table of Contents
    an accumulated value for a set of entities.  All of the entities
    belonging to that set need to be identified.
 
-4.5.1.2.  Reports on Other Entities
+4.6.1.2.  Reports on Other Entities
 
    The standard must provide means for an entity to report information
    on another entity.
 
-4.5.1.3.  Identity of Other Entities on Which Information Is Reported
+4.6.1.3.  Identity of Other Entities on Which Information Is Reported
 
    For entities that report on one or more other entities, the standard
    must provide means for reporting the identity of other entities on
    which information is reported.  Note that, in some situations, a
    manual configuration might be required to populate this information.
 
-4.5.1.4.  Reporting Quantities Accumulated over Multiple Entities
+4.6.1.4.  Reporting Quantities Accumulated over Multiple Entities
 
    The standard must provide means for reporting the list of all
    entities from which contributions are included in an accumulated
    value.
 
-4.5.1.5.  List of All Entities on Which Information Is Reported
+4.6.1.5.  List of All Entities on Which Information Is Reported
 
    For entities that report on one or more other entities, the standard
    must provide means for reporting the complete list of all those
    entities on which energy-related information can be reported.
 
-4.5.1.6.  Content of Reports on Other Entities
+4.6.1.6.  Content of Reports on Other Entities
 
    For entities that report on one or more other entities, the standard
    must provide means for indicating what type or types of energy-
    related information can be reported, and for which entities.
 
-4.5.2.  Controlling Other Entities
+4.6.2.  Controlling Other Entities
 
    This section specifies requirements for controlling Power States and
    power supply of entities by communicating with other entities that
    have the means for doing that control.
 
-4.5.2.1.  Controlling Power States of Other Entities
+4.6.2.1.  Controlling Power States of Other Entities
 
    RFC6988 allow some entities have control over Power States of other
    entities, e.g., in Building automation case where a gateway to a
@@ -1643,32 +1643,32 @@ Table of Contents
    controlled by the Energy Management System has the means to report
    the list of these other entities.
 
-4.5.2.1.1.  Control of Power States of Other Entities
+4.6.2.1.1.  Control of Power States of Other Entities
 
    The standard must provide means for an Energy Management System to
    send Power State control commands to an entity that controls the
    Power States of entities other than the entity to which the command
    was sent.
 
-4.5.2.1.2.  Identity of Other Power State Controlled Entities
+4.6.2.1.2.  Identity of Other Power State Controlled Entities
 
    The standard must provide means for reporting the identities of the
    entities for which the reporting entity has the means to control
    their Power States.  Note that, in some situations, a manual
    configuration might be required to populate this information.
 
-4.5.2.1.3.  List of All Power State Controlled Entities
+4.6.2.1.3.  List of All Power State Controlled Entities
 
    The standard must provide means for an entity to report the list of
    all entities for which it can control the Power State.
 
-4.5.2.1.4.  List of All Power State Controllers
+4.6.2.1.4.  List of All Power State Controllers
 
    The standard must provide means for an entity that receives commands
    controlling its Power State from other entities to report the list of
    all those entities.
 
-4.5.2.2.  Controlling Power Supply
+4.6.2.2.  Controlling Power Supply
 
    Some entities may have control of the power supply of other entities,
    for example, because the other entity is supplied via a Power Outlet
