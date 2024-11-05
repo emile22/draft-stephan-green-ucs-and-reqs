@@ -100,6 +100,9 @@ Table of Contents
      2.1.  Incremental Application of the GREEN Framework
      2.2.  Selective reduction of energy consumption in network parts
            proportional to traffic levels
+     2.3.  Reporting on Lifecycle Management
+     2.4.  Carbon Reporting
+     2.5.  Energy Mix
    3.  Requirements extracted from proponents documents
    4.  Framework Discussed During the BoF
    5.  EMAN RFC6988bis inputs
@@ -122,50 +125,47 @@ Table of Contents
        5.3.4.  Power State
        5.3.5.  Energy
        5.3.6.  Time Series of Measured Values
-     5.4.  Reporting on Lifecycle Management
-   6.  Carbon Reporting
-     6.1.  Energy Mix
-   7.  Control of Entities
-     7.1.  Provisioning Power States
-     7.2.  Controlling Power SupplyProvisioning
-     7.3.  Controlling Switching Power Speed
-     7.4.  Controlling Energy Saving and Optimization Functionalities
-   8.  Management of oultet Entities
-     8.1.  Discovery of Power inlet Entities
-       8.1.1.  Reporting on Other Entities
-       8.1.2.  Reports on Other Entities
-       8.1.3.  Identity of Other Entities on Which Information Is
+   6.  Control of Entities
+     6.1.  Provisioning Power States
+     6.2.  Controlling Power SupplyProvisioning
+     6.3.  Controlling Switching Power Speed
+     6.4.  Controlling Energy Saving and Optimization Functionalities
+   7.  Management of oultet Entities
+     7.1.  Discovery of Power inlet Entities
+       7.1.1.  Reporting on Other Entities
+       7.1.2.  Reports on Other Entities
+       7.1.3.  Identity of Other Entities on Which Information Is
                Reported
-       8.1.4.  Reporting Quantities Accumulated over Multiple Entities
-       8.1.5.  List of All Entities on Which Information Is Reported
-       8.1.6.  Content of Reports on Other Entities
-     8.2.  Controlling Other Entities
-       8.2.1.  Controlling Power States of Other Entities
-       8.2.2.  Controlling Power Supply
-   9.  Security Considerations
-     9.1.  Secure Energy Management
-     9.2.  Isolation of Insufficiently Secure Entities
-     9.3.  Optional Restriction of Functions
-     9.4.  Other Aspects
-   10. IANA Considerations
-   11. Acknowledgments
-   12. Open Issues
-     12.1.  Open Issues to be Discussed at IETF121
-     12.2.  Open Issues collected since the BoF
-   13. Other use cases (to be decided if moved to use case section)
-     13.1.  Consideration of other domains for obtention of end-to-end
+       7.1.4.  Reporting Quantities Accumulated over Multiple Entities
+       7.1.5.  List of All Entities on Which Information Is Reported
+       7.1.6.  Content of Reports on Other Entities
+     7.2.  Controlling Other Entities
+       7.2.1.  Controlling Power States of Other Entities
+       7.2.2.  Controlling Power Supply
+   8.  Security Considerations
+     8.1.  Secure Energy Management
+     8.2.  Isolation of Insufficiently Secure Entities
+     8.3.  Optional Restriction of Functions
+     8.4.  Other Aspects
+   9.  IANA Considerations
+   10. Acknowledgments
+   11. Open Issues
+     11.1.  Open Issues to be Discussed at IETF121
+     11.2.  Open Issues collected since the BoF
+   12. Other use cases (to be decided if moved to use case section)
+     12.1.  Consideration of other domains for obtention of end-to-end
             metrics
-     13.2.  Dynamic adjustment of network element throughput according
+     12.2.  Dynamic adjustment of network element throughput according
             to traffic levels in wireless transport networks
-     13.3.  Video streaming use case
-   14. References
-     14.1.  Normative References
-     14.2.  Informative References
-   15. Appendix
-     15.1.  Terminology
-     15.2.  In Preparation of the GREEN BoF at IETF 120
-     15.3.  High-level Differences with RFC6988
-   16. Informative References
+     12.3.  Video streaming use case
+   13. References
+     13.1.  Normative References
+     13.2.  Informative References
+   14. Appendix
+     14.1.  Terminology
+     14.2.  In Preparation of the GREEN BoF at IETF 120
+     14.3.  High-level Differences with RFC6988
+   15. Informative References
    Authors' Addresses
 
 1.  Introduction
@@ -514,6 +514,42 @@ Table of Contents
    +-----------+---------------+------------------+-----------+--------+
 
                                   Table 2
+
+2.3.  Reporting on Lifecycle Management
+
+   Lifecycle information related to manufacturing energy costs,
+   transport, recyclability, and end-of-life disposal impacts is part of
+   what is called "embedded carbon."  This information is considered to
+   be an estimated value, which might not be implemented today in the
+   network devices.  It might be part of the vendor information, and to
+   be collected from datasheets or databases.  In accordance with ISO
+   14040/44, this information should be considered as part of the
+   sustainable strategy related to energy efficiency.  Also, refer to
+   the ecodesign framework [(EU) 2024/1781] published in June by the
+   European Commission.
+
+2.4.  Carbon Reporting
+
+   To report on carbon equivalents for global reporting, it is important
+   to correlate the location where the specific entity/network element
+   is operating with the corresponding carbon factor.  Refer to the
+   world emission factor from the International Energy Agency (IEA),
+   electricity maps applications that reflect the carbon intensity of
+   the electricity consumed, etc.
+
+2.5.  Energy Mix
+
+   Energy efficiency is not limited to reducing the energy consumption,
+   it is common to include carbon free, solar energy, wind energy,
+   cogeneration in the efficiency.
+
+   The type of the sources of energy of the power is one criteria of
+   efficiency.
+
+   There are other dimensions that must visible: As many telecom
+   locations include battery or additionnally several backups levels (as
+   example battery, standby generator ...) there is a requirement to
+   known exactly when a backup power is in used and which one is.
 
 3.  Requirements extracted from proponents documents
 
@@ -1528,43 +1564,7 @@ Table of Contents
    The standard should provide means for reporting the number of values
    of a time series that can be stored for later reporting.
 
-5.4.  Reporting on Lifecycle Management
-
-   Lifecycle information related to manufacturing energy costs,
-   transport, recyclability, and end-of-life disposal impacts is part of
-   what is called "embedded carbon."  This information is considered to
-   be an estimated value, which might not be implemented today in the
-   network devices.  It might be part of the vendor information, and to
-   be collected from datasheets or databases.  In accordance with ISO
-   14040/44, this information should be considered as part of the
-   sustainable strategy related to energy efficiency.  Also, refer to
-   the ecodesign framework [(EU) 2024/1781] published in June by the
-   European Commission.
-
-6.  Carbon Reporting
-
-   To report on carbon equivalents for global reporting, it is important
-   to correlate the location where the specific entity/network element
-   is operating with the corresponding carbon factor.  Refer to the
-   world emission factor from the International Energy Agency (IEA),
-   electricity maps applications that reflect the carbon intensity of
-   the electricity consumed, etc.
-
-6.1.  Energy Mix
-
-   Energy efficiency is not limited to reducing the energy consumption,
-   it is common to include carbon free, solar energy, wind energy,
-   cogeneration in the efficiency.
-
-   The type of the sources of energy of the power is one criteria of
-   efficiency.
-
-   There are other dimensions that must visible: As many telecom
-   locations include battery or additionnally several backups levels (as
-   example battery, standby generator ...) there is a requirement to
-   known exactly when a backup power is in used and which one is.
-
-7.  Control of Entities
+6.  Control of Entities
 
    Many entities control their Power State locally.  Other entities need
    interfaces for an Energy Management System to control their Power
@@ -1579,7 +1579,7 @@ Table of Contents
    shutting down the power supply abruptly may have severe consequences
    for the device.
 
-7.1.  Provisioning Power States
+6.1.  Provisioning Power States
 
    The standard must provide means for provisioning Power States of
    entities.
@@ -1591,20 +1591,20 @@ Table of Contents
    provide means to report the intented and applied Power States, with
    the Network Management Datastore Architecture (NMDA) [RFC8342]
 
-7.2.  Controlling Power SupplyProvisioning
+6.2.  Controlling Power SupplyProvisioning
 
    The standard must provide means for switching a power supply off or
    turning a power supply on at Power Interfaces providing power to one
    or more devices.
 
-7.3.  Controlling Switching Power Speed
+6.3.  Controlling Switching Power Speed
 
    The standard must provide means to avoid the speed of switching a
    power supply off or turning a power supply on to break component
    parts (aka laser, power parts, wire connectors ...), or a too hight
    number of on/off switching to reduce their live duration.
 
-7.4.  Controlling Energy Saving and Optimization Functionalities
+6.4.  Controlling Energy Saving and Optimization Functionalities
 
    The standard must provide means for controlling energy saving and
    optimization functionalities and allocating the committed component
@@ -1616,7 +1616,7 @@ Table of Contents
    management and network wide management based on energy saving
    functionality.
 
-8.  Management of oultet Entities
+7.  Management of oultet Entities
 
    As discussed in Section 5, not all energy-related information may be
    available at the entity in question.  Such information may be
@@ -1625,11 +1625,11 @@ Table of Contents
 
    The intend is to summarize them in a table in section 9.
 
-8.1.  Discovery of Power inlet Entities
+7.1.  Discovery of Power inlet Entities
 
    Energy consumption must not be accounted twice
 
-8.1.1.  Reporting on Other Entities
+7.1.1.  Reporting on Other Entities
 
    As discussed in Section 5, not all energy-related information may be
    available at the entity in question.  Such information may be
@@ -1645,43 +1645,43 @@ Table of Contents
    an accumulated value for a set of entities.  All of the entities
    belonging to that set need to be identified.
 
-8.1.2.  Reports on Other Entities
+7.1.2.  Reports on Other Entities
 
    The standard must provide means for an entity to report information
    on another entity.
 
-8.1.3.  Identity of Other Entities on Which Information Is Reported
+7.1.3.  Identity of Other Entities on Which Information Is Reported
 
    For entities that report on one or more other entities, the standard
    must provide means for reporting the identity of other entities on
    which information is reported.  Note that, in some situations, a
    manual configuration might be required to populate this information.
 
-8.1.4.  Reporting Quantities Accumulated over Multiple Entities
+7.1.4.  Reporting Quantities Accumulated over Multiple Entities
 
    The standard must provide means for reporting the list of all
    entities from which contributions are included in an accumulated
    value.
 
-8.1.5.  List of All Entities on Which Information Is Reported
+7.1.5.  List of All Entities on Which Information Is Reported
 
    For entities that report on one or more other entities, the standard
    must provide means for reporting the complete list of all those
    entities on which energy-related information can be reported.
 
-8.1.6.  Content of Reports on Other Entities
+7.1.6.  Content of Reports on Other Entities
 
    For entities that report on one or more other entities, the standard
    must provide means for indicating what type or types of energy-
    related information can be reported, and for which entities.
 
-8.2.  Controlling Other Entities
+7.2.  Controlling Other Entities
 
    This section specifies requirements for controlling Power States and
    power supply of entities by communicating with other entities that
    have the means for doing that control.
 
-8.2.1.  Controlling Power States of Other Entities
+7.2.1.  Controlling Power States of Other Entities
 
    RFC6988 allow some entities have control over Power States of other
    entities, e.g., in Building automation case where a gateway to a
@@ -1696,32 +1696,32 @@ Table of Contents
    controlled by the Energy Management System has the means to report
    the list of these other entities.
 
-8.2.1.1.  Control of Power States of Other Entities
+7.2.1.1.  Control of Power States of Other Entities
 
    The standard must provide means for an Energy Management System to
    send Power State control commands to an entity that controls the
    Power States of entities other than the entity to which the command
    was sent.
 
-8.2.1.2.  Identity of Other Power State Controlled Entities
+7.2.1.2.  Identity of Other Power State Controlled Entities
 
    The standard must provide means for reporting the identities of the
    entities for which the reporting entity has the means to control
    their Power States.  Note that, in some situations, a manual
    configuration might be required to populate this information.
 
-8.2.1.3.  List of All Power State Controlled Entities
+7.2.1.3.  List of All Power State Controlled Entities
 
    The standard must provide means for an entity to report the list of
    all entities for which it can control the Power State.
 
-8.2.1.4.  List of All Power State Controllers
+7.2.1.4.  List of All Power State Controllers
 
    The standard must provide means for an entity that receives commands
    controlling its Power State from other entities to report the list of
    all those entities.
 
-8.2.2.  Controlling Power Supply
+7.2.2.  Controlling Power Supply
 
    Some entities may have control of the power supply of other entities,
    for example, because the other entity is supplied via a Power Outlet
@@ -1734,7 +1734,7 @@ Table of Contents
    these other entities.  This need is already addressed by requirements
    in Sections 5.2.3 and 5.2.4.
 
-9.  Security Considerations
+8.  Security Considerations
 
    Controlling Power State and power supply of entities are considered
    highly sensitive actions, since they can significantly affect the
@@ -1764,21 +1764,21 @@ Table of Contents
    actions, so integrity of transmitted information and authentication
    of the origin may be needed.
 
-9.1.  Secure Energy Management
+8.1.  Secure Energy Management
 
    The standard must provide privacy, integrity, and authentication
    mechanisms for all actions addressed in Sections 5 through 8.  The
    security mechanisms must meet the security requirements detailed in
    Section 1.4 of [RFC3411].
 
-9.2.  Isolation of Insufficiently Secure Entities
+8.2.  Isolation of Insufficiently Secure Entities
 
    The standard must provide means to allow the isolation of entities
    that are not sufficiently secure to operate on the public Internet,
    e.g., behind a gateway that implements sufficient security that the
    vulnerable entities are not directly exposed to the Internet.
 
-9.3.  Optional Restriction of Functions
+8.3.  Optional Restriction of Functions
 
    The standard must allow compliant implementations to disable
    sensitive functions, or to not implement such functions at all, when
@@ -1786,18 +1786,18 @@ Table of Contents
    applies particularly to the control functions described in Sections 6
    and 8.
 
-9.4.  Other Aspects
+8.4.  Other Aspects
 
    Adding new interfaces on devices increase attack surfaces.  Devices
    have brief variation of power consumption due their internal works.
    Reducing the power available may reduce their routing capacity which
    may reduce network performance and resiliency.
 
-10.  IANA Considerations
+9.  IANA Considerations
 
    This document has no IANA actions.
 
-11.  Acknowledgments
+10.  Acknowledgments
 
    The contribution of Luis M.  Contreras to this document has been
    supported by the Smart Networks and Services Joint Undertaking (SNS
@@ -1805,9 +1805,9 @@ Table of Contents
    projects 6Green (Grant Agreement no. 101096925) and Exigence (Grant
    Agreement no. 101139120).
 
-12.  Open Issues
+11.  Open Issues
 
-12.1.  Open Issues to be Discussed at IETF121
+11.1.  Open Issues to be Discussed at IETF121
 
    o Consider 5g vs network slicing: 3GPP spec describong energy
    efficiency KPIs. 3GPP TS 28.554.
@@ -1819,7 +1819,7 @@ Table of Contents
    Meanwhile, they are considered as part of the network… Servers might
    be considered outside of scope o Energy Metric in E2E view
 
-12.2.  Open Issues collected since the BoF
+11.2.  Open Issues collected since the BoF
 
    o Power and Energy Monitoring and Control MIB modules has not been
    converted yet into YANG modules.  Based on their deployements status,
@@ -1896,12 +1896,12 @@ Table of Contents
    energy spent on behalf of a particular customer/user.  Open issue,
    marisolpalmero/GREEN-bof#89
 
-13.  Other use cases (to be decided if moved to use case section)
+12.  Other use cases (to be decided if moved to use case section)
 
    Use cases which are not tied enough to the current GREEN chater will
    be moved to the GREEN WG wiki pages.
 
-13.1.  Consideration of other domains for obtention of end-to-end
+12.1.  Consideration of other domains for obtention of end-to-end
        metrics
 
    The technologies under the scope of IETF provide the necessary
@@ -1930,7 +1930,7 @@ Table of Contents
    end-to-end metric, the 3GPP metric should only consider the
    efficiency and consumption of the 3GPP-related technologies.
 
-13.2.  Dynamic adjustment of network element throughput according to
+12.2.  Dynamic adjustment of network element throughput according to
        traffic levels in wireless transport networks
 
    Radio base stations are typically connected to the backbone network
@@ -1957,7 +1957,7 @@ Table of Contents
    power to the observed traffic levels with some coarse granularity,
    but pursuing certain degrees of proportionality.
 
-13.3.  Video streaming use case
+12.3.  Video streaming use case
 
    Video streaming is nowadays the major source of traffic observed in
    ISP networks, in a propotion of 70% or even higher.  Over-the-top
@@ -1993,9 +1993,9 @@ Table of Contents
    service.  It should be noted that another front for optimization is
    the one related to the deployment of cache servers in the network.
 
-14.  References
+13.  References
 
-14.1.  Normative References
+13.1.  Normative References
 
    [IEC.61850-7-4] International Electrotechnical Commission,
    "Communication networks and systems for power utility automation --
@@ -2034,7 +2034,7 @@ Table of Contents
    https://www.itu.int/rec/T-REC-L.1310/en (https://www.itu.int/rec/T-
    REC-L.1310/en).
 
-14.2.  Informative References
+13.2.  Informative References
 
    [IEC.60050] International Electrotechnical Commission, "Electropedia:
    The World's Online Electrotechnical Vocabulary", 2013,
@@ -2047,12 +2047,12 @@ Table of Contents
    Facsimile and Leased Circuits -- Telecommunications Management
    Network - TMN management functions", February 2000.
 
-15.  Appendix
+14.  Appendix
 
    This appendix should be removed when the initial set of GREEN WG
    documents will be stable
 
-15.1.  Terminology
+14.1.  Terminology
 
    This section is excepted to move in the GREEN WG draft in charge of
    terms.  The terms below are a sub set of the whole terminology.
@@ -2156,7 +2156,7 @@ Table of Contents
      characterizes its capabilities, power consumption, and
      responsiveness to input [IEEE-1621].
 
-15.2.  In Preparation of the GREEN BoF at IETF 120
+14.2.  In Preparation of the GREEN BoF at IETF 120
 
    The EMAN (Energy MANagement) working group (WG), created in 2010 and
    now concluded, has produced multiples RFCs
@@ -2200,7 +2200,7 @@ Table of Contents
    document re-evaluates the energy-related requirements, as a
    preparation for the GREEN BoF at IETF 120.
 
-15.3.  High-level Differences with RFC6988
+14.3.  High-level Differences with RFC6988
 
    The following section will delve into the specific details but from a
    high level point of view, the differences between this document and
@@ -2223,7 +2223,7 @@ Table of Contents
    *  A focus on reporting lifecycle management, considering energy and
       transformation towards carbon awareness
 
-16.  Informative References
+15.  Informative References
 
    [GREEN-BOF]
               "BOF proposal for GREEN WG Creation", 10 May 2024,
@@ -2236,11 +2236,11 @@ Table of Contents
 
    [I-D.ietf-ivy-network-inventory-yang]
               Yu, C., Belotti, S., Bouquier, J., Peruzzini, F., and P.
-              Bedard, "A YANG Data Model for Network Inventory", Work in
-              Progress, Internet-Draft, draft-ietf-ivy-network-
-              inventory-yang-03, 7 July 2024,
+              Bedard, "A Base YANG Data Model for Network Inventory",
+              Work in Progress, Internet-Draft, draft-ietf-ivy-network-
+              inventory-yang-04, 5 November 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ivy-
-              network-inventory-yang-03>.
+              network-inventory-yang-04>.
 
    [legacy-path]
               "Requirements for Energy Efficiency Management", 21 July
