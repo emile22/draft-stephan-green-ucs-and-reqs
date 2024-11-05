@@ -1031,7 +1031,7 @@ The table below groups requirements from [sustainability-insights] uses cases re
 Energy efficiency is not limited to reducing the energy consumption, it is common to include carbon free, solar energy, wind energy, cogeneration in the efficiency.
 
 The type of the sources of energy of the power is one criteria of efficiency.
-   
+
 There are other dimensions that must visible: As many telecom locations include battery or additionnally several backups levels (as example battery, standby generator ...) there is a requirement to known exactly when a backup power is in used and which one is.
 
 # Control of Entities
@@ -1598,7 +1598,7 @@ The terms below are a sub set of the whole terminology. There are many other dra
       A Power State is a condition or mode of a device that broadly
       characterizes its capabilities, power consumption, and
       responsiveness to input [IEEE-1621].
-  
+
 ## In Preparation of the GREEN BoF at IETF 120
 
    The EMAN (Energy MANagement) working group (WG), created in 2010 and now concluded, has produced multiples RFCs
