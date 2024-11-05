@@ -103,6 +103,9 @@ Table of Contents
      2.3.  Reporting on Lifecycle Management
        2.3.1.  Carbon Reporting
        2.3.2.  Energy Mix
+     2.4.  Facilitating more precise and real-time estimations of
+           energy consumed by virtualised or cloud-native network
+           functions
    3.  Requirements extracted from proponents documents
    4.  Framework Discussed During the BoF
    5.  EMAN Requirements from RFC6988bis
@@ -550,6 +553,17 @@ Table of Contents
    locations include battery or additionnally several backups levels (as
    example battery, standby generator ...) there is a requirement to
    known exactly when a backup power is in used and which one is.
+
+2.4.  Facilitating more precise and real-time estimations of energy
+      consumed by virtualised or cloud-native network functions
+
+   Effective metering of virtualized network infrastructure is critical
+   for the efficient management and operation of next-generation mobile
+   networks.
+
+   Reference: (GREEN FUTURE NETWORKS: METERING IN VIRTUALISED RAN
+   INFRASTRUCTURE)[https://www.ngmn.org/publications/metering-in-
+   virtualised-ran-infrastructure.html] by NGMN Alliance
 
 3.  Requirements extracted from proponents documents
 
