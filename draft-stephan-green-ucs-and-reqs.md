@@ -1187,31 +1187,31 @@ The table below is a copy of the operator'requirements table of [charter-refinem
 
 |id|category|requirements|note|Priority|
 |:----|:----|:----|:----|:----|
-|Req00|Observability|Component granularity, e.g., per line-card, per-port|Per component measurement|1|
-|Req00|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
-|Req00|Observability|Triggering of alarms when consumption deviate from a nominal usage|Alarm notification|1??|
-|Req00|Observability|Improvement of metering solutions (finer granularity, control of the energy efficiency and saving, interoperability, exposure)|Standardized metering??|1|
-|Req00|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
-|Req00|Analysis|Common methodology of measurements for fair comparison|Standard methodology|2|
-|Req00|Analysis|How to provide accurate figures (context of the measurement in terms of time period, location, traffic, etc|Time based, location based visualization|2 ??|
-|Req00|Analysis|Database for decision in case of large data transfer|Information Correlation|3|
-|Req00|Analysis|Ability of multi-layer analysis (e.g., IP plus optical)|POI Use Case|3|
-|Req00|Control& Mgmt|To have devices with elastic power consumption according to the carried traffic|Dynamic Energy Saving|2|
-|Req00|Control& Mgmt|Support of network-wide energy saving and optimization functions|Network Level Mgmt|2|
-|Req00|Control& Mgmt|Support of network-wide control of energy optimization APIs, allowing external applications to optimize consumption|Network Level Mgmt|2|
-|Req00|Control& Mgmt|Advanced sleep mode, needing some sort of low power mode when node is lightly utilized|Dynamic Energy Saving|2|
-|Req00|Control& Mgmt|Ability to steer traffic based on power savings|Traffic Engineering|4|
-|Req00|Control& Mgmt|Comparison of decision vs optimal case|Intent based Concept|2|
-|Req00|Control& Mgmt|Synchronous query support|Network Level Query|2|
-|Req00|Inventory Management|Inventory of power components (of devices, racks, etc) including together|Component & Device Level|1|
-|Req00|Interaction with other domain|Inclusion of data center networks in the picture|Data Center Case|3|
-|Req00|Interaction with other domain|Inclusion of data center networks in the picture|Mobile Network Case|3|
-|Req00|Sustainability & Carbon Emission|Optimize the overall CO2 footprint (i.e., energy mix based on source type) facilitating the engineering of PoP More renewable energy|More renewable energy|4|
-|Req00|Sustainability & Carbon Emission|Support GHG units|Measurement Units|4|
-|Req00|Sustainability & Carbon Emission|Support Energy units|More renewable energy|2 ??|
-|Req00|Sustainability & Carbon EmissiCarbon, renewable|4|
-|Req00|Sustainability & Carbon Emission|Accounting of legacy installed based GHG/energy|Accounting Cost|4|
-|Req00|Sustainability & Carbon Emission|Track device/network Energy Consumption Before Operation|Manufacturing, transport(weight, volume, package)|4|
+|Req01-OP|Observability|Component granularity, e.g., per line-card, per-port|Per component measurement|1|
+|Req01-OP|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
+|Req01-OP|Observability|Triggering of alarms when consumption deviate from a nominal usage|Alarm notification|1??|
+|Req01-OP|Observability|Improvement of metering solutions (finer granularity, control of the energy efficiency and saving, interoperability, exposure)|Standardized metering??|1|
+|Req01-OP|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
+|Req01-OP|Analysis|Common methodology of measurements for fair comparison|Standard methodology|2|
+|Req01-OP|Analysis|How to provide accurate figures (context of the measurement in terms of time period, location, traffic, etc|Time based, location based visualization|2 ??|
+|Req01-OP|Analysis|Database for decision in case of large data transfer|Information Correlation|3|
+|Req01-OP|Analysis|Ability of multi-layer analysis (e.g., IP plus optical)|POI Use Case|3|
+|Req01-OP|Control& Mgmt|To have devices with elastic power consumption according to the carried traffic|Dynamic Energy Saving|2|
+|Req01-OP|Control& Mgmt|Support of network-wide energy saving and optimization functions|Network Level Mgmt|2|
+|Req01-OP|Control& Mgmt|Support of network-wide control of energy optimization APIs, allowing external applications to optimize consumption|Network Level Mgmt|2|
+|Req01-OP|Control& Mgmt|Advanced sleep mode, needing some sort of low power mode when node is lightly utilized|Dynamic Energy Saving|2|
+|Req01-OP|Control& Mgmt|Ability to steer traffic based on power savings|Traffic Engineering|4|
+|Req01-OP|Control& Mgmt|Comparison of decision vs optimal case|Intent based Concept|2|
+|Req01-OP|Control& Mgmt|Synchronous query support|Network Level Query|2|
+|Req01-OP|Inventory Management|Inventory of power components (of devices, racks, etc) including together|Component & Device Level|1|
+|Req01-OP|Interaction with other domain|Inclusion of data center networks in the picture|Data Center Case|3|
+|Req01-OP|Interaction with other domain|Inclusion of data center networks in the picture|Mobile Network Case|3|
+|Req01-OP|Sustainability & Carbon Emission|Optimize the overall CO2 footprint (i.e., energy mix based on source type) facilitating the engineering of PoP More renewable energy|More renewable energy|4|
+|Req01-OP|Sustainability & Carbon Emission|Support GHG units|Measurement Units|4|
+|Req01-OP|Sustainability & Carbon Emission|Support Energy units|More renewable energy|2 ??|
+|Req01-OP|Sustainability & Carbon EmissiCarbon, renewable|4|
+|Req01-OP|Sustainability & Carbon Emission|Accounting of legacy installed based GHG/energy|Accounting Cost|4|
+|Req01-OP|Sustainability & Carbon Emission|Track device/network Energy Consumption Before Operation|Manufacturing, transport(weight, volume, package)|4|
 
 ## Requirements extracted from [legacy-path] {#incremental}
 
@@ -1219,9 +1219,9 @@ TODO: This section might merge with {{incremental-use-case}} secction.
 
 |id|category|requirements|note|Priority|
 |:----|:----|:----|:----|:----|
-|Req00|Inventory Management|component control capacity (aka component max power-on/power-off frequency supported)|Per component control| 1 (i)|
-|Req00|Analysis|assess the gains of introducing eco-designed components in a device|Device Level Mgmt| 1 (ii)|
-|Req00|Control& Mgmt|comprehensive support of network-wide energy efficiency includes legacy devices|Network Level Mgmt| 1 (iii)|
+|Req01-INC|Inventory Management|component control capacity (aka component max power-on/power-off frequency supported)|Per component control| 1 (i)|
+|Req01-INC|Analysis|assess the gains of introducing eco-designed components in a device|Device Level Mgmt| 1 (ii)|
+|Req01-INC|Control& Mgmt|comprehensive support of network-wide energy efficiency includes legacy devices|Network Level Mgmt| 1 (iii)|
 
 (i) Avoid a power-on/power-off frequency to break component parts (aka laser, power parts, wire connectors ...)
 
@@ -1233,10 +1233,10 @@ TODO: This section might merge with {{incremental-use-case}} secction.
 
 |id|category|requirements|note|Priority|
 |:----|:----|:----|:----|:----|
-|Req00|Control& Mgmt|Distinguish backup sources|rfc6988bis battery| 2|
-|Req00|Inventory Management|Reporting on Other Entities, typically smart PDU or PoE|Fit in "Inventory of power components (of devices, racks, etc) including together"| 2|
-|Req00|Observability or Interaction with Other domain|Room sensor (hvac...)|Data Center Case| 4|
-|Req00|Observability|flexible (future-proof) description of the nature of the sources of the energy used |Standard metric|2 |
+|Req01-BIS|Control& Mgmt|Distinguish backup sources|rfc6988bis battery| 2|
+|Req01-BIS|Inventory Management|Reporting on Other Entities, typically smart PDU or PoE|Fit in "Inventory of power components (of devices, racks, etc) including together"| 2|
+|Req01-BIS|Observability or Interaction with Other domain|Room sensor (hvac...)|Data Center Case| 4|
+|Req01-BIS|Observability|flexible (future-proof) description of the nature of the sources of the energy used |Standard metric|2 |
 
 ## Requirements extracted from [sustainability-insights] uses cases
 
@@ -1244,11 +1244,11 @@ There are limited to energy consumption vs sustainability
 
 |id|category|requirements|note|Priority|
 |:----|:----|:----|:----|:----|
-|Req00|Observability|Provide near-real-time energy consumption to different device types, service types, and individual users | Helps identify which devices or network functions are consuming more energy. | 2 |
-|Req00|Migration or Upgrade | Provide KPIs for energy efficiency parameters, enhance accuracy of upgrade decisions | Helps make informed decisions about upgrades based on actual usage data. |   |
-|Req00|Recycling | Report on percentage of recycled user devices and components. Enable comprehensive reporting and recycling efforts | Major driver of the circular economy, transparency is key | 4 |
-|Req00|Power Optimization | Provide KPIs for energy efficiency parameters. Perform actions to reduce energy consumption | Monitor network and application performance to optimize power usage | 4 |
-|Req00|Control& Mgmt Switch off | Stop and restart WiFi APs with the right time, space, and service granularity | Save power consumption during periods when APs are not in use.| 2|
+|Req01-SIS|Observability|Provide near-real-time energy consumption to different device types, service types, and individual users | Helps identify which devices or network functions are consuming more energy. | 2 |
+|Req01-SIS|Migration or Upgrade | Provide KPIs for energy efficiency parameters, enhance accuracy of upgrade decisions | Helps make informed decisions about upgrades based on actual usage data. |   |
+|Req01-SIS|Recycling | Report on percentage of recycled user devices and components. Enable comprehensive reporting and recycling efforts | Major driver of the circular economy, transparency is key | 4 |
+|Req01-SIS|Power Optimization | Provide KPIs for energy efficiency parameters. Perform actions to reduce energy consumption | Monitor network and application performance to optimize power usage | 4 |
+|Req01-SIS|Control& Mgmt Switch off | Stop and restart WiFi APs with the right time, space, and service granularity | Save power consumption during periods when APs are not in use.| 2|
 
 
 ## Framework Discussed During the BoF {#framework}
@@ -1331,13 +1331,13 @@ For this use case, the following requirements apply:
 
 |id|category|requirements|note|Priority|
 |:----|:----|:----|:----|:----|
-|Req00|Observability|Component granularity, e.g., per line-card, per-port|Per component measurement|1|
-|Req00|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
-|Req00|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
-|Req00|Analysis|Ability of multi-layer analysis (e.g., IP plus optical)|POI Use Case|3|
-|Req00|Control& Mgmt|To have devices with elastic power consumption according to the carried traffic|Dynamic Energy Saving|2|
-|Req00|Control& Mgmt|Advanced sleep mode, needing some sort of low power mode when node is lightly utilized|Dynamic Energy Saving|2|
-|Req00|Control& Mgmt|Ability to steer traffic based on power savings|Traffic Engineering|4|
+|Req01-UCRED|Observability|Component granularity, e.g., per line-card, per-port|Per component measurement|1|
+|Req01-UCRED|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
+|Req01-UCRED|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
+|Req01-UCRED|Analysis|Ability of multi-layer analysis (e.g., IP plus optical)|POI Use Case|3|
+|Req01-UCRED|Control& Mgmt|To have devices with elastic power consumption according to the carried traffic|Dynamic Energy Saving|2|
+|Req01-UCRED|Control& Mgmt|Advanced sleep mode, needing some sort of low power mode when node is lightly utilized|Dynamic Energy Saving|2|
+|Req01-UCRED|Control& Mgmt|Ability to steer traffic based on power savings|Traffic Engineering|4|
 
 These requirements are under revision as this is a work in progress.
 
@@ -1371,9 +1371,9 @@ For this use case, the following requirements apply:
 
 |id|category|requirements|note|Priority|
 |:----|:----|:----|:----|:----|
-|Req00|Discovery|Component granularity, e.g., per line-card, per-port|Per component |1|
-|Req00|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
-|Req00|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
+|Req01-UCINC|Discovery|Component granularity, e.g., per line-card, per-port|Per component |1|
+|Req01-UCINC|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
+|Req01-UCINC|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
 
 These requirements are under revision as this is a work in progress.
 
