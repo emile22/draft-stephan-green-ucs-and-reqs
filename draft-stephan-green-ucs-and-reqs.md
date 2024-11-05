@@ -125,10 +125,10 @@ The primary objectives of this draft, which are listed in the goals and scope wi
 (1) collecting and updating requirements for the management of energy-efficient networks, and
 (2) defining use cases for managing energy-efficient networks.
 
-This draft replaces the drafts [rfc6988bis-green] and [green-bof-reqs] and groups requirements from the documents of the GREEN WG proponents [charter-refinement], [operators-inputs], [GREEN-BOF], [sustainability-insights], [legacy-path] and [rfc6988bis-green]. The aim is to determine initial sets of requirements actionable at different levels of the framework presented below {{framework}}. 
+This draft replaces the drafts [rfc6988bis-green] and [green-bof-reqs] and groups requirements from the documents of the GREEN WG proponents [charter-refinement], [operators-inputs], [GREEN-BOF], [sustainability-insights], [legacy-path] and [rfc6988bis-green]. The aim is to determine initial sets of requirements actionable at different levels of the framework presented below {{framework}}.
 
-Requirements are named and grouped in tables and are set with individual priority (to be) determined by the GREEN WG consensus. 
-Section 5 recalls [rfc6988bis-green] requirements. They will be grouped in tables too. 
+Requirements are named and grouped in tables and are set with individual priority (to be) determined by the GREEN WG consensus.
+Section 5 recalls [rfc6988bis-green] requirements. They will be grouped in tables too.
 
 Requirements are segmented into three core functions: discovery, monitoring, and control. Discovery functions involve identifying energy-managed networks, devices, and their components, as well as discovering the inventory of power components capabilities, optimization control capabilities, and nominal condition use. Monitoring functions encompass tracking power states, power attributes, energy consumption, network performance, and energy efficiency metrics. Control functions include managing energy-saving and optimization functions and the power states of energy-managed devices and their components.
 
@@ -458,7 +458,7 @@ The main elements in the framework are as follows:
 
 This section groups the inputs of the work of RFC6988bis [rfc6988bis-green]. Currently they still include a lot of verbatim text from [rfc6988] which don't fit exactly in the granularity of the current GREEN WG charter.
 
-At this step the specifications made by the IETF, aka in WGs like EMAN, on energy managements focus mainly on SMI (aka MIBs) instead of YANG and cover neither the control nor energy efficiency. 
+At this step the specifications made by the IETF, aka in WGs like EMAN, on energy managements focus mainly on SMI (aka MIBs) instead of YANG and cover neither the control nor energy efficiency.
 
 The goal is to enable the resuse pieces of the energy-related requirements of RFC6988 and to map them in a framework of YANG/Netconf for energy efficiency that might reuse "YANG Data Model for Hardware Management" {{?RFC8348}}, a conversion of former Entity MIB module, Entity Sensor MIB module, Entity State MIB modules.
 
