@@ -426,7 +426,7 @@ The main elements in the framework are as follows:
 
 # EMAN RFC6988bis inputs
 
-This section groups the inputs from the work on RFC6988bis [rfc6988bis-green]. Currently they still include a lot of verbatim text from [rfc6988] which don't fit exactly the granularity of the current GREEN WG charter. 
+This section groups the inputs from the work on RFC6988bis [rfc6988bis-green]. Currently they still include a lot of verbatim text from [rfc6988] which don't fit exactly the granularity of the current GREEN WG charter.
 
 ## General Considerations Related to Energy Management
 
