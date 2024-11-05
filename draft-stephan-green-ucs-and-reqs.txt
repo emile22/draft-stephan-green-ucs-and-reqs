@@ -103,10 +103,9 @@ Table of Contents
      2.3.  Reporting on Lifecycle Management
        2.3.1.  Carbon Reporting
        2.3.2.  Energy Mix
-     2.4.  Facilitating more precise and real-time estimations of
-           energy consumed by virtualised or cloud-native network
-           functions
-   3.  Requirements extracted from proponents documents
+     2.4.  Real-time Energy Metering of Virtualised or Cloud-native
+           Network Functions
+   3.  Requirements Extracted from Proponents Documents
    4.  Framework Discussed During the BoF
    5.  EMAN Requirements from RFC6988bis
      5.1.  General Considerations Related to Energy Management
@@ -554,18 +553,17 @@ Table of Contents
    example battery, standby generator ...) there is a requirement to
    known exactly when a backup power is in used and which one is.
 
-2.4.  Facilitating more precise and real-time estimations of energy
-      consumed by virtualised or cloud-native network functions
+2.4.  Real-time Energy Metering of Virtualised or Cloud-native Network
+      Functions
+
+   Facilitating more precise and real-time estimations of energy
+   consumed by virtualised or cloud-native network functions.
 
    Effective metering of virtualized network infrastructure is critical
    for the efficient management and operation of next-generation mobile
-   networks.
+   networks [GREEN_NGNM].
 
-   Reference: (GREEN FUTURE NETWORKS: METERING IN VIRTUALISED RAN
-   INFRASTRUCTURE)[https://www.ngmn.org/publications/metering-in-
-   virtualised-ran-infrastructure.html] by NGMN Alliance
-
-3.  Requirements extracted from proponents documents
+3.  Requirements Extracted from Proponents Documents
 
    This section extracts and groups requirements from the documents of
    the GREEN WG proponents [GREEN-BOF], [sustainability-insights],
@@ -2250,6 +2248,12 @@ Table of Contents
               "Green BoF requirements collections", 3 September 2024,
               <https://datatracker.ietf.org/doc/draft-stephan-green-bof-
               reqs-collections>.
+
+   [GREEN_NGNM]
+              "NGMN Alliance, GREEN FUTURE NETWORKS: METERING IN
+              VIRTUALISED RAN INFRASTRUCTURE", n.d.,
+              <https://www.ngmn.org/publications/metering-in-
+              virtualised-ran-infrastructure.html>.
 
    [I-D.ietf-ivy-network-inventory-yang]
               Yu, C., Belotti, S., Bouquier, J., Peruzzini, F., and P.
