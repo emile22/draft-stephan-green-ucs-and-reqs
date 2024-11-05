@@ -310,7 +310,7 @@ For this use case, the following requirements apply:
    related to energy efficiency. Also, refer to the ecodesign framework
    [(EU) 2024/1781] published in June by the European Commission.
 
-## Carbon Reporting
+### Carbon Reporting
 
    To report on carbon equivalents for global reporting, it is important
    to correlate the location where the specific entity/network element
@@ -319,7 +319,7 @@ For this use case, the following requirements apply:
    maps applications that reflect the carbon intensity of the electricity
    consumed, etc.
 
-## Energy Mix
+### Energy Mix
 
 Energy efficiency is not limited to reducing the energy consumption, it is common to include carbon free, solar energy, wind energy, cogeneration in the efficiency.
 
@@ -453,9 +453,11 @@ The main elements in the framework are as follows:
 
 (g) Control Energy Saving
 
-# EMAN RFC6988bis inputs
+# EMAN Requirements from RFC6988bis
 
-This section groups the inputs from the work on RFC6988bis [rfc6988bis-green]. Currently they still include a lot of verbatim text from [rfc6988] which don't fit exactly the granularity of the current GREEN WG charter.
+This section groups the inputs from the work on RFC6988bis [rfc6988bis-green]. Currently they still include a lot of verbatim text from [rfc6988] which don't fit exactly in the granularity of the current GREEN WG charter.
+
+This section will groups the subsections requirements tables to get the consensus priority.
 
 ## General Considerations Related to Energy Management
 
