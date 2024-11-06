@@ -246,7 +246,7 @@ Table of Contents
    This is a work in progress and additional use cases will be
    documented in next versions of this document.  Use cases which are
    not tied enough to the current GREEN chater will be moved to the
-   GREEN WG wiki pages or to others WG or RG.
+   GREEN WG wiki pages or to other WGs or RGs.
 
 2.1.  Incremental Application of the GREEN Framework
 
