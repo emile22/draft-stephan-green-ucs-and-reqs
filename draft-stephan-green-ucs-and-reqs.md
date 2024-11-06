@@ -133,7 +133,7 @@ Section 2 groups the 'core' use cases. Several of them might not be relevant for
 
 Section 3 recalls a set of requirements established after the BoF in [charter-refinement].
 
-Section 4 recalls [rfc6988bis-green] requirements wich may fit to the GREEN WG. They still have to be grouped in tables and set with individual priorities.
+Section 4 recalls [rfc6988bis-green] requirements which may fit to the GREEN WG. They still have to be grouped in tables and set with individual priorities.
 
 Section 5 recalls the raw framework discussed during the BoF to illustrate the segmentation of the requirements in three core functions: discovery, monitoring, and control. Discovery functions involve identifying energy-managed networks, devices, and their components, as well as discovering the inventory of power components capabilities, optimization control capabilities, and nominal condition use. Monitoring functions encompass tracking power states, power attributes, energy consumption, network performance, and energy efficiency metrics. Control functions include managing energy-saving and optimization functions and the power states of energy-managed devices and their components.
 
@@ -343,11 +343,11 @@ The table below groups the operator'requirements based on the inputs received fr
 |:----|:----|:----|:----|:----|
 |Req01-OP|Observability|Component granularity, e.g., per line-card, per-port|Per component measurement|1|
 |Req02-OP|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
-|Req03-OP|Observability|Triggering of alarms when consumption deviate from a nominal usage|Alarm notification|1??|
-|Req04-OP|Observability|Improvement of metering solutions (finer granularity, control of the energy efficiency and saving, interoperability, exposure)|Standardized metering??|1|
+|Req03-OP|Observability|Triggering of alarms when consumption deviate from a nominal usage|Alarm notification|1|
+|Req04-OP|Observability|Improvement of metering solutions (finer granularity, control of the energy efficiency and saving, interoperability, exposure)|Standardized metering|1|
 |Req05-OP|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
 |Req06-OP|Analysis|Common methodology of measurements for fair comparison|Standard methodology|2|
-|Req07-OP|Analysis|How to provide accurate figures (context of the measurement in terms of time period, location, traffic, etc|Time based, location based visualization|2 ??|
+|Req07-OP|Analysis|How to provide accurate figures (context of the measurement in terms of time period, location, traffic, etc|Time based, location based visualization|2|
 |Req08-OP|Analysis|Database for decision in case of large data transfer|Information Correlation|3|
 |Req09-OP|Analysis|Ability of multi-layer analysis (e.g., IP plus optical)|POI Use Case|3|
 |Req10-OP|Control& Mgmt|To have devices with elastic power consumption according to the carried traffic|Dynamic Energy Saving|2|
