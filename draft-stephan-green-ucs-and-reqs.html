@@ -1244,21 +1244,19 @@ svg :is([fill="white"], [fill^="#fff"]) {
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.5">
                 <p id="section-toc.1-1.2.2.5.1"><a href="#section-2.5" class="auto internal xref">2.5</a>.  <a href="#name-indirect-energy-monitoring-" class="internal xref">Indirect Energy Monitoring and control</a></p>
 </li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.6">
+                <p id="section-toc.1-1.2.2.6.1"><a href="#section-2.6" class="auto internal xref">2.6</a>.  <a href="#name-consideration-of-other-doma" class="internal xref">Consideration of other domains for obtention of end-to-end metrics</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.7">
+                <p id="section-toc.1-1.2.2.7.1"><a href="#section-2.7" class="auto internal xref">2.7</a>.  <a href="#name-dynamic-adjustment-of-netwo" class="internal xref">Dynamic adjustment of network element throughput according to traffic levels in wireless transport networks</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.8">
+                <p id="section-toc.1-1.2.2.8.1"><a href="#section-2.8" class="auto internal xref">2.8</a>.  <a href="#name-video-streaming-use-case" class="internal xref">Video streaming use case</a></p>
+</li>
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
             <p id="section-toc.1-1.3.1"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-requirements-extracted-from" class="internal xref">Requirements Extracted from Proponents Documents</a></p>
-<ul class="compact toc ulBare ulEmpty">
-<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.1">
-                <p id="section-toc.1-1.3.2.1.1"><a href="#section-3.1" class="auto internal xref">3.1</a>.  <a href="#name-consideration-of-other-doma" class="internal xref">Consideration of other domains for obtention of end-to-end metrics</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.2">
-                <p id="section-toc.1-1.3.2.2.1"><a href="#section-3.2" class="auto internal xref">3.2</a>.  <a href="#name-dynamic-adjustment-of-netwo" class="internal xref">Dynamic adjustment of network element throughput according to traffic levels in wireless transport networks</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.3">
-                <p id="section-toc.1-1.3.2.3.1"><a href="#section-3.3" class="auto internal xref">3.3</a>.  <a href="#name-video-streaming-use-case" class="internal xref">Video streaming use case</a></p>
-</li>
-            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
             <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-eman-requirements-from-rfc6" class="internal xref">EMAN Requirements from RFC6988bis</a></p>
@@ -1746,6 +1744,37 @@ For this use case, the following requirements apply:<a href="#section-2.2-1" cla
    be implemented by compliant implementations.<a href="#section-2.5-5" class="pilcrow">¶</a></p>
 </section>
 </div>
+<div id="consideration-of-other-domains-for-obtention-of-end-to-end-metrics">
+<section id="section-2.6">
+        <h3 id="name-consideration-of-other-doma">
+<a href="#section-2.6" class="section-number selfRef">2.6. </a><a href="#name-consideration-of-other-doma" class="section-name selfRef">Consideration of other domains for obtention of end-to-end metrics</a>
+        </h3>
+<p id="section-2.6-1">The technologies under the scope of IETF provide the necessary connectivity to other technological domains. For the obtention of metrics end-to-end it would be required to combine or compose the metrics per each of those domains.<a href="#section-2.6-1" class="pilcrow">¶</a></p>
+<p id="section-2.6-2">An exemplary case is the one of a network slice service. The concept of network slice was initially defined by 3GPP <span>[<a href="#TS23.501" class="cite xref">TS23.501</a>]</span>, and it has been further extended to the concerns of IETF <span>[<a href="#RFC9543" class="cite xref">RFC9543</a>]</span>.<a href="#section-2.6-2" class="pilcrow">¶</a></p>
+<p id="section-2.6-3">In regards energy efficiency, 3GPP defines a number of energy-related key performance indicators (KPI) in <span>[<a href="#TS28.554" class="cite xref">TS28.554</a>]</span>, specifically Energy Efficiency (EE) and Energy Consumption (EC) KPIs. There are KPIs particular for a slice supporting a specific kind of service (e.g., Mobile Broadband or MBB), or generic ones, like Generic Network Slice EE or Network Slice EC. Assuming these as the KPIs of interest, the motivation of this use case is the obtention of the equivalent KPIs at IETF level, that is, for the network slice service as defined in <span>[<a href="#RFC9543" class="cite xref">RFC9543</a>]</span>.<a href="#section-2.6-3" class="pilcrow">¶</a></p>
+<p id="section-2.6-4">Note that according to <span>[<a href="#TS28.554" class="cite xref">TS28.554</a>]</span>, the Generic Network Slice EE is the performance of the network slice divided by the Network Slice EC. Same approach can be followed at IETF level. Note that for avoiding double counting the energy at IETF level in the calculation of the end-to-end metric, the 3GPP metric should only consider the efficiency and consumption of the 3GPP-related technologies.<a href="#section-2.6-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="dynamic-adjustment-of-network-element-throughput-according-to-traffic-levels-in-wireless-transport-networks">
+<section id="section-2.7">
+        <h3 id="name-dynamic-adjustment-of-netwo">
+<a href="#section-2.7" class="section-number selfRef">2.7. </a><a href="#name-dynamic-adjustment-of-netwo" class="section-name selfRef">Dynamic adjustment of network element throughput according to traffic levels in wireless transport networks</a>
+        </h3>
+<p id="section-2.7-1">Radio base stations are typically connected to the backbone network by means of fiber or wireless transport (e.g., microwave) technologies. In the specific case of wireless transport, automation frameworks have been defined <span>[<a href="#ONF-MW" class="cite xref">ONF-MW</a>]</span><span>[<a href="#RFC8432" class="cite xref">RFC8432</a>]</span><span>[<a href="#mWT025" class="cite xref">mWT025</a>]</span> for their control and management.<a href="#section-2.7-1" class="pilcrow">¶</a></p>
+<p id="section-2.7-2">One of the parameters subject of automated control is the power of the radio links. The relevance of that capability is that the power can be adjusted accordingly to the traffic observed. Wireless transport networks are typically planned to support the máximum traffic capacity in their área of aggregation, that is, the traffic peak. With that input, the number of radio links in the network element and the corresponding power per radio link (for supporting a given modulation and link length in the worst weather conditions) are configured. This is done to avoid any kind of traffic loss in the worst operational situation. However, such operational needs are sporadic, giving room for optimization during normal operational circumstances and/or low traffic periods.<a href="#section-2.7-2" class="pilcrow">¶</a></p>
+<p id="section-2.7-3">Power-related parameters are for instance defined in <span>[<a href="#RFC8561" class="cite xref">RFC8561</a>]</span>. Those power parameters can be dynamically configured to adjust the power to the observed traffic levels with some coarse granularity, but pursuing certain degrees of proportionality.<a href="#section-2.7-3" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="video-streaming-use-case">
+<section id="section-2.8">
+        <h3 id="name-video-streaming-use-case">
+<a href="#section-2.8" class="section-number selfRef">2.8. </a><a href="#name-video-streaming-use-case" class="section-name selfRef">Video streaming use case</a>
+        </h3>
+<p id="section-2.8-1">Video streaming is nowadays the major source of traffic observed in ISP networks, in a propotion of 70% or even higher. Over-the-top distribution of streaming traffic is typically done by delivering a unicast flow per end user for the content of its interest.In consequence, during the hours of higher demand, the total traffic in the network is proportional to the concurrence of users consuming the video streaming service. The amount of traffic is also dependent of the resolution of the encoded video (the higher the resolution, the higher the bit rate per video flow), which tends to be higher as long as the users devices support such higher resolutions.<a href="#section-2.8-1" class="pilcrow">¶</a></p>
+<p id="section-2.8-2">The consequence of both the growth in the number of flows to be supported simultaneously, and the higher bit rate per flow, is that the nework elements in the path between the source of the video and the user have to be dimensioned accordingly. This implies the continuous upgrade of those network elements in terms of capacity, with the need of deploying high-capacity network elements and components. Apart from the fact that this process is shortening the lifetime of network elements, the need of high capacity interfaces also increase the energy consumption (despite the effort of manufacturers in creating more efficient network element platforms). Note that nowadays there is no actual possibility of activating energy consumption proportionality (in regards the delivered traffic) to such network elements.<a href="#section-2.8-2" class="pilcrow">¶</a></p>
+<p id="section-2.8-3">As a mean of slowing down this cycle of continuos renewal, and reduce the need og higher bit rate interfaces / line cards, it seems convenient to explore mechanisms that could reduce the volume of traffic without impacting the user service expectations. Variants of multicast or different service delivery strategies can help to improve the energy efficiency associated to the video streaming service. It should be noted that another front for optimization is the one related to the deployment of cache servers in the network.<a href="#section-2.8-3" class="pilcrow">¶</a></p>
+</section>
+</div>
 </section>
 </div>
 <div id="requirements-extracted-from-proponents-documents">
@@ -2039,37 +2068,6 @@ For this use case, the following requirements apply:<a href="#section-2.2-1" cla
           </tr>
         </tbody>
       </table>
-<div id="consideration-of-other-domains-for-obtention-of-end-to-end-metrics">
-<section id="section-3.1">
-        <h3 id="name-consideration-of-other-doma">
-<a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-consideration-of-other-doma" class="section-name selfRef">Consideration of other domains for obtention of end-to-end metrics</a>
-        </h3>
-<p id="section-3.1-1">The technologies under the scope of IETF provide the necessary connectivity to other technological domains. For the obtnetion of metrics end-to-end it would be required to combine or compose the metrics per each of those domains.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
-<p id="section-3.1-2">An exemplary case is the one of a network slice service. The concept of network slice was initially defined by 3GPP <span>[<a href="#TS23.501" class="cite xref">TS23.501</a>]</span>, and it has been further extended to the concerns of IETF <span>[<a href="#RFC9543" class="cite xref">RFC9543</a>]</span>.<a href="#section-3.1-2" class="pilcrow">¶</a></p>
-<p id="section-3.1-3">In regards energy efficiency, 3GPP defines a number of energy-related key performance indicators (KPI) in <span>[<a href="#TS28.554" class="cite xref">TS28.554</a>]</span>, specifically Energy Efficiency (EE) and Energy Consumption (EC) KPIs. There are KPIs particular for a slice supporting a specific kind of service (e.g., Mobile Broadband or MBB), or generic ones, like Generic Network Slice EE or Network Slice EC. Assuming these as the KPIs of interest, the motivation of this use case is the obtention of the equivalent KPIs at IETF level, that is, for the network slice service as defined in <span>[<a href="#RFC9543" class="cite xref">RFC9543</a>]</span>.<a href="#section-3.1-3" class="pilcrow">¶</a></p>
-<p id="section-3.1-4">Note that according to <span>[<a href="#TS28.554" class="cite xref">TS28.554</a>]</span>, the Generic Network Slice EE is the performance of the network slice divided by the Network Slice EC. Same approach can be followed at IETF level. Note that for avoiding double counting the energy at IETF level in the calculation of the end-to-end metric, the 3GPP metric should only consider the efficiency and consumption of the 3GPP-related technologies.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
-</section>
-</div>
-<div id="dynamic-adjustment-of-network-element-throughput-according-to-traffic-levels-in-wireless-transport-networks">
-<section id="section-3.2">
-        <h3 id="name-dynamic-adjustment-of-netwo">
-<a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-dynamic-adjustment-of-netwo" class="section-name selfRef">Dynamic adjustment of network element throughput according to traffic levels in wireless transport networks</a>
-        </h3>
-<p id="section-3.2-1">Radio base stations are typically connected to the backbone network by means of fiber or wireless transport (e.g., microwave) technologies. In the specific case of wireless transport, automation frameworks have been defined <span>[<a href="#ONF-MW" class="cite xref">ONF-MW</a>]</span><span>[<a href="#RFC8432" class="cite xref">RFC8432</a>]</span><span>[<a href="#mWT025" class="cite xref">mWT025</a>]</span> for their control and management.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
-<p id="section-3.2-2">One of the parameters subject of automated control is the power of the radio links. The relevance of that capability is that the power can be adjusted accordingly to the traffic observed. Wireless transport networks are typically planned to support the máximum traffic capacity in their área of aggregation, that is, the traffic peak. With that input, the number of radio links in the network element and the corresponding power per radio link (for supporting a given modulation and link length in the worst weather conditions) are configured. This is done to avoid any kind of traffic loss in the worst operational situation. However, such operational needs are sporadic, giving room for optimization during normal operational circumstances and/or low traffic periods.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
-<p id="section-3.2-3">Power-related parameters are for instance defined in <span>[<a href="#RFC8561" class="cite xref">RFC8561</a>]</span>. Those power parameters can be dynamically configured to adjust the power to the observed traffic levels with some coarse granularity, but pursuing certain degrees of proportionality.<a href="#section-3.2-3" class="pilcrow">¶</a></p>
-</section>
-</div>
-<div id="video-streaming-use-case">
-<section id="section-3.3">
-        <h3 id="name-video-streaming-use-case">
-<a href="#section-3.3" class="section-number selfRef">3.3. </a><a href="#name-video-streaming-use-case" class="section-name selfRef">Video streaming use case</a>
-        </h3>
-<p id="section-3.3-1">Video streaming is nowadays the major source of traffic observed in ISP networks, in a propotion of 70% or even higher. Over-the-top distribution of streaming traffic is typically done by delivering a unicast flow per end user for the content of its interest.In consequence, during the hours of higher demand, the total traffic in the network is proportional to the concurrence of users consuming the video streaming service. The amount of traffic is also dependent of the resolution of the encoded video (the higher the resolution, the higher the bit rate per video flow), which tends to be higher as long as the users devices support such higher resolutions.<a href="#section-3.3-1" class="pilcrow">¶</a></p>
-<p id="section-3.3-2">The consequence of both the growth in the number of flows to be supported simultaneously, and the higher bit rate per flow, is that the nework elements in the path between the source of the video and the user have to be dimensioned accordingly. This implies the continuous upgrade of those network elements in terms of capacity, with the need of deploying high-capacity network elements and components. Apart from the fact that this process is shortening the lifetime of network elements, the need of high capacity interfaces also increase the energy consumption (despite the effort of manufacturers in creating more efficient network element platforms). Note that nowadays there is no actual possibility of activating energy consumption proportionality (in regards the delivered traffic) to such network elements.<a href="#section-3.3-2" class="pilcrow">¶</a></p>
-<p id="section-3.3-3">As a mean of slowing down this cycle of continuos renewal, and reduce the need og higher bit rate interfaces / line cards, it seems convenient to explore mechanisms that could reduce the volume of traffic without impacting the user service expectations. Variants of multicast or different service delivery strategies can help to improve the energy efficiency associated to the video streaming service. It should be noted that another front for optimization is the one related to the deployment of cache servers in the network.<a href="#section-3.3-3" class="pilcrow">¶</a></p>
-</section>
-</div>
 </section>
 </div>
 <div id="eman-requirements-from-rfc6988bis">
