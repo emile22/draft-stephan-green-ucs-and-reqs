@@ -137,11 +137,7 @@ Section 4 recalls [rfc6988bis-green] requirements wich may fit to the GREEN WG. 
 
 Section 5 recalls the raw framework discussed during the BoF to illustrate the segmentation of the requirements in three core functions: discovery, monitoring, and control. Discovery functions involve identifying energy-managed networks, devices, and their components, as well as discovering the inventory of power components capabilities, optimization control capabilities, and nominal condition use. Monitoring functions encompass tracking power states, power attributes, energy consumption, network performance, and energy efficiency metrics. Control functions include managing energy-saving and optimization functions and the power states of energy-managed devices and their components.
 
-This document does not mandate specific use cases for compliant implementations but rather lists a few use cases that must be supported by standards for Energy Efficiency Management.
-
-Requirements and use cases are still under revision. 
-
-Terms and definitions related to energy efficiency metrics are recalled in Appendix and will be discussed in later stages for potential integration in another GREEN WG document.
+Terms and definitions, mostly  from RFC6988, related to energy efficiency metrics are recalled in Appendix and will be discussed in later stages for potential integration in another GREEN WG document.
 
 ## Background
 
@@ -177,6 +173,11 @@ This is a work in progress and additional use cases will be documented in next v
 ## Incremental Application of the GREEN Framework {#incremental-use-case}
 
 This section describes an incremental example [legacy-path] of usage showing how a product, a service and a network can use the framework in different settings.
+
+This use case is the less trendy of all the use cases by far as its ambitious is limited to migration and coexistence, as usual. Nevertheless from a telco perspective, it is the centrality for 2 main reasons:
+
+- to start immediatly the move to energy efficiency using legacy devices;
+- to account the gain of the move one started;
 
 Once upon a time there was an very old legacy router named Rusty equipped with outdated ethernet and ugly optical interfaces. Despite his worn-out appearance, Rusty was determined to contribute to the energy efficiency effort. He dreamed of finding a way to optimize his old circuits and help reduce the power consumption of the network he had faithfully served for so many years. Though he was no longer in his prime, Rusty believed that even an old router like him could make a difference in a world striving for sustainability and help reduce the carbon footprint. He is convince that he still had a part to play in making the digital world a greener place.
 
@@ -396,8 +397,7 @@ TODO: This section will groups the subsections requirements in tables to prepare
 
 This section groups the inputs of the work of RFC6988bis [rfc6988bis-green]. Currently they still include a lot of verbatim text from [rfc6988] which don't fit exactly in the granularity of the current GREEN WG charter.
 
-
-Specifications made by the IETF, aka in WGs like EMAN, on energy managements focus mainly on SMI (aka MIBs) instead of YANG and cover neither the control nor energy efficiency. By consequence all EMAN WG requirements might not be applicable to the GREEN WG charter as they can worded and arraged differently. As an example battery is in the scope as a source of power but the detail of the management of the battery is not a requirement. 
+Specifications made by the IETF, aka in WGs like EMAN, on energy managements focus mainly on SMI (aka MIBs) instead of YANG and cover neither the control nor energy efficiency. By consequence all EMAN WG requirements might not be applicable to the GREEN WG charter as they can worded and arraged differently. As an example battery is in the scope as a source of power but the detail of the management of the battery is not a requirement.
 
 The goal is to enable the resuse pieces of the energy-related requirements of RFC6988 and to map them in a framework of YANG/Netconf for energy efficiency that might reuse "YANG Data Model for Hardware Management" {{?RFC8348}}, a conversion of former Entity MIB module, Entity Sensor MIB module, Entity State MIB modules.
 
