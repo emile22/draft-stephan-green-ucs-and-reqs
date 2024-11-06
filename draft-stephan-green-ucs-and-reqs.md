@@ -364,7 +364,7 @@ The table below groups the operator'requirements based on the inputs received fr
 |Req21-OP|Sustainability & Carbon Emission|Support GHG units|Measurement Units|4|
 |Req22-OP|Sustainability & Carbon Emission|Support Energy units|More renewable energy|2|
 |Req23-OP|Sustainability & Carbon Emission|Accounting of legacy installed based GHG/energy|Accounting Cost|4|
-|Req24-OP|Sustainability & Carbon Emission|Track device/network Energy Consumption Before Operation|Manufacturing, transport(weight, volume, package)|4|
+|Req24-OP|Sustainability & Carbon Emission|Track device/network Energy Consumption Before Operation|Manufacturing, transport (weight, volume, package)|4|
 
 The table below groups requirements from [rf988bis-green] draft Open Issues.
 
