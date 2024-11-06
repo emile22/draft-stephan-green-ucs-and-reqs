@@ -168,7 +168,7 @@ Terms and definitions, mostly  from RFC6988, related to energy efficiency metric
 # Use Cases
 
 This section describes a number of relevant use cases with the purpose of elicit requirements for Energy Efficiency Management.
-This is a work in progress and additional use cases will be documented in next versions of this document. Use cases which are not tied enough to the current GREEN chater will be moved to the GREEN WG wiki pages or to others WG or RG.
+This is a work in progress and additional use cases will be documented in next versions of this document. Use cases which are not tied enough to the current GREEN chater will be moved to the GREEN WG wiki pages or to other WGs or RGs.
 
 ## Incremental Application of the GREEN Framework {#incremental-use-case}
 
