@@ -362,7 +362,7 @@ The table below groups the operator'requirements based on the inputs received fr
 |Req19-OP|Interaction with other domain|Inclusion of data center networks in the picture|Mobile Network Case|3|
 |Req20-OP|Sustainability & Carbon Emission|Optimize the overall CO2 footprint (i.e., energy mix based on source type) facilitating the engineering of PoP More renewable energy|More renewable energy|4|
 |Req21-OP|Sustainability & Carbon Emission|Support GHG units|Measurement Units|4|
-|Req22-OP|Sustainability & Carbon Emission|Support Energy units|More renewable energy|2 ??|
+|Req22-OP|Sustainability & Carbon Emission|Support Energy units|More renewable energy|2|
 |Req23-OP|Sustainability & Carbon EmissiCarbon, renewable|4|
 |Req24-OP|Sustainability & Carbon Emission|Accounting of legacy installed based GHG/energy|Accounting Cost|4|
 |Req25-OP|Sustainability & Carbon Emission|Track device/network Energy Consumption Before Operation|Manufacturing, transport(weight, volume, package)|4|
