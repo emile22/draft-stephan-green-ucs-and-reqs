@@ -765,16 +765,11 @@ Table of Contents
    |        |& Carbon      |units            |energy           |        |
    |        |Emission      |                 |                 |        |
    +--------+--------------+-----------------+-----------------+--------+
-   |Req23-OP|Sustainability|4                |                 |        |
-   |        |& Carbon      |                 |                 |        |
-   |        |EmissiCarbon, |                 |                 |        |
-   |        |renewable     |                 |                 |        |
-   +--------+--------------+-----------------+-----------------+--------+
-   |Req24-OP|Sustainability|Accounting of    |Accounting Cost  |4       |
+   |Req23-OP|Sustainability|Accounting of    |Accounting Cost  |4       |
    |        |& Carbon      |legacy installed |                 |        |
    |        |Emission      |based GHG/energy |                 |        |
    +--------+--------------+-----------------+-----------------+--------+
-   |Req25-OP|Sustainability|Track device/    |Manufacturing,   |4       |
+   |Req24-OP|Sustainability|Track device/    |Manufacturing,   |4       |
    |        |& Carbon      |network Energy   |transport(weight,|        |
    |        |Emission      |Consumption      |volume, package) |        |
    |        |              |Before Operation |                 |        |
