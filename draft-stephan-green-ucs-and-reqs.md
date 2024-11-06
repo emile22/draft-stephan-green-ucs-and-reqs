@@ -135,13 +135,11 @@ Section 3 recalls a set of requirements established after the BoF in [charter-re
 
 Section 4 recalls [rfc6988bis-green] requirements wich may fit to the GREEN WG. They still have to be grouped in tables and set with individual priorities.
 
-Section 5 recalls the raw framework discussed durin the BoF.
-
-Requirements are segmented into three core functions: discovery, monitoring, and control. Discovery functions involve identifying energy-managed networks, devices, and their components, as well as discovering the inventory of power components capabilities, optimization control capabilities, and nominal condition use. Monitoring functions encompass tracking power states, power attributes, energy consumption, network performance, and energy efficiency metrics. Control functions include managing energy-saving and optimization functions and the power states of energy-managed devices and their components.
+Section 5 recalls the raw framework discussed during the BoF to illustrate the segmentation of the requirements in three core functions: discovery, monitoring, and control. Discovery functions involve identifying energy-managed networks, devices, and their components, as well as discovering the inventory of power components capabilities, optimization control capabilities, and nominal condition use. Monitoring functions encompass tracking power states, power attributes, energy consumption, network performance, and energy efficiency metrics. Control functions include managing energy-saving and optimization functions and the power states of energy-managed devices and their components.
 
 This document does not mandate specific use cases for compliant implementations but rather lists a few use cases that must be supported by standards for Energy Efficiency Management.
 
-Requirements and use cases are still under revision.
+Requirements and use cases are still under revision. 
 
 Terms and definitions related to energy efficiency metrics are recalled in Appendix and will be discussed in later stages for potential integration in another GREEN WG document.
 
@@ -172,8 +170,9 @@ Terms and definitions related to energy efficiency metrics are recalled in Appen
    Track document(s) and not in this document.
 
 # Use Cases
+
 This section describes a number of relevant use cases with the purpose of elicit requirements for Energy Efficiency Management.
-This is a work in progress and additional use cases will be documented in next versions of this document.
+This is a work in progress and additional use cases will be documented in next versions of this document. Use cases which are not tied enough to the current GREEN chater will be moved to the GREEN WG wiki pages or to others WG or RG.
 
 ## Incremental Application of the GREEN Framework {#incremental-use-case}
 
@@ -343,7 +342,7 @@ The table below groups the operator'requirements based on the inputs received fr
 
 The table below groups requirements from [rf988bis-green] draft Open Issues.
 
-TODO: this table has to be reviewed as it overlaps with the sections above related to rfc6988
+TODO: this table has to be reviewed as it part of it overlaps with the sections above related to rfc6988
 
 |id|category|requirements|note|Priority|
 |:----|:----|:----|:----|:----|
@@ -364,24 +363,52 @@ The table below groups requirements from [sustainability-insights] uses cases re
 |Req04-SIS|Power Optimization | Provide KPIs for energy efficiency parameters. Perform actions to reduce energy consumption | Monitor network and application performance to optimize power usage | 4 |
 |Req05-SIS|Control& Mgmt Switch off | Stop and restart WiFi APs with the right time, space, and service granularity | Save power consumption during periods when APs are not in use.| 2|
 
+## Consideration of other domains for obtention of end-to-end metrics
+
+The technologies under the scope of IETF provide the necessary connectivity to other technological domains. For the obtnetion of metrics end-to-end it would be required to combine or compose the metrics per each of those domains.
+
+An exemplary case is the one of a network slice service. The concept of network slice was initially defined by 3GPP {{TS23.501}}, and it has been further extended to the concerns of IETF {{?RFC9543}}.
+
+In regards energy efficiency, 3GPP defines a number of energy-related key performance indicators (KPI) in {{TS28.554}}, specifically Energy Efficiency (EE) and Energy Consumption (EC) KPIs. There are KPIs particular for a slice supporting a specific kind of service (e.g., Mobile Broadband or MBB), or generic ones, like Generic Network Slice EE or Network Slice EC. Assuming these as the KPIs of interest, the motivation of this use case is the obtention of the equivalent KPIs at IETF level, that is, for the network slice service as defined in {{?RFC9543}}.
+
+Note that according to {{TS28.554}}, the Generic Network Slice EE is the performance of the network slice divided by the Network Slice EC. Same approach can be followed at IETF level. Note that for avoiding double counting the energy at IETF level in the calculation of the end-to-end metric, the 3GPP metric should only consider the efficiency and consumption of the 3GPP-related technologies.
+
+## Dynamic adjustment of network element throughput according to traffic levels in wireless transport networks
+
+Radio base stations are typically connected to the backbone network by means of fiber or wireless transport (e.g., microwave) technologies. In the specific case of wireless transport, automation frameworks have been defined {{ONF-MW}}{{?RFC8432}}{{mWT025}} for their control and management.
+
+One of the parameters subject of automated control is the power of the radio links. The relevance of that capability is that the power can be adjusted accordingly to the traffic observed. Wireless transport networks are typically planned to support the máximum traffic capacity in their área of aggregation, that is, the traffic peak. With that input, the number of radio links in the network element and the corresponding power per radio link (for supporting a given modulation and link length in the worst weather conditions) are configured. This is done to avoid any kind of traffic loss in the worst operational situation. However, such operational needs are sporadic, giving room for optimization during normal operational circumstances and/or low traffic periods.
+
+Power-related parameters are for instance defined in {{?RFC8561}}. Those power parameters can be dynamically configured to adjust the power to the observed traffic levels with some coarse granularity, but pursuing certain degrees of proportionality.
+
+## Video streaming use case
+
+Video streaming is nowadays the major source of traffic observed in ISP networks, in a propotion of 70% or even higher. Over-the-top distribution of streaming traffic is typically done by delivering a unicast flow per end user for the content of its interest.In consequence, during the hours of higher demand, the total traffic in the network is proportional to the concurrence of users consuming the video streaming service. The amount of traffic is also dependent of the resolution of the encoded video (the higher the resolution, the higher the bit rate per video flow), which tends to be higher as long as the users devices support such higher resolutions.
+
+The consequence of both the growth in the number of flows to be supported simultaneously, and the higher bit rate per flow, is that the nework elements in the path between the source of the video and the user have to be dimensioned accordingly. This implies the continuous upgrade of those network elements in terms of capacity, with the need of deploying high-capacity network elements and components. Apart from the fact that this process is shortening the lifetime of network elements, the need of high capacity interfaces also increase the energy consumption (despite the effort of manufacturers in creating more efficient network element platforms). Note that nowadays there is no actual possibility of activating energy consumption proportionality (in regards the delivered traffic) to such network elements.
+
+As a mean of slowing down this cycle of continuos renewal, and reduce the need og higher bit rate interfaces / line cards, it seems convenient to explore mechanisms that could reduce the volume of traffic without impacting the user service expectations. Variants of multicast or different service delivery strategies can help to improve the energy efficiency associated to the video streaming service. It should be noted that another front for optimization is the one related to the deployment of cache servers in the network.
+
+
 # EMAN Requirements from RFC6988bis
+
+TODO: This section will groups the subsections requirements in tables to prepare the room for establishing their individual consensus priority.
 
 This section groups the inputs of the work of RFC6988bis [rfc6988bis-green]. Currently they still include a lot of verbatim text from [rfc6988] which don't fit exactly in the granularity of the current GREEN WG charter.
 
-At this step the specifications made by the IETF, aka in WGs like EMAN, on energy managements focus mainly on SMI (aka MIBs) instead of YANG and cover neither the control nor energy efficiency.
+
+Specifications made by the IETF, aka in WGs like EMAN, on energy managements focus mainly on SMI (aka MIBs) instead of YANG and cover neither the control nor energy efficiency. By consequence all EMAN WG requirements might not be applicable to the GREEN WG charter as they can worded and arraged differently. As an example battery is in the scope as a source of power but the detail of the management of the battery is not a requirement. 
 
 The goal is to enable the resuse pieces of the energy-related requirements of RFC6988 and to map them in a framework of YANG/Netconf for energy efficiency that might reuse "YANG Data Model for Hardware Management" {{?RFC8348}}, a conversion of former Entity MIB module, Entity Sensor MIB module, Entity State MIB modules.
 
-TODO: This section will groups the subsections requirements in tables to prepare the room for establishing consensus priority.
-
-   Section 5.3 elaborates on a set of general needs for Energy Management.
+   Section 4.2 elaborates on a set of general needs for Energy Management.
    Requirements for an Energy Management standard are specified in
-   Sections 5.4 through 5.8.
+   Sections 4.3 through 4.6.
 
-   Sections 5.4 through 5.6 contain conventional requirements specifying
+   Sections 4.4 through 4.5 contain conventional requirements specifying
    information on entities and control functions.
 
-   Sections 5.7 and 5.8 contain requirements specific to Energy Management.
+   Sections 4.6 contains requirements specific to Energy Management.
    Due to the nature of power supply, some monitoring and control
    functions are not conducted by interacting with the entity of
    interest but rather with other entities, for example, entities
@@ -390,13 +417,13 @@ TODO: This section will groups the subsections requirements in tables to prepare
 ## Conventional Requirements for Energy Efficiency Management
 
    The specification of requirements for an Energy Efficiency Management standard
-   starts with Section 5.4, which addresses the identification of entities
+   starts with Section 4.3, which addresses the identification of entities
    and the granularity of reporting of energy-related information.  A
    standard must support the unique identification of entities,
    reporting per network, per entire device, and reporting energy-related information
    on individual components of a device or attached devices.
 
-   Section 5.5 specifies requirements related to the monitoring of
+   Section 4.4 specifies requirements related to the monitoring of
    entities.  This includes general (type, context) information and
    specific information on Power States, Power Inlets, Power Outlets,
    power, energy.  The control of Power State and power saving functionalities,
@@ -1416,36 +1443,6 @@ o	Energy Metric in E2E view
    o Consideration to include in scope, allocate/compute and report the energy
    spent on behalf of a particular customer/user.
    Open issue, marisolpalmero/GREEN-bof#89
-
-# Other use cases (to be decided if moved to use case section)
-
-Use cases which are not tied enough to the current GREEN chater will be moved to the GREEN WG wiki pages.
-
-## Consideration of other domains for obtention of end-to-end metrics
-
-The technologies under the scope of IETF provide the necessary connectivity to other technological domains. For the obtnetion of metrics end-to-end it would be required to combine or compose the metrics per each of those domains.
-
-An exemplary case is the one of a network slice service. The concept of network slice was initially defined by 3GPP {{TS23.501}}, and it has been further extended to the concerns of IETF {{?RFC9543}}.
-
-In regards energy efficiency, 3GPP defines a number of energy-related key performance indicators (KPI) in {{TS28.554}}, specifically Energy Efficiency (EE) and Energy Consumption (EC) KPIs. There are KPIs particular for a slice supporting a specific kind of service (e.g., Mobile Broadband or MBB), or generic ones, like Generic Network Slice EE or Network Slice EC. Assuming these as the KPIs of interest, the motivation of this use case is the obtention of the equivalent KPIs at IETF level, that is, for the network slice service as defined in {{?RFC9543}}.
-
-Note that according to {{TS28.554}}, the Generic Network Slice EE is the performance of the network slice divided by the Network Slice EC. Same approach can be followed at IETF level. Note that for avoiding double counting the energy at IETF level in the calculation of the end-to-end metric, the 3GPP metric should only consider the efficiency and consumption of the 3GPP-related technologies.
-
-## Dynamic adjustment of network element throughput according to traffic levels in wireless transport networks
-
-Radio base stations are typically connected to the backbone network by means of fiber or wireless transport (e.g., microwave) technologies. In the specific case of wireless transport, automation frameworks have been defined {{ONF-MW}}{{?RFC8432}}{{mWT025}} for their control and management.
-
-One of the parameters subject of automated control is the power of the radio links. The relevance of that capability is that the power can be adjusted accordingly to the traffic observed. Wireless transport networks are typically planned to support the máximum traffic capacity in their área of aggregation, that is, the traffic peak. With that input, the number of radio links in the network element and the corresponding power per radio link (for supporting a given modulation and link length in the worst weather conditions) are configured. This is done to avoid any kind of traffic loss in the worst operational situation. However, such operational needs are sporadic, giving room for optimization during normal operational circumstances and/or low traffic periods.
-
-Power-related parameters are for instance defined in {{?RFC8561}}. Those power parameters can be dynamically configured to adjust the power to the observed traffic levels with some coarse granularity, but pursuing certain degrees of proportionality.
-
-## Video streaming use case
-
-Video streaming is nowadays the major source of traffic observed in ISP networks, in a propotion of 70% or even higher. Over-the-top distribution of streaming traffic is typically done by delivering a unicast flow per end user for the content of its interest.In consequence, during the hours of higher demand, the total traffic in the network is proportional to the concurrence of users consuming the video streaming service. The amount of traffic is also dependent of the resolution of the encoded video (the higher the resolution, the higher the bit rate per video flow), which tends to be higher as long as the users devices support such higher resolutions.
-
-The consequence of both the growth in the number of flows to be supported simultaneously, and the higher bit rate per flow, is that the nework elements in the path between the source of the video and the user have to be dimensioned accordingly. This implies the continuous upgrade of those network elements in terms of capacity, with the need of deploying high-capacity network elements and components. Apart from the fact that this process is shortening the lifetime of network elements, the need of high capacity interfaces also increase the energy consumption (despite the effort of manufacturers in creating more efficient network element platforms). Note that nowadays there is no actual possibility of activating energy consumption proportionality (in regards the delivered traffic) to such network elements.
-
-As a mean of slowing down this cycle of continuos renewal, and reduce the need og higher bit rate interfaces / line cards, it seems convenient to explore mechanisms that could reduce the volume of traffic without impacting the user service expectations. Variants of multicast or different service delivery strategies can help to improve the energy efficiency associated to the video streaming service. It should be noted that another front for optimization is the one related to the deployment of cache servers in the network.
 
 # References
 
