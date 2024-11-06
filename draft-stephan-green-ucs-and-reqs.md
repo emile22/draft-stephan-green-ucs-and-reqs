@@ -321,7 +321,7 @@ Note that according to {{TS28.554}}, the Generic Network Slice EE is the perform
 
 Radio base stations are typically connected to the backbone network by means of fiber or wireless transport (e.g., microwave) technologies. In the specific case of wireless transport, automation frameworks have been defined {{ONF-MW}}{{?RFC8432}}{{mWT025}} for their control and management.
 
-One of the parameters subject of automated control is the power of the radio links. The relevance of that capability is that the power can be adjusted accordingly to the traffic observed. Wireless transport networks are typically planned to support the máximum traffic capacity in their área of aggregation, that is, the traffic peak. With that input, the number of radio links in the network element and the corresponding power per radio link (for supporting a given modulation and link length in the worst weather conditions) are configured. This is done to avoid any kind of traffic loss in the worst operational situation. However, such operational needs are sporadic, giving room for optimization during normal operational circumstances and/or low traffic periods.
+One of the parameters subject of automated control is the power of the radio links. The relevance of that capability is that the power can be adjusted accordingly to the traffic observed. Wireless transport networks are typically planned to support the maximum traffic capacity in their area of aggregation, that is, the traffic peak. With that input, the number of radio links in the network element and the corresponding power per radio link (for supporting a given modulation and link length in the worst weather conditions) are configured. This is done to avoid any kind of traffic loss in the worst operational situation. However, such operational needs are sporadic, giving room for optimization during normal operational circumstances and/or low traffic periods.
 
 Power-related parameters are for instance defined in {{?RFC8561}}. Those power parameters can be dynamically configured to adjust the power to the observed traffic levels with some coarse granularity, but pursuing certain degrees of proportionality.
 
@@ -1374,18 +1374,18 @@ This document has no IANA actions.
 
 # Acknowledgments
 
-The contribution of Luis M. Contreras to this document has been supported by the Smart Networks and Services Joint Undertaking (SNS JU) under the European Union’s Horizon Europe research and innovation projects 6Green (Grant Agreement no. 101096925) and Exigence (Grant Agreement no. 101139120).
+The contribution of Luis M. Contreras to this document has been supported by the Smart Networks and Services Joint Undertaking (SNS JU) under the European Union's Horizon Europe research and innovation projects 6Green (Grant Agreement no. 101096925) and Exigence (Grant Agreement no. 101139120).
 
 # Open Issues
 
 ## Open Issues to be Discussed at IETF121
 
-o	Consider 5g vs network  slicing: 3GPP spec describong energy efficiency KPIs. 3GPP TS 28.554. Reference:https://datatracker.ietf.org/doc/rfc9543/
+o	Consider 5g vs network slicing: 3GPP spec describong energy efficiency KPIs. 3GPP TS 28.554. Reference:https://datatracker.ietf.org/doc/rfc9543/
 o	POE use case: open issue section?
 o	Reduce traffic (video streaming)
 o	Connectivity from radio side (trying to control the traffic/related work to CCAMP)
 o	Marisol to add one use case: drift from data specifications... (somehow link to the above)
-o	Use case per Domain specific? Meanwhile, they are considered as part of the network… Servers might be considered outside of scope
+o	Use case per Domain specific? Meanwhile, they are considered as part of the network... Servers might be considered outside of scope
 o	Energy Metric in E2E view
 
 ## Open Issues collected since the BoF
