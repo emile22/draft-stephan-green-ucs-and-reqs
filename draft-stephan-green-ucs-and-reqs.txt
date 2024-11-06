@@ -761,7 +761,7 @@ Table of Contents
    |        |& Carbon      |                 |                 |        |
    |        |Emission      |                 |                 |        |
    +--------+--------------+-----------------+-----------------+--------+
-   |Req22-OP|Sustainability|Support Energy   |More renewable   |2 ??    |
+   |Req22-OP|Sustainability|Support Energy   |More renewable   |2       |
    |        |& Carbon      |units            |energy           |        |
    |        |Emission      |                 |                 |        |
    +--------+--------------+-----------------+-----------------+--------+
