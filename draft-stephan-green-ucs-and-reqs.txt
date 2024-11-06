@@ -192,8 +192,8 @@ Table of Contents
    Section 3 recalls a set of requirements established after the BoF in
    [charter-refinement].
 
-   Section 4 recalls [rfc6988bis-green] requirements wich may fit to the
-   GREEN WG.  They still have to be grouped in tables and set with
+   Section 4 recalls [rfc6988bis-green] requirements which may fit to
+   the GREEN WG.  They still have to be grouped in tables and set with
    individual priorities.
 
    Section 5 recalls the raw framework discussed during the BoF to
@@ -647,14 +647,14 @@ Table of Contents
    |        |              |connected to the |                 |        |
    |        |              |infrastructure   |                 |        |
    +--------+--------------+-----------------+-----------------+--------+
-   |Req03-OP|Observability |Triggering of    |Alarm            |1??     |
+   |Req03-OP|Observability |Triggering of    |Alarm            |1       |
    |        |              |alarms when      |notification     |        |
    |        |              |consumption      |                 |        |
    |        |              |deviate from a   |                 |        |
    |        |              |nominal usage    |                 |        |
    +--------+--------------+-----------------+-----------------+--------+
    |Req04-OP|Observability |Improvement of   |Standardized     |1       |
-   |        |              |metering         |metering??       |        |
+   |        |              |metering         |metering         |        |
    |        |              |solutions (finer |                 |        |
    |        |              |granularity,     |                 |        |
    |        |              |control of the   |                 |        |
@@ -674,7 +674,7 @@ Table of Contents
    |        |              |measurements for |                 |        |
    |        |              |fair comparison  |                 |        |
    +--------+--------------+-----------------+-----------------+--------+
-   |Req07-OP|Analysis      |How to provide   |Time based,      |2 ??    |
+   |Req07-OP|Analysis      |How to provide   |Time based,      |2       |
    |        |              |accurate figures |location based   |        |
    |        |              |(context of the  |visualization    |        |
    |        |              |measurement in   |                 |        |
