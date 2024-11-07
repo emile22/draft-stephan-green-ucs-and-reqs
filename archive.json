@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-11-05T00:57:22.687476+00:00",
+  "timestamp": "2024-11-07T00:57:50.329298+00:00",
   "repo": "emile22/draft-stephan-green-ucs-and-reqs",
   "labels": [
     {
@@ -466,6 +466,90 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 14,
+      "id": "PR_kwDONBw63s6A9Re8",
+      "title": "Update draft-stephan-green-ucs-and-reqs.md",
+      "url": "https://github.com/emile22/draft-stephan-green-ucs-and-reqs/pull/14",
+      "state": "MERGED",
+      "author": "marisolpalmero",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "new use case on power consumption for virtualized network",
+      "createdAt": "2024-11-05T17:03:21Z",
+      "updatedAt": "2024-11-05T20:15:02Z",
+      "baseRepository": "emile22/draft-stephan-green-ucs-and-reqs",
+      "baseRefName": "main",
+      "baseRefOid": "c625520f858c802ff871a5579751776a9c53e142",
+      "headRepository": "marisolpalmero/draft-stephan-green-terms-ucs-and-reqs",
+      "headRefName": "main",
+      "headRefOid": "5fcabfe430452f09c9be71c33c6d7dea83cfbcef",
+      "closedAt": "2024-11-05T20:15:02Z",
+      "mergedAt": "2024-11-05T20:15:02Z",
+      "mergedBy": "emile22",
+      "mergeCommit": {
+        "oid": "631d48e6107f301f1f46e9fc85d31757544a6b68"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDONBw63s6QCmzN",
+          "commit": {
+            "abbreviatedOid": "5fcabfe"
+          },
+          "author": "emile22",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-11-05T20:14:51Z",
+          "updatedAt": "2024-11-05T20:14:51Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "id": "PR_kwDONBw63s6A-mjY",
+      "title": "eman bis section creation",
+      "url": "https://github.com/emile22/draft-stephan-green-ucs-and-reqs/pull/15",
+      "state": "MERGED",
+      "author": "emile22",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-11-05T20:54:07Z",
+      "updatedAt": "2024-11-05T21:25:18Z",
+      "baseRepository": "emile22/draft-stephan-green-ucs-and-reqs",
+      "baseRefName": "main",
+      "baseRefOid": "631d48e6107f301f1f46e9fc85d31757544a6b68",
+      "headRepository": "emile22/draft-stephan-green-ucs-and-reqs",
+      "headRefName": "eman-sub-section",
+      "headRefOid": "1c07b4508e12d61507328bf9fce296b271c08ae5",
+      "closedAt": "2024-11-05T21:10:36Z",
+      "mergedAt": "2024-11-05T21:10:36Z",
+      "mergedBy": "emile22",
+      "mergeCommit": {
+        "oid": "7c7683558cbe359e420671fdf1d941e33036181e"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDONBw63s6QDFHa",
+          "commit": {
+            "abbreviatedOid": "1c07b45"
+          },
+          "author": "emile22",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "try pr in  main",
+          "createdAt": "2024-11-05T21:25:18Z",
+          "updatedAt": "2024-11-05T21:25:18Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
