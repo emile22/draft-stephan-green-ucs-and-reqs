@@ -99,6 +99,10 @@ informative:
     title: "NGMN Alliance, GREEN FUTURE NETWORKS: METERING IN VIRTUALISED RAN INFRASTRUCTURE"
     target: "https://www.ngmn.org/publications/metering-in-virtualised-ran-infrastructure.html"
 
+  UC_Interim18Dec24:
+    title: "UC_Requirements_GREENWG_v4"
+    target: "https://datatracker.ietf.org/meeting/interim-2024-green-01/materials/slides-interim-2024-green-01-sessa-uses-cases-requirements-presentation-01"
+
 
 --- abstract
 
@@ -332,6 +336,18 @@ Video streaming is nowadays the major source of traffic observed in ISP networks
 The consequence of both the growth in the number of flows to be supported simultaneously, and the higher bit rate per flow, is that the nework elements in the path between the source of the video and the user have to be dimensioned accordingly. This implies the continuous upgrade of those network elements in terms of capacity, with the need of deploying high-capacity network elements and components. Apart from the fact that this process is shortening the lifetime of network elements, the need of high capacity interfaces also increase the energy consumption (despite the effort of manufacturers in creating more efficient network element platforms). Note that nowadays there is no actual possibility of activating energy consumption proportionality (in regards the delivered traffic) to such network elements.
 
 As a mean of slowing down this cycle of continuos renewal, and reduce the need og higher bit rate interfaces / line cards, it seems convenient to explore mechanisms that could reduce the volume of traffic without impacting the user service expectations. Variants of multicast or different service delivery strategies can help to improve the energy efficiency associated to the video streaming service. It should be noted that another front for optimization is the one related to the deployment of cache servers in the network.
+
+## WLAN Network Energy Saving
+
+As per slide 11 of [UC_Interim18Dec24]
+
+## Fixed Network Energy Saving
+
+As per slide 12 of [UC_Interim18Dec24]
+
+## Energy Efficiency Network Management
+
+As per slide 13 of [UC_Interim18Dec24]
 
 # Requirements Extracted from Proponents Documents
 
