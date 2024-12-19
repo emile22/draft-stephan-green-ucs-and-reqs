@@ -5,13 +5,13 @@
 Getting Ready for Energy-Efficient Networking                 E. Stephan
 Internet-Draft                                                    Orange
 Intended status: Informational                                M. Palmero
-Expires: 21 June 2025                                Cisco Systems, Inc.
+Expires: 22 June 2025                                Cisco Systems, Inc.
                                                                B. Claise
                                                                    Q. Wu
                                                                   Huawei
                                                          L. M. Contreras
                                                               Telefonica
-                                                        18 December 2024
+                                                        19 December 2024
 
 
              Requirements for Energy Efficiency Management
@@ -73,7 +73,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 June 2025.
+   This Internet-Draft will expire on 22 June 2025.
 
 Copyright Notice
 
@@ -96,18 +96,21 @@ Table of Contents
    2.  Use Cases
      2.1.  Incremental Application of the GREEN Framework
      2.2.  Selective reduction of energy consumption in network parts
-           proportional to traffic levels
+            proportional to traffic levels
      2.3.  Reporting on Lifecycle Management
        2.3.1.  Carbon Reporting
        2.3.2.  Energy Mix
      2.4.  Real-time Energy Metering of Virtualised or Cloud-native
-           Network Functions
+            Network Functions
      2.5.  Indirect Energy Monitoring and control
      2.6.  Consideration of other domains for obtention of end-to-end
-           metrics
+            metrics
      2.7.  Dynamic adjustment of network element throughput according
-           to traffic levels in wireless transport networks
+            to traffic levels in wireless transport networks
      2.8.  Video streaming use case
+     2.9.  WLAN Network Energy Saving
+     2.10. Fixed Network Energy Saving
+     2.11. Energy Efficiency Network Management
    3.  Requirements Extracted from Proponents Documents
    4.  EMAN Requirements from RFC6988bis
      4.1.  Conventional Requirements for Energy Efficiency Management
@@ -616,6 +619,18 @@ Table of Contents
    improve the energy efficiency associated to the video streaming
    service.  It should be noted that another front for optimization is
    the one related to the deployment of cache servers in the network.
+
+2.9.  WLAN Network Energy Saving
+
+   As per slide 11 of [UC_Interim18Dec24]
+
+2.10.  Fixed Network Energy Saving
+
+   As per slide 12 of [UC_Interim18Dec24]
+
+2.11.  Energy Efficiency Network Management
+
+   As per slide 13 of [UC_Interim18Dec24]
 
 3.  Requirements Extracted from Proponents Documents
 
@@ -2338,6 +2353,12 @@ Table of Contents
    [TS28.554] "3GPP TS 28.554, Management and orchestration; 5G end to
               end Key Performance Indicators (KPI), 17.15.0.", 25
               September 2024.
+
+   [UC_Interim18Dec24]
+              "UC_Requirements_GREENWG_v4", n.d.,
+              <https://datatracker.ietf.org/meeting/interim-2024-green-
+              01/materials/slides-interim-2024-green-01-sessa-uses-
+              cases-requirements-presentation-01>.
 
 Authors' Addresses
 
