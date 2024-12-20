@@ -339,15 +339,95 @@ As a mean of slowing down this cycle of continuos renewal, and reduce the need o
 
 ## WLAN Network Energy Saving
 
-As per slide 11 of [UC_Interim18Dec24]
+In a WLAN network, The AP is usually powered by a PoE switch.
+AP nodes are network devices with the largest number and consuming most of energy. Therefore, the working status of the AP is the core of the energy saving
+solution. 
+The working status of the AP can be break down into 3 modes as follows:
+ o PoE power-off mode: In this mode, the PoE switch shuts down the port and stops supplying power to the AP. The AP does not consume power at all. When the
+   AP wakes up, the port provides power again. In this mode, it usually takes a few minutes for the AP to recover.
+ o Hibernation mode: Only low power consumption is used to protect key hardware such as the CPU, and other components are shut down.
+ o Low power consumption mode: Compared with the hibernation mode, the low power consumption mode maintains a certain communication capability. For example, 
+   the AP retains only the 2.4 GHz band and disables other radio bands.
+
+In energy saving deployment, after the surrounding energy saving APs are shut down, the Working AP automatically adjusts their transmit power to increase the coverage of the entire area at specific energy saving period. In such case, energy saving APs can freely choose to switch to any mode we described above.
+
+   /---\
+  |     +-----+
+  | AP  |     |
+   \---/      |      +------------+
+              |      |            |
+              |------+     PoE    |
+   /---\      |      |   Switch   |
+  |     |     |      +------------+
+  | AP  +-----+
+   \---/
+         Figure 1: PoE Power Off Mode
+
+                 4                         4
+ +----------+   \|/        +----------+   \|/
+ |          |    |         |          |    |
+ |   +----+ |    |         |   +----+ |    |
+ |   |5GHz+-+----+         |   |5GHz+-+-X--+
+ |   | RF | |    2         |   | RF | |    2
+ |   +----+ |   \|/    \   |   +----+ |   \|/
+ |   +----+ |    |   ---\  |   +----+ |    |
+ |  2.4GHz| |    |       \ |  2.4GHz| |    |
+ |   | RF +-+----+       / |   | RF +-+-X--+
+ |   +----+ |    2   ---/  |   +----+ |    2
+ |   +----+ |   \|/    /   |   +----+ |   \|/
+ |  2.4GHz| |    |         |  2.4GHz| |    |
+ |   | RF |-+----+         |   | RF +-+----+
+ |   +----+ |              |   +----+ |
+ +----------+              +----------+
+         Figure 2: Low Power Consumption Mode
+
+     +--+  +--+    +--+
+     |AP|--|AP|--- |AP|      ------------------------------
+     +--+  +--+   \+--+      Grouping  Recommended
+     /               \        Area     Energy Saving Period
+  +--+     +--+      +--+    ------------------------------
+  |AP|     |AP|      |AP|    XED01-1  01:00:00,06:30:00
+  +--+     +--+      +--+
+    |                 |      ------------------------------
+     +--+          +--+
+     |AP|  +--+   /|AP|      XED01-2  01:30:00,06:30:00
+     +--+--|AP|--- +--+     --------------------------------
+           +--+
+          Figure 3: Wireless Resource Management on APs
+For this use case, the following requirements apply:
+|Req04-UCWES|Control& Mgmt|Ability to switch on or off to power the L2 network device at specific time period|Network Level Mgmt|1|
+|Req05-UCWES|Control& Mgmt|Ability to reconfigure various different energy saving mode to adapt to network change|Network Level Mgmt|1|
+|Req06-UCWES|Control& Mgmt|Ability to optimize wireless resource management to support dynamic energy saving|Network Level Mgmt|1|
+|Req07-UCWES|Control& Mgmt|Ability to schedule wireless resource management to support dynamic energy saving|Network Level Mgmt|1|
 
 ## Fixed Network Energy Saving
 
-As per slide 12 of [UC_Interim18Dec24]
+Traffic on the Tidal network has an obvious tidal period, including heavy-traffic periods and light-traffic periods:
+The time duration of heavy traffic load and light traffic load are clearly distinguished,
+The switching time between the heavy-traffic period and the light-traffic period is quite fixed and cyclic.
+In a tidal network, some network devices can be shut down or sleep during low-traffic periods to save energy.
+In the metro or backbone network, the routers support various different speed interfaces, e.g., the gigabit level to 10GE/50GE, or 100G to 400G
+Routers might choose to adjust speed of the interface or downgrade from high speed interface to low speed interface based on network traffic load changes to
+save the energy.
+In addition, the routers can adjust the number of working network processor cores and clock frequency of chipsets and the number of SerDes buses based on network traffic load changes to save the energy.
+For this use case, the following requirements apply:
+|Req04-UCFES|Control& Mgmt|Ability to shutdown devices during low traffic period|Network Level Mgmt|1|
+|Req05-UCFES|Control& Mgmt|Ability to restart devices during high traffic period|Network Level Mgmt|1|
+|Req06-UCFES|Control& Mgmt|Ability to adjust interface speed to adapt to network traffic change|Network Level Mgmt|1|
+|Req07-UCFES|Control& Mgmt|Ability to adjust working component such as SerDes to adapt to network traffic change|Network Level Mgmt|1|
 
 ## Energy Efficiency Network Management
 
-As per slide 13 of [UC_Interim18Dec24]
+Network level Energy Efficiency allows network operators not only see real time energy consumption in the network devices of large scale network, but also
+allow you see
+o which network devices enable energy saving, which devices not,which are legacy ones,
+o The total energy consumption changing trend over the time of the day, for all network devices,
+o Energy efficiency changing trend over the time of the day for the whole network.
+With the better observability to energy consumption statistics data and energy efficiency statistics data, the network operators can know which part of the network need to be adjusted or optimized based on network status change.
+For this use case, the following requirements apply:
+|Req04-UCEEM|Discovery|Ability to provide observability to Network wide Energy Efficiency Statistics Data|Network Level Mgmt|1|
+|Req05-UCEEM|Observability|Ability to provide observability to Network Wide Energy Consumption Statistics data|Network Level Mgmt|1|
+|Req06-UCEEM|Observability|Ability to discover energy saving capability for each device type|Network Level Mgmt|1|
 
 # Requirements Extracted from Proponents Documents
 
