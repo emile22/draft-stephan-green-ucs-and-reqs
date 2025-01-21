@@ -363,6 +363,9 @@ In energy saving deployment, after the surrounding energy saving APs are shut do
    \---/
          Figure 1: PoE Power Off Mode
 
+~~~~
+{: #poe-power-off Mode title="PoE Power Off Mode"}
+
                  4                         4
  +----------+   \|/        +----------+   \|/
  |          |    |         |          |    |
@@ -379,9 +382,9 @@ In energy saving deployment, after the surrounding energy saving APs are shut do
  |   | RF |-+----+         |   | RF +-+----+
  |   +----+ |              |   +----+ |
  +----------+              +----------+
-         Figure 2: Low Power Consumption Mode
 
 ~~~~
+
 {: #low-power-consumption title="Low Power Consumption Mode"}
 
 ~~~~
@@ -398,7 +401,6 @@ In energy saving deployment, after the surrounding energy saving APs are shut do
      |AP|  +--+   /|AP|      XED01-2  01:30:00,06:30:00
      +--+--|AP|--- +--+     --------------------------------
            +--+
-          Figure 3: Wireless Resource Management on APs
 ~~~~
 {: #wireless-resource-management title="Wireless Resource Management on APs"}
 
