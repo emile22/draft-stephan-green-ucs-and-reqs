@@ -310,58 +310,55 @@ Table of Contents
 
    For this use case, the following requirements apply :
 
-   +=============+===============+==================+=========+========+
-   | id          | category      | requirements     |note     |Priority|
-   +=============+===============+==================+=========+========+
-   | Req01-UCINC | Discovery     | Component        |Per      |1       |
-   |             |               | granularity,     |component|        |
-   |             |               | e.g., per line-  |         |        |
-   |             |               | card, per-port   |         |        |
-   +-------------+---------------+------------------+---------+--------+
-   | Req02-UCINC | Observability | Availability of  |Related  |1       |
-   |             |               | information on   |to       |        |
-   |             |               | the power        |connected|        |
-   |             |               | consumption of   |device   |        |
-   |             |               | the device,      |case     |        |
-   |             |               | without needing  |         |        |
-   |             |               | instrumentation  |         |        |
-   |             |               | connected to     |         |        |
-   |             |               | the              |         |        |
-   |             |               | infrastructure   |         |        |
-   +-------------+---------------+------------------+---------+--------+
-   | Req03-UCINC | Analysis      | Common           |Standard |1       |
-   |             |               | definition of    |metric   |        |
-   |             |               | energy           |         |        |
-   |             |               | efficiency in    |         |        |
-   |             |               | network          |         |        |
-   |             |               | devices/         |         |        |
-   |             |               | components       |         |        |
-   +-------------+---------------+------------------+---------+--------+
-   | Req04-UCINC | Inventory     | component        |Per      |1 (i)   |
-   |             | Management    | control          |component|        |
-   |             |               | capacity (aka    |control  |        |
-   |             |               | component max    |         |        |
-   |             |               | power-on/power-  |         |        |
-   |             |               | off frequency    |         |        |
-   |             |               | supported)       |         |        |
-   +-------------+---------------+------------------+---------+--------+
-   | Req05-UCINC | Analysis      | assess the       |Device   |1 (ii)  |
-   |             |               | gains of         |Level    |        |
-   |             |               | introducing      |Mgmt     |        |
-   |             |               | eco-designed     |         |        |
-   |             |               | components in a  |         |        |
-   |             |               | device           |         |        |
-   +-------------+---------------+------------------+---------+--------+
-   | Req06-UCINC | Control& Mgmt | comprehensive    |Network  |1 (iii) |
-   |             |               | support of       |Level    |        |
-   |             |               | network-wide     |Mgmt     |        |
-   |             |               | energy           |         |        |
-   |             |               | efficiency       |         |        |
-   |             |               | includes legacy  |         |        |
-   |             |               | devices          |         |        |
-   +-------------+---------------+------------------+---------+--------+
+   +=============+===============+==================+===========+=====+
+   | id          | category      | requirements     | note      |Pri  |
+   +=============+===============+==================+===========+=====+
+   | Req01-UCINC | Discovery     | Component        | Per       |1    |
+   |             |               | granularity,     | component |     |
+   |             |               | e.g., per line-  |           |     |
+   |             |               | card, per-port   |           |     |
+   +-------------+---------------+------------------+-----------+-----+
+   | Req02-UCINC | Observability | Availability of  | Related   |1    |
+   |             |               | information on   | to        |     |
+   |             |               | the power        | connected |     |
+   |             |               | consumption of   | device    |     |
+   |             |               | the device,      | case      |     |
+   |             |               | without needing  |           |     |
+   |             |               | instrumentation  |           |     |
+   |             |               | connected to the |           |     |
+   |             |               | infrastructure   |           |     |
+   +-------------+---------------+------------------+-----------+-----+
+   | Req03-UCINC | Analysis      | Common           | Standard  |1    |
+   |             |               | definition of    | metric    |     |
+   |             |               | energy           |           |     |
+   |             |               | efficiency in    |           |     |
+   |             |               | network devices/ |           |     |
+   |             |               | components       |           |     |
+   +-------------+---------------+------------------+-----------+-----+
+   | Req04-UCINC | Inventory     | component        | Per       |1 (i)|
+   |             | Management    | control capacity | component |     |
+   |             |               | (aka component   | control   |     |
+   |             |               | max power-on/    |           |     |
+   |             |               | power-off        |           |     |
+   |             |               | frequency        |           |     |
+   |             |               | supported)       |           |     |
+   +-------------+---------------+------------------+-----------+-----+
+   | Req05-UCINC | Analysis      | assess the gains | Device    |1    |
+   |             |               | of introducing   | Level     |(ii) |
+   |             |               | eco-designed     | Mgmt      |     |
+   |             |               | components in a  |           |     |
+   |             |               | device           |           |     |
+   +-------------+---------------+------------------+-----------+-----+
+   | Req06-UCINC | Control& Mgmt | comprehensive    | Network   |1    |
+   |             |               | support of       | Level     |(iii)|
+   |             |               | network-wide     | Mgmt      |     |
+   |             |               | energy           |           |     |
+   |             |               | efficiency       |           |     |
+   |             |               | includes legacy  |           |     |
+   |             |               | devices          |           |     |
+   +-------------+---------------+------------------+-----------+-----+
 
-                                  Table 1
+                                 Table 1
 
    (i) Avoid a power-on/power-off frequency to break component parts
    (aka laser, power parts, wire connectors ...)
@@ -388,62 +385,56 @@ Table of Contents
    concentration in the network.  For this use case, the following
    requirements apply:
 
-   +===========+===============+==================+===========+========+
-   |id         | category      | requirements     |note       |Priority|
-   +===========+===============+==================+===========+========+
-   |Req01-UCRED| Observability | Component        |Per        |1       |
-   |           |               | granularity,     |component  |        |
-   |           |               | e.g., per line-  |measurement|        |
-   |           |               | card, per-port   |           |        |
-   +-----------+---------------+------------------+-----------+--------+
-   |Req02-UCRED| Observability | Availability of  |Related to |1       |
-   |           |               | information on   |connected  |        |
-   |           |               | the power        |device case|        |
-   |           |               | consumption of   |           |        |
-   |           |               | the device,      |           |        |
-   |           |               | without needing  |           |        |
-   |           |               | instrumentation  |           |        |
-   |           |               | connected to     |           |        |
-   |           |               | the              |           |        |
-   |           |               | infrastructure   |           |        |
-   +-----------+---------------+------------------+-----------+--------+
-   |Req03-UCRED| Analysis      | Common           |Standard   |1       |
-   |           |               | definition of    |metric     |        |
-   |           |               | energy           |           |        |
-   |           |               | efficiency in    |           |        |
-   |           |               | network          |           |        |
-   |           |               | devices/         |           |        |
-   |           |               | components       |           |        |
-   +-----------+---------------+------------------+-----------+--------+
-   |Req04-UCRED| Analysis      | Ability of       |POI Use    |3       |
-   |           |               | multi-layer      |Case       |        |
-   |           |               | analysis (e.g.,  |           |        |
-   |           |               | IP plus          |           |        |
-   |           |               | optical)         |           |        |
-   +-----------+---------------+------------------+-----------+--------+
-   |Req05-UCRED| Control& Mgmt | To have devices  |Dynamic    |2       |
-   |           |               | with elastic     |Energy     |        |
-   |           |               | power            |Saving     |        |
-   |           |               | consumption      |           |        |
-   |           |               | according to     |           |        |
-   |           |               | the carried      |           |        |
-   |           |               | traffic          |           |        |
-   +-----------+---------------+------------------+-----------+--------+
-   |Req06-UCRED| Control& Mgmt | Advanced sleep   |Dynamic    |2       |
-   |           |               | mode, needing    |Energy     |        |
-   |           |               | some sort of     |Saving     |        |
-   |           |               | low power mode   |           |        |
-   |           |               | when node is     |           |        |
-   |           |               | lightly          |           |        |
-   |           |               | utilized         |           |        |
-   +-----------+---------------+------------------+-----------+--------+
-   |Req07-UCRED| Control& Mgmt | Ability to       |Traffic    |4       |
-   |           |               | steer traffic    |Engineering|        |
-   |           |               | based on power   |           |        |
-   |           |               | savings          |           |        |
-   +-----------+---------------+------------------+-----------+--------+
+   +=============+===============+==================+=============+===+
+   | id          | category      | requirements     | note        |Pri|
+   +=============+===============+==================+=============+===+
+   | Req01-UCRED | Observability | Component        | Per         |1  |
+   |             |               | granularity,     | component   |   |
+   |             |               | e.g., per line-  | measurement |   |
+   |             |               | card, per-port   |             |   |
+   +-------------+---------------+------------------+-------------+---+
+   | Req02-UCRED | Observability | Availability of  | Related to  |1  |
+   |             |               | information on   | connected   |   |
+   |             |               | the power        | device case |   |
+   |             |               | consumption of   |             |   |
+   |             |               | the device,      |             |   |
+   |             |               | without needing  |             |   |
+   |             |               | instrumentation  |             |   |
+   |             |               | connected to the |             |   |
+   |             |               | infrastructure   |             |   |
+   +-------------+---------------+------------------+-------------+---+
+   | Req03-UCRED | Analysis      | Common           | Standard    |1  |
+   |             |               | definition of    | metric      |   |
+   |             |               | energy           |             |   |
+   |             |               | efficiency in    |             |   |
+   |             |               | network devices/ |             |   |
+   |             |               | components       |             |   |
+   +-------------+---------------+------------------+-------------+---+
+   | Req04-UCRED | Analysis      | Ability of       | POI Use     |3  |
+   |             |               | multi-layer      | Case        |   |
+   |             |               | analysis (e.g.,  |             |   |
+   |             |               | IP plus optical) |             |   |
+   +-------------+---------------+------------------+-------------+---+
+   | Req05-UCRED | Control& Mgmt | To have devices  | Dynamic     |2  |
+   |             |               | with elastic     | Energy      |   |
+   |             |               | power            | Saving      |   |
+   |             |               | consumption      |             |   |
+   |             |               | according to the |             |   |
+   |             |               | carried traffic  |             |   |
+   +-------------+---------------+------------------+-------------+---+
+   | Req06-UCRED | Control& Mgmt | Advanced sleep   | Dynamic     |2  |
+   |             |               | mode, needing    | Energy      |   |
+   |             |               | some sort of low | Saving      |   |
+   |             |               | power mode when  |             |   |
+   |             |               | node is lightly  |             |   |
+   |             |               | utilized         |             |   |
+   +-------------+---------------+------------------+-------------+---+
+   | Req07-UCRED | Control& Mgmt | Ability to steer | Traffic     |4  |
+   |             |               | traffic based on | Engineering |   |
+   |             |               | power savings    |             |   |
+   +-------------+---------------+------------------+-------------+---+
 
-                                  Table 2
+                                 Table 2
 
 2.3.  Reporting on Lifecycle Management
 
@@ -675,36 +666,29 @@ Table of Contents
 
    For this use case, the following requirements apply:
 
-   +=============+==========+====================+=========+==========+
-   | id          | category | requirements       | note    | Priority |
-   +=============+==========+====================+=========+==========+
-   | Req01-UCWES | Control& | Ability to switch  | Network | 1        |
-   |             | Mgmt     | on or off to power | Level   |          |
-   |             |          | the L2 network     | Mgmt    |          |
-   |             |          | device at specific |         |          |
-   |             |          | time period        |         |          |
-   +-------------+----------+--------------------+---------+----------+
-   | Req02-UCWES | Control& | Ability to         | Network | 1        |
-   |             | Mgmt     | reconfigure        | Level   |          |
-   |             |          | various different  | Mgmt    |          |
-   |             |          | energy saving mode |         |          |
-   |             |          | to adapt to        |         |          |
-   |             |          | network change     |         |          |
-   +-------------+----------+--------------------+---------+----------+
-   | Req03-UCWES | Control& | Ability to         | Network | 1        |
-   |             | Mgmt     | optimize wireless  | Level   |          |
-   |             |          | resource           | Mgmt    |          |
-   |             |          | management to      |         |          |
-   |             |          | support dynamic    |         |          |
-   |             |          | energy saving      |         |          |
-   +-------------+----------+--------------------+---------+----------+
-   | Req04-UCWES | Control& | Ability to         | Network | 1        |
-   |             | Mgmt     | schedule wireless  | Level   |          |
-   |             |          | resource           | Mgmt    |          |
-   |             |          | management to      |         |          |
-   |             |          | support dynamic    |         |          |
-   |             |          | energy saving      |         |          |
-   +-------------+----------+--------------------+---------+----------+
+   +=============+==========+=========================+=========+=====+
+   | id          | category | requirements            | note    | Pri |
+   +=============+==========+=========================+=========+=====+
+   | Req01-UCWES | Control& | Ability to switch on or | Network | 1   |
+   |             | Mgmt     | off to power the L2     | Level   |     |
+   |             |          | network device at       | Mgmt    |     |
+   |             |          | specific time period    |         |     |
+   +-------------+----------+-------------------------+---------+-----+
+   | Req02-UCWES | Control& | Ability to reconfigure  | Network | 1   |
+   |             | Mgmt     | various different       | Level   |     |
+   |             |          | energy saving mode to   | Mgmt    |     |
+   |             |          | adapt to network change |         |     |
+   +-------------+----------+-------------------------+---------+-----+
+   | Req03-UCWES | Control& | Ability to optimize     | Network | 1   |
+   |             | Mgmt     | wireless resource       | Level   |     |
+   |             |          | management to support   | Mgmt    |     |
+   |             |          | dynamic energy saving   |         |     |
+   +-------------+----------+-------------------------+---------+-----+
+   | Req04-UCWES | Control& | Ability to schedule     | Network | 1   |
+   |             | Mgmt     | wireless resource       | Level   |     |
+   |             |          | management to support   | Mgmt    |     |
+   |             |          | dynamic energy saving   |         |     |
+   +-------------+----------+-------------------------+---------+-----+
 
                                  Table 3
 
@@ -712,46 +696,43 @@ Table of Contents
 
    Traffic on the Tidal network has an obvious tidal period, including
    heavy-traffic periods and light-traffic periods: The time duration of
-   heavy traffic load and light traffic load are clearly distinguished,
+   heavy traffic load and light traffic load are clearly distinguished.
    The switching time between the heavy-traffic period and the light-
    traffic period is quite fixed and cyclic.  In a tidal network, some
    network devices can be shut down or sleep during low-traffic periods
    to save energy.  In the metro or backbone network, the routers
    support various different speed interfaces, e.g., the gigabit level
-   to 10GE/50GE, or 100G to 400G Routers might choose to adjust speed of
-   the interface or downgrade from high speed interface to low speed
+   to 10GE/50GE, or 100G to 400G.  Routers might choose to adjust speed
+   of the interface or downgrade from high speed interface to low speed
    interface based on network traffic load changes to save the energy.
    In addition, the routers can adjust the number of working network
    processor cores and clock frequency of chipsets and the number of
    SerDes buses based on network traffic load changes to save the
    energy.  For this use case, the following requirements apply:
 
-   +=============+==========+====================+=========+==========+
-   | id          | category | requirements       | note    | Priority |
-   +=============+==========+====================+=========+==========+
-   | Req01-UCFES | Control& | Ability to         | Network | 1        |
-   |             | Mgmt     | shutdown devices   | Level   |          |
-   |             |          | during low traffic | Mgmt    |          |
-   |             |          | period             |         |          |
-   +-------------+----------+--------------------+---------+----------+
-   | Req02-UCFES | Control& | Ability to restart | Network | 1        |
-   |             | Mgmt     | devices during     | Level   |          |
-   |             |          | high traffic       | Mgmt    |          |
-   |             |          | period             |         |          |
-   +-------------+----------+--------------------+---------+----------+
-   | Req03-UCFES | Control& | Ability to adjust  | Network | 1        |
-   |             | Mgmt     | interface speed to | Level   |          |
-   |             |          | adapt to network   | Mgmt    |          |
-   |             |          | traffic change     |         |          |
-   +-------------+----------+--------------------+---------+----------+
-   | Req04-UCFES | Control& | Ability to adjust  | Network | 1        |
-   |             | Mgmt     | working component  | Level   |          |
-   |             |          | such as SerDes to  | Mgmt    |          |
-   |             |          | adapt to network   |         |          |
-   |             |          | traffic change     |         |          |
-   +-------------+----------+--------------------+---------+----------+
+    +=============+==========+========================+=========+=====+
+    | id          | category | requirements           | note    | Pri |
+    +=============+==========+========================+=========+=====+
+    | Req01-UCFES | Control& | Ability to shutdown    | Network | 1   |
+    |             | Mgmt     | devices during low     | Level   |     |
+    |             |          | traffic period         | Mgmt    |     |
+    +-------------+----------+------------------------+---------+-----+
+    | Req02-UCFES | Control& | Ability to restart     | Network | 1   |
+    |             | Mgmt     | devices during high    | Level   |     |
+    |             |          | traffic period         | Mgmt    |     |
+    +-------------+----------+------------------------+---------+-----+
+    | Req03-UCFES | Control& | Ability to adjust      | Network | 1   |
+    |             | Mgmt     | interface speed to     | Level   |     |
+    |             |          | adapt to network       | Mgmt    |     |
+    |             |          | traffic change         |         |     |
+    +-------------+----------+------------------------+---------+-----+
+    | Req04-UCFES | Control& | Ability to adjust      | Network | 1   |
+    |             | Mgmt     | working component such | Level   |     |
+    |             |          | as SerDes to adapt to  | Mgmt    |     |
+    |             |          | network traffic change |         |     |
+    +-------------+----------+------------------------+---------+-----+
 
-                                 Table 4
+                                  Table 4
 
 2.11.  Energy Efficiency Network Management
 
@@ -767,34 +748,27 @@ Table of Contents
    adjusted or optimized based on network status change.  For this use
    case, the following requirements apply:
 
-   +=============+===============+===============+=========+==========+
-   | id          | category      | requirements  | note    | Priority |
-   +=============+===============+===============+=========+==========+
-   | Req01-UCEEM | Discovery     | Ability to    | Network | 1        |
-   |             |               | provide       | Level   |          |
-   |             |               | observability | Mgmt    |          |
-   |             |               | to Network    |         |          |
-   |             |               | wide Energy   |         |          |
-   |             |               | Efficiency    |         |          |
-   |             |               | Statistics    |         |          |
-   |             |               | Data          |         |          |
-   +-------------+---------------+---------------+---------+----------+
-   | Req02-UCEEM | Observability | Ability to    | Network | 1        |
-   |             |               | provide       | Level   |          |
-   |             |               | observability | Mgmt    |          |
-   |             |               | to Network    |         |          |
-   |             |               | Wide Energy   |         |          |
-   |             |               | Consumption   |         |          |
-   |             |               | Statistics    |         |          |
-   |             |               | data          |         |          |
-   +-------------+---------------+---------------+---------+----------+
-   | Req03-UCEEM | Observability | Ability to    | Network | 1        |
-   |             |               | discover      | Level   |          |
-   |             |               | energy saving | Mgmt    |          |
-   |             |               | capability    |         |          |
-   |             |               | for each      |         |          |
-   |             |               | device type   |         |          |
-   +-------------+---------------+---------------+---------+----------+
+   +=============+===============+====================+=========+=====+
+   | id          | category      | requirements       | note    | Pri |
+   +=============+===============+====================+=========+=====+
+   | Req01-UCEEM | Discovery     | Ability to provide | Network | 1   |
+   |             |               | observability to   | Level   |     |
+   |             |               | Network wide       | Mgmt    |     |
+   |             |               | Energy Efficiency  |         |     |
+   |             |               | Statistics Data    |         |     |
+   +-------------+---------------+--------------------+---------+-----+
+   | Req02-UCEEM | Observability | Ability to provide | Network | 1   |
+   |             |               | observability to   | Level   |     |
+   |             |               | Network Wide       | Mgmt    |     |
+   |             |               | Energy Consumption |         |     |
+   |             |               | Statistics data    |         |     |
+   +-------------+---------------+--------------------+---------+-----+
+   | Req03-UCEEM | Observability | Ability to         | Network | 1   |
+   |             |               | discover energy    | Level   |     |
+   |             |               | saving capability  | Mgmt    |     |
+   |             |               | for each device    |         |     |
+   |             |               | type               |         |     |
+   +-------------+---------------+--------------------+---------+-----+
 
                                  Table 5
 
@@ -810,148 +784,152 @@ Table of Contents
    received from operators for the GREEN BoF [charter-
    refinement],[operators-inputs].
 
-   +========+==============+===================+==============+========+
-   |id      |category      |requirements       |note          |Priority|
-   +========+==============+===================+==============+========+
-   |Req01-OP|Observability |Component          |Per component |1       |
-   |        |              |granularity, e.g., |measurement   |        |
-   |        |              |per line-card,     |              |        |
-   |        |              |per-port           |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req02-OP|Observability |Availability of    |Related to    |1       |
-   |        |              |information on the |connected     |        |
-   |        |              |power consumption  |device case   |        |
-   |        |              |of the device,     |              |        |
-   |        |              |without needing    |              |        |
-   |        |              |instrumentation    |              |        |
-   |        |              |connected to the   |              |        |
-   |        |              |infrastructure     |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req03-OP|Observability |Triggering of      |Alarm         |1       |
-   |        |              |alarms when        |notification  |        |
-   |        |              |consumption        |              |        |
-   |        |              |deviate from a     |              |        |
-   |        |              |nominal usage      |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req04-OP|Observability |Improvement of     |Standardized  |1       |
-   |        |              |metering solutions |metering      |        |
-   |        |              |(finer             |              |        |
-   |        |              |granularity,       |              |        |
-   |        |              |control of the     |              |        |
-   |        |              |energy efficiency  |              |        |
-   |        |              |and saving,        |              |        |
-   |        |              |interoperability,  |              |        |
-   |        |              |exposure)          |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req05-OP|Analysis      |Common definition  |Standard      |1       |
-   |        |              |of energy          |metric        |        |
-   |        |              |efficiency in      |              |        |
-   |        |              |network devices/   |              |        |
-   |        |              |components         |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req06-OP|Analysis      |Common methodology |Standard      |2       |
-   |        |              |of measurements    |methodology   |        |
-   |        |              |for fair           |              |        |
-   |        |              |comparison         |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req07-OP|Analysis      |How to provide     |Time based,   |2       |
-   |        |              |accurate figures   |location based|        |
-   |        |              |(context of the    |visualization |        |
-   |        |              |measurement in     |              |        |
-   |        |              |terms of time      |              |        |
-   |        |              |period, location,  |              |        |
-   |        |              |traffic, etc       |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req08-OP|Analysis      |Database for       |Information   |3       |
-   |        |              |decision in case   |Correlation   |        |
-   |        |              |of large data      |              |        |
-   |        |              |transfer           |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req09-OP|Analysis      |Ability of multi-  |POI Use Case  |3       |
-   |        |              |layer analysis     |              |        |
-   |        |              |(e.g., IP plus     |              |        |
-   |        |              |optical)           |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req10-OP|Control& Mgmt |To have devices    |Dynamic Energy|2       |
-   |        |              |with elastic power |Saving        |        |
-   |        |              |consumption        |              |        |
-   |        |              |according to the   |              |        |
-   |        |              |carried traffic    |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req11-OP|Control& Mgmt |Support of         |Network Level |2       |
-   |        |              |network-wide       |Mgmt          |        |
-   |        |              |energy saving and  |              |        |
-   |        |              |optimization       |              |        |
-   |        |              |functions          |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req12-OP|Control& Mgmt |Support of         |Network Level |2       |
-   |        |              |network-wide       |Mgmt          |        |
-   |        |              |control of energy  |              |        |
-   |        |              |optimization APIs, |              |        |
-   |        |              |allowing external  |              |        |
-   |        |              |applications to    |              |        |
-   |        |              |optimize           |              |        |
-   |        |              |consumption        |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req13-OP|Control& Mgmt |Advanced sleep     |Dynamic Energy|2       |
-   |        |              |mode, needing some |Saving        |        |
-   |        |              |sort of low power  |              |        |
-   |        |              |mode when node is  |              |        |
-   |        |              |lightly utilized   |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req14-OP|Control& Mgmt |Ability to steer   |Traffic       |4       |
-   |        |              |traffic based on   |Engineering   |        |
-   |        |              |power savings      |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req15-OP|Control& Mgmt |Comparison of      |Intent based  |2       |
-   |        |              |decision vs        |Concept       |        |
-   |        |              |optimal case       |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req16-OP|Control& Mgmt |Synchronous query  |Network Level |2       |
-   |        |              |support            |Query         |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req17-OP|Inventory     |Inventory of power |Component &   |1       |
-   |        |Management    |components (of     |Device Level  |        |
-   |        |              |devices, racks,    |              |        |
-   |        |              |etc) including     |              |        |
-   |        |              |together           |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req18-OP|Interaction   |Inclusion of data  |Data Center   |3       |
-   |        |with other    |center networks in |Case          |        |
-   |        |domain        |the picture        |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req19-OP|Interaction   |Inclusion of data  |Mobile Network|3       |
-   |        |with other    |center networks in |Case          |        |
-   |        |domain        |the picture        |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req20-OP|Sustainability|Optimize the       |More renewable|4       |
-   |        |& Carbon      |overall CO2        |energy        |        |
-   |        |Emission      |footprint (i.e.,   |              |        |
-   |        |              |energy mix based   |              |        |
-   |        |              |on source type)    |              |        |
-   |        |              |facilitating the   |              |        |
-   |        |              |engineering of PoP |              |        |
-   |        |              |More renewable     |              |        |
-   |        |              |energy             |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req21-OP|Sustainability|Support GHG units  |Measurement   |4       |
-   |        |& Carbon      |                   |Units         |        |
-   |        |Emission      |                   |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req22-OP|Sustainability|Support Energy     |More renewable|2       |
-   |        |& Carbon      |units              |energy        |        |
-   |        |Emission      |                   |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req23-OP|Sustainability|Accounting of      |Accounting    |4       |
-   |        |& Carbon      |legacy installed   |Cost          |        |
-   |        |Emission      |based GHG/energy   |              |        |
-   +--------+--------------+-------------------+--------------+--------+
-   |Req24-OP|Sustainability|Track device/      |Manufacturing,|4       |
-   |        |& Carbon      |network Energy     |transport     |        |
-   |        |Emission      |Consumption Before |(weight,      |        |
-   |        |              |Operation          |volume,       |        |
-   |        |              |                   |package)      |        |
-   +--------+--------------+-------------------+--------------+--------+
+   +========+================+====================+================+===+
+   |id      | category       | requirements       | note           |Pri|
+   +========+================+====================+================+===+
+   |Req01-OP| Observability  | Component          | Per component  |1  |
+   |        |                | granularity,       | measure        |   |
+   |        |                | e.g., per line-    |                |   |
+   |        |                | card, per-port     |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req02-OP| Observability  | Availability of    | Related to     |1  |
+   |        |                | information on     | connected      |   |
+   |        |                | the power          | device case    |   |
+   |        |                | consumption of     |                |   |
+   |        |                | the device,        |                |   |
+   |        |                | without needing    |                |   |
+   |        |                | instrument         |                |   |
+   |        |                | connected to the   |                |   |
+   |        |                | infra              |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req03-OP| Observability  | Triggering of      | Alarm          |1  |
+   |        |                | alarms when        | notification   |   |
+   |        |                | consumption        |                |   |
+   |        |                | deviate from a     |                |   |
+   |        |                | nominal usage      |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req04-OP| Observability  | Improvement of     | Standardized   |1  |
+   |        |                | metering           | metering       |   |
+   |        |                | solutions (finer   |                |   |
+   |        |                | granularity,       |                |   |
+   |        |                | control of the     |                |   |
+   |        |                | energy efficiency  |                |   |
+   |        |                | and saving,        |                |   |
+   |        |                | interoperability,  |                |   |
+   |        |                | exposure)          |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req05-OP| Analysis       | Common definition  | Standard       |1  |
+   |        |                | of energy          | metric         |   |
+   |        |                | efficiency in      |                |   |
+   |        |                | network devices/   |                |   |
+   |        |                | components         |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req06-OP| Analysis       | Common             | Standard       |2  |
+   |        |                | methodology of     | methodology    |   |
+   |        |                | measurements for   |                |   |
+   |        |                | fair comparison    |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req07-OP| Analysis       | How to provide     | Time based,    |2  |
+   |        |                | accurate figures   | location based |   |
+   |        |                | (context of the    | visualn        |   |
+   |        |                | measurement in     |                |   |
+   |        |                | terms of time      |                |   |
+   |        |                | period, location,  |                |   |
+   |        |                | traffic, etc       |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req08-OP| Analysis       | Database for       | Information    |3  |
+   |        |                | decision in case   | Correlation    |   |
+   |        |                | of large data      |                |   |
+   |        |                | transfer           |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req09-OP| Analysis       | Ability of multi-  | POI Use Case   |3  |
+   |        |                | layer analysis     |                |   |
+   |        |                | (e.g., IP plus     |                |   |
+   |        |                | optical)           |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req10-OP| Control& Mgmt  | To have devices    | Dynamic Energy |2  |
+   |        |                | with elastic       | Saving         |   |
+   |        |                | power consumption  |                |   |
+   |        |                | according to the   |                |   |
+   |        |                | carried traffic    |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req11-OP| Control& Mgmt  | Support of         | Network Level  |2  |
+   |        |                | network-wide       | Mgmt           |   |
+   |        |                | energy saving and  |                |   |
+   |        |                | optimization       |                |   |
+   |        |                | functions          |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req12-OP| Control& Mgmt  | Support of         | Network Level  |2  |
+   |        |                | network-wide       | Mgmt           |   |
+   |        |                | control of energy  |                |   |
+   |        |                | optimization       |                |   |
+   |        |                | APIs, allowing     |                |   |
+   |        |                | external           |                |   |
+   |        |                | applications to    |                |   |
+   |        |                | optimize           |                |   |
+   |        |                | consumption        |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req13-OP| Control& Mgmt  | Advanced sleep     | Dynamic Energy |2  |
+   |        |                | mode, needing      | Saving         |   |
+   |        |                | some sort of low   |                |   |
+   |        |                | power mode when    |                |   |
+   |        |                | node is lightly    |                |   |
+   |        |                | utilized           |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req14-OP| Control& Mgmt  | Ability to steer   | Traffic        |4  |
+   |        |                | traffic based on   | Engineering    |   |
+   |        |                | power savings      |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req15-OP| Control& Mgmt  | Comparison of      | Intent based   |2  |
+   |        |                | decision vs        | Concept        |   |
+   |        |                | optimal case       |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req16-OP| Control& Mgmt  | Synchronous query  | Network Level  |2  |
+   |        |                | support            | Query          |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req17-OP| Inventory      | Inventory of       | Component &    |1  |
+   |        | Management     | power components   | Device Level   |   |
+   |        |                | (of devices,       |                |   |
+   |        |                | racks, etc)        |                |   |
+   |        |                | including          |                |   |
+   |        |                | together           |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req18-OP| Interaction    | Inclusion of data  | Data Center    |3  |
+   |        | with other     | center networks    | Case           |   |
+   |        | domain         | in the picture     |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req19-OP| Interaction    | Inclusion of data  | Mobile Network |3  |
+   |        | with other     | center networks    | Case           |   |
+   |        | domain         | in the picture     |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req20-OP| Sustainability | Optimize the       | More renewable |4  |
+   |        | & Carbon       | overall CO2        | energy         |   |
+   |        | Emission       | footprint (i.e.,   |                |   |
+   |        |                | energy mix based   |                |   |
+   |        |                | on source type)    |                |   |
+   |        |                | facilitating the   |                |   |
+   |        |                | engineering of     |                |   |
+   |        |                | PoP More           |                |   |
+   |        |                | renewable energy   |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req21-OP| Sustainability | Support GHG units  | Measurement    |4  |
+   |        | & Carbon       |                    | Units          |   |
+   |        | Emission       |                    |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req22-OP| Sustainability | Support Energy     | More renewable |2  |
+   |        | & Carbon       | units              | energy         |   |
+   |        | Emission       |                    |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req23-OP| Sustainability | Accounting of      | Accounting     |4  |
+   |        | & Carbon       | legacy installed   | Cost           |   |
+   |        | Emission       | based GHG/energy   |                |   |
+   +--------+----------------+--------------------+----------------+---+
+   |Req24-OP| Sustainability | Track device/      | Manufacturing, |4  |
+   |        | & Carbon       | network Energy     | transport      |   |
+   |        | Emission       | Consumption        | (weight,       |   |
+   |        |                | Before Operation   | volume,        |   |
+   |        |                |                    | package)       |   |
+   +--------+----------------+--------------------+----------------+---+
 
                                   Table 6
 
@@ -961,39 +939,37 @@ Table of Contents
    TODO: this table has to be reviewed as it part of it overlaps with
    the sections above related to rfc6988
 
-   +===========+===============+================+=============+========+
-   | id        | category      | requirements   | note        |Priority|
-   +===========+===============+================+=============+========+
-   | Req01-BIS | Control& Mgmt | Distinguish    | rfc6988bis  |2       |
-   |           |               | backup from    | battery(i)  |        |
-   |           |               | main power     |             |        |
-   |           |               | sources        |             |        |
-   +-----------+---------------+----------------+-------------+--------+
-   | Req02-BIS | Inventory     | Reporting on   | Fit in      |2       |
-   |           | Management    | Other          | "Inventory  |        |
-   |           |               | Entities,      | of power    |        |
-   |           |               | typically      | components  |        |
-   |           |               | smart PDU or   | (of         |        |
-   |           |               | PoE            | devices,    |        |
-   |           |               |                | racks,      |        |
-   |           |               |                | etc)        |        |
-   |           |               |                | including   |        |
-   |           |               |                | together"   |        |
-   +-----------+---------------+----------------+-------------+--------+
-   | Req03-BIS | Observability | Room sensor    | Data        |4       |
-   |           | or            | (hvac...)      | Center      |        |
-   |           | Interaction   |                | Case        |        |
-   |           | with Other    |                |             |        |
-   |           | domain        |                |             |        |
-   +-----------+---------------+----------------+-------------+--------+
-   | Req04-BIS | Observability | flexible       | Standard    |2       |
-   |           |               | (future-proof) | metric      |        |
-   |           |               | description of |             |        |
-   |           |               | the nature of  |             |        |
-   |           |               | the sources of |             |        |
-   |           |               | the energy     |             |        |
-   |           |               | used           |             |        |
-   +-----------+---------------+----------------+-------------+--------+
+    +===========+===============+================+==============+=====+
+    | id        | category      | requirements   | note         | Pri |
+    +===========+===============+================+==============+=====+
+    | Req01-BIS | Control& Mgmt | Distinguish    | rfc6988bis   | 2   |
+    |           |               | backup from    | battery(i)   |     |
+    |           |               | main power     |              |     |
+    |           |               | sources        |              |     |
+    +-----------+---------------+----------------+--------------+-----+
+    | Req02-BIS | Inventory     | Reporting on   | Fit in       | 2   |
+    |           | Management    | Other          | "Inventory   |     |
+    |           |               | Entities,      | of power     |     |
+    |           |               | typically      | components   |     |
+    |           |               | smart PDU or   | (of devices, |     |
+    |           |               | PoE            | racks, etc)  |     |
+    |           |               |                | including    |     |
+    |           |               |                | together"    |     |
+    +-----------+---------------+----------------+--------------+-----+
+    | Req03-BIS | Observability | Room sensor    | Data Center  | 4   |
+    |           | or            | (hvac...)      | Case         |     |
+    |           | Interaction   |                |              |     |
+    |           | with Other    |                |              |     |
+    |           | domain        |                |              |     |
+    +-----------+---------------+----------------+--------------+-----+
+    | Req04-BIS | Observability | flexible       | Standard     | 2   |
+    |           |               | (future-proof) | metric       |     |
+    |           |               | description of |              |     |
+    |           |               | the nature of  |              |     |
+    |           |               | the sources of |              |     |
+    |           |               | the energy     |              |     |
+    |           |               | used           |              |     |
+    +-----------+---------------+----------------+--------------+-----+
 
                                   Table 7
 
@@ -1003,58 +979,58 @@ Table of Contents
    The table below groups requirements from [sustainability-insights]
    uses cases related to energy consumption vs sustainability
 
-   +=========+===============+================+==============+========+
-   |id       | category      | requirements   | note         |Priority|
-   +=========+===============+================+==============+========+
-   |Req01-SIS| Observability | Provide near-  | Helps        |2       |
-   |         |               | real-time      | identify     |        |
-   |         |               | energy         | which        |        |
-   |         |               | consumption to | devices or   |        |
-   |         |               | different      | network      |        |
-   |         |               | device types,  | functions    |        |
-   |         |               | service types, | are          |        |
-   |         |               | and individual | consuming    |        |
-   |         |               | users          | more energy. |        |
-   +---------+---------------+----------------+--------------+--------+
-   |Req02-SIS| Migration or  | Provide KPIs   | Helps make   |        |
-   |         | Upgrade       | for energy     | informed     |        |
-   |         |               | efficiency     | decisions    |        |
-   |         |               | parameters,    | about        |        |
-   |         |               | enhance        | upgrades     |        |
-   |         |               | accuracy of    | based on     |        |
-   |         |               | upgrade        | actual usage |        |
-   |         |               | decisions      | data.        |        |
-   +---------+---------------+----------------+--------------+--------+
-   |Req03-SIS| Recycling     | Report on      | Major driver |4       |
-   |         |               | percentage of  | of the       |        |
-   |         |               | recycled user  | circular     |        |
-   |         |               | devices and    | economy,     |        |
-   |         |               | components.    | transparency |        |
-   |         |               | Enable         | is key       |        |
-   |         |               | comprehensive  |              |        |
-   |         |               | reporting and  |              |        |
-   |         |               | recycling      |              |        |
-   |         |               | efforts        |              |        |
-   +---------+---------------+----------------+--------------+--------+
-   |Req04-SIS| Power         | Provide KPIs   | Monitor      |4       |
-   |         | Optimization  | for energy     | network and  |        |
-   |         |               | efficiency     | application  |        |
-   |         |               | parameters.    | performance  |        |
-   |         |               | Perform        | to optimize  |        |
-   |         |               | actions to     | power usage  |        |
-   |         |               | reduce energy  |              |        |
-   |         |               | consumption    |              |        |
-   +---------+---------------+----------------+--------------+--------+
-   |Req05-SIS| Control& Mgmt | Stop and       | Save power   |2       |
-   |         | Switch off    | restart WiFi   | consumption  |        |
-   |         |               | APs with the   | during       |        |
-   |         |               | right time,    | periods when |        |
-   |         |               | space, and     | APs are not  |        |
-   |         |               | service        | in use.      |        |
-   |         |               | granularity    |              |        |
-   +---------+---------------+----------------+--------------+--------+
+    +===========+===============+================+==============+=====+
+    | id        | category      | requirements   | note         | Pri |
+    +===========+===============+================+==============+=====+
+    | Req01-SIS | Observability | Provide near-  | Helps        | 2   |
+    |           |               | real-time      | identify     |     |
+    |           |               | energy         | which        |     |
+    |           |               | consumption to | devices or   |     |
+    |           |               | different      | network      |     |
+    |           |               | device types,  | functions    |     |
+    |           |               | service types, | are          |     |
+    |           |               | and individual | consuming    |     |
+    |           |               | users          | more energy. |     |
+    +-----------+---------------+----------------+--------------+-----+
+    | Req02-SIS | Migration or  | Provide KPIs   | Helps make   |     |
+    |           | Upgrade       | for energy     | informed     |     |
+    |           |               | efficiency     | decisions    |     |
+    |           |               | parameters,    | about        |     |
+    |           |               | enhance        | upgrades     |     |
+    |           |               | accuracy of    | based on     |     |
+    |           |               | upgrade        | actual usage |     |
+    |           |               | decisions      | data.        |     |
+    +-----------+---------------+----------------+--------------+-----+
+    | Req03-SIS | Recycling     | Report on      | Major driver | 4   |
+    |           |               | percentage of  | of the       |     |
+    |           |               | recycled user  | circular     |     |
+    |           |               | devices and    | economy,     |     |
+    |           |               | components.    | transparency |     |
+    |           |               | Enable         | is key       |     |
+    |           |               | comprehensive  |              |     |
+    |           |               | reporting and  |              |     |
+    |           |               | recycling      |              |     |
+    |           |               | efforts        |              |     |
+    +-----------+---------------+----------------+--------------+-----+
+    | Req04-SIS | Power         | Provide KPIs   | Monitor      | 4   |
+    |           | Optimization  | for energy     | network and  |     |
+    |           |               | efficiency     | application  |     |
+    |           |               | parameters.    | performance  |     |
+    |           |               | Perform        | to optimize  |     |
+    |           |               | actions to     | power usage  |     |
+    |           |               | reduce energy  |              |     |
+    |           |               | consumption    |              |     |
+    +-----------+---------------+----------------+--------------+-----+
+    | Req05-SIS | Control& Mgmt | Stop and       | Save power   | 2   |
+    |           | Switch off    | restart WiFi   | consumption  |     |
+    |           |               | APs with the   | during       |     |
+    |           |               | right time,    | periods when |     |
+    |           |               | space, and     | APs are not  |     |
+    |           |               | service        | in use.      |     |
+    |           |               | granularity    |              |     |
+    +-----------+---------------+----------------+--------------+-----+
 
-                                 Table 8
+                                  Table 8
 
 4.  EMAN Requirements from RFC6988bis
 
