@@ -424,6 +424,9 @@ Routers might choose to adjust speed of the interface or downgrade from high spe
 save the energy.
 In addition, the routers can adjust the number of working network processor cores and clock frequency of chipsets and the number of SerDes buses based on network traffic load changes to save the energy.
 For this use case, the following requirements apply:
+
+|id|category|requirements|note|Priority|
+|:----|:----|:----|:----|:----|
 |Req01-UCFES|Control& Mgmt|Ability to shutdown devices during low traffic period|Network Level Mgmt|1|
 |Req02-UCFES|Control& Mgmt|Ability to restart devices during high traffic period|Network Level Mgmt|1|
 |Req03-UCFES|Control& Mgmt|Ability to adjust interface speed to adapt to network traffic change|Network Level Mgmt|1|
@@ -438,6 +441,9 @@ o The total energy consumption changing trend over the time of the day, for all 
 o Energy efficiency changing trend over the time of the day for the whole network.
 With the better observability to energy consumption statistics data and energy efficiency statistics data, the network operators can know which part of the network need to be adjusted or optimized based on network status change.
 For this use case, the following requirements apply:
+
+|id|category|requirements|note|Priority|
+|:----|:----|:----|:----|:----|
 |Req01-UCEEM|Discovery|Ability to provide observability to Network wide Energy Efficiency Statistics Data|Network Level Mgmt|1|
 |Req02-UCEEM|Observability|Ability to provide observability to Network Wide Energy Consumption Statistics data|Network Level Mgmt|1|
 |Req03-UCEEM|Observability|Ability to discover energy saving capability for each device type|Network Level Mgmt|1|
