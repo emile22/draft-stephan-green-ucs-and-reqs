@@ -207,7 +207,7 @@ Tracking: Measure again to see if efficiency improves towards 8-10 Gbps per watt
 
 For this use case, the following requirements apply :
 
-|id|category|requirements|note|Priority|
+|id|category|requirements|note|Pri|
 |:----|:----|:----|:----|:----|
 |Req01-UCINC|Discovery|Component granularity, e.g., per line-card, per-port|Per component |1|
 |Req02-UCINC|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
@@ -227,7 +227,7 @@ For this use case, the following requirements apply :
 Traffic levels in a network follow patterns reflecting the behavior of consumers. Those patterns show periodicity in the terms of the traffic delivered, that can range from daily (from 00:00 to 23:59) to seasonal (e.g., winter to summer), showing peaks and valleys that could be exploited to reduce the consumption of energy in the network proportionally, in case the underlying network elements incorporate such capabilities. The reduction of energy consumption could be performed by leveraging on sleep modes in components up to more extreme actions such as switching off network components or modules. Such decisions are expected to no impact on the service delivered to customers, and could be accompanied by traffic relocation and / or concentration in the network.
 For this use case, the following requirements apply:
 
-|id|category|requirements|note|Priority|
+|id|category|requirements|note|Pri|
 |:----|:----|:----|:----|:----|
 |Req01-UCRED|Observability|Component granularity, e.g., per line-card, per-port|Per component measurement|1|
 |Req02-UCRED|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
@@ -406,7 +406,7 @@ In energy saving deployment, after the surrounding energy saving APs are shut do
 
 For this use case, the following requirements apply:
 
-|id|category|requirements|note|Priority|
+|id|category|requirements|note|Pri|
 |:----|:----|:----|:----|:----|
 |Req01-UCWES|Control& Mgmt|Ability to switch on or off to power the L2 network device at specific time period|Network Level Mgmt|1|
 |Req02-UCWES|Control& Mgmt|Ability to reconfigure various different energy saving mode to adapt to network change|Network Level Mgmt|1|
@@ -415,17 +415,14 @@ For this use case, the following requirements apply:
 
 ## Fixed Network Energy Saving
 
-Traffic on the Tidal network has an obvious tidal period, including heavy-traffic periods and light-traffic periods:
-The time duration of heavy traffic load and light traffic load are clearly distinguished,
+Traffic on the Tidal network has an obvious tidal period, including heavy-traffic periods and light-traffic periods: The time duration of heavy traffic load and light traffic load are clearly distinguished.
 The switching time between the heavy-traffic period and the light-traffic period is quite fixed and cyclic.
 In a tidal network, some network devices can be shut down or sleep during low-traffic periods to save energy.
-In the metro or backbone network, the routers support various different speed interfaces, e.g., the gigabit level to 10GE/50GE, or 100G to 400G
-Routers might choose to adjust speed of the interface or downgrade from high speed interface to low speed interface based on network traffic load changes to
-save the energy.
+In the metro or backbone network, the routers support various different speed interfaces, e.g., the gigabit level to 10GE/50GE, or 100G to 400G. Routers might choose to adjust speed of the interface or downgrade from high speed interface to low speed interface based on network traffic load changes to save the energy.
 In addition, the routers can adjust the number of working network processor cores and clock frequency of chipsets and the number of SerDes buses based on network traffic load changes to save the energy.
 For this use case, the following requirements apply:
 
-|id|category|requirements|note|Priority|
+|id|category|requirements|note|Pri|
 |:----|:----|:----|:----|:----|
 |Req01-UCFES|Control& Mgmt|Ability to shutdown devices during low traffic period|Network Level Mgmt|1|
 |Req02-UCFES|Control& Mgmt|Ability to restart devices during high traffic period|Network Level Mgmt|1|
@@ -442,7 +439,7 @@ o Energy efficiency changing trend over the time of the day for the whole networ
 With the better observability to energy consumption statistics data and energy efficiency statistics data, the network operators can know which part of the network need to be adjusted or optimized based on network status change.
 For this use case, the following requirements apply:
 
-|id|category|requirements|note|Priority|
+|id|category|requirements|note|Pri|
 |:----|:----|:----|:----|:----|
 |Req01-UCEEM|Discovery|Ability to provide observability to Network wide Energy Efficiency Statistics Data|Network Level Mgmt|1|
 |Req02-UCEEM|Observability|Ability to provide observability to Network Wide Energy Consumption Statistics data|Network Level Mgmt|1|
@@ -454,15 +451,15 @@ This section extracts and groups requirements from the documents of the GREEN WG
 
 The table below groups the operator'requirements based on the inputs received from operators for the GREEN BoF [charter-refinement],[operators-inputs].
 
-|id|category|requirements|note|Priority|
+|id|category|requirements|note|Pri|
 |:----|:----|:----|:----|:----|
-|Req01-OP|Observability|Component granularity, e.g., per line-card, per-port|Per component measurement|1|
-|Req02-OP|Observability|Availability of information on the power consumption of the device, without needing instrumentation connected to the infrastructure|Related to connected device case|1|
+|Req01-OP|Observability|Component granularity, e.g., per line-card, per-port|Per component measure|1|
+|Req02-OP|Observability|Availability of information on the power consumption of the device, without needing instrument connected to the infra|Related to connected device case|1|
 |Req03-OP|Observability|Triggering of alarms when consumption deviate from a nominal usage|Alarm notification|1|
 |Req04-OP|Observability|Improvement of metering solutions (finer granularity, control of the energy efficiency and saving, interoperability, exposure)|Standardized metering|1|
 |Req05-OP|Analysis|Common definition of energy efficiency in network devices/components|Standard metric|1|
 |Req06-OP|Analysis|Common methodology of measurements for fair comparison|Standard methodology|2|
-|Req07-OP|Analysis|How to provide accurate figures (context of the measurement in terms of time period, location, traffic, etc|Time based, location based visualization|2|
+|Req07-OP|Analysis|How to provide accurate figures (context of the measurement in terms of time period, location, traffic, etc|Time based, location based visualn|2|
 |Req08-OP|Analysis|Database for decision in case of large data transfer|Information Correlation|3|
 |Req09-OP|Analysis|Ability of multi-layer analysis (e.g., IP plus optical)|POI Use Case|3|
 |Req10-OP|Control& Mgmt|To have devices with elastic power consumption according to the carried traffic|Dynamic Energy Saving|2|
@@ -485,7 +482,7 @@ The table below groups requirements from [rf988bis-green] draft Open Issues.
 
 TODO: this table has to be reviewed as it part of it overlaps with the sections above related to rfc6988
 
-|id|category|requirements|note|Priority|
+|id|category|requirements|note|Pri|
 |:----|:----|:----|:----|:----|
 |Req01-BIS|Control& Mgmt|Distinguish backup from main power sources|rfc6988bis battery(i)| 2|
 |Req02-BIS|Inventory Management|Reporting on Other Entities, typically smart PDU or PoE|Fit in "Inventory of power components (of devices, racks, etc) including together"| 2|
@@ -496,7 +493,7 @@ TODO: this table has to be reviewed as it part of it overlaps with the sections 
 
 The table below groups requirements from [sustainability-insights] uses cases related to energy consumption vs sustainability
 
-|id|category|requirements|note|Priority|
+|id|category|requirements|note|Pri|
 |:----|:----|:----|:----|:----|
 |Req01-SIS|Observability|Provide near-real-time energy consumption to different device types, service types, and individual users | Helps identify which devices or network functions are consuming more energy. | 2 |
 |Req02-SIS|Migration or Upgrade | Provide KPIs for energy efficiency parameters, enhance accuracy of upgrade decisions | Helps make informed decisions about upgrades based on actual usage data. |   |
