@@ -341,13 +341,11 @@ As a mean of slowing down this cycle of continuos renewal, and reduce the need o
 
 In a WLAN network, The AP is usually powered by a PoE switch.
 AP nodes are network devices with the largest number and consuming most of energy. Therefore, the working status of the AP is the core of the energy saving
-solution. 
+solution.
 The working status of the AP can be break down into 3 modes as follows:
- o PoE power-off mode: In this mode, the PoE switch shuts down the port and stops supplying power to the AP. The AP does not consume power at all. When the
-   AP wakes up, the port provides power again. In this mode, it usually takes a few minutes for the AP to recover.
+ o PoE power-off mode: In this mode, the PoE switch shuts down the port and stops supplying power to the AP. The AP does not consume power at all. When the AP wakes up, the port provides power again. In this mode, it usually takes a few minutes for the AP to recover.
  o Hibernation mode: Only low power consumption is used to protect key hardware such as the CPU, and other components are shut down.
- o Low power consumption mode: Compared with the hibernation mode, the low power consumption mode maintains a certain communication capability. For example, 
-   the AP retains only the 2.4 GHz band and disables other radio bands.
+ o Low power consumption mode: Compared with the hibernation mode, the low power consumption mode maintains a certain communication capability. For example, the AP retains only the 2.4 GHz band and disables other radio bands.
 
 In energy saving deployment, after the surrounding energy saving APs are shut down, the Working AP automatically adjusts their transmit power to increase the coverage of the entire area at specific energy saving period. In such case, energy saving APs can freely choose to switch to any mode we described above.
 
