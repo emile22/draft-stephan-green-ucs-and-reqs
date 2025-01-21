@@ -351,6 +351,8 @@ The working status of the AP can be break down into 3 modes as follows:
 
 In energy saving deployment, after the surrounding energy saving APs are shut down, the Working AP automatically adjusts their transmit power to increase the coverage of the entire area at specific energy saving period. In such case, energy saving APs can freely choose to switch to any mode we described above.
 
+~~~~
+
    /---\
   |     +-----+
   | AP  |     |
@@ -381,6 +383,11 @@ In energy saving deployment, after the surrounding energy saving APs are shut do
  +----------+              +----------+
          Figure 2: Low Power Consumption Mode
 
+~~~~
+{: #low-power-consumption title="Low Power Consumption Mode"}
+
+~~~~
+
      +--+  +--+    +--+
      |AP|--|AP|--- |AP|      ------------------------------
      +--+  +--+   \+--+      Grouping  Recommended
@@ -394,7 +401,13 @@ In energy saving deployment, after the surrounding energy saving APs are shut do
      +--+--|AP|--- +--+     --------------------------------
            +--+
           Figure 3: Wireless Resource Management on APs
+~~~~
+{: #wireless-resource-management title="Wireless Resource Management on APs"}
+
 For this use case, the following requirements apply:
+
+|id|category|requirements|note|Priority|
+|:----|:----|:----|:----|:----|
 |Req01-UCWES|Control& Mgmt|Ability to switch on or off to power the L2 network device at specific time period|Network Level Mgmt|1|
 |Req02-UCWES|Control& Mgmt|Ability to reconfigure various different energy saving mode to adapt to network change|Network Level Mgmt|1|
 |Req03-UCWES|Control& Mgmt|Ability to optimize wireless resource management to support dynamic energy saving|Network Level Mgmt|1|
