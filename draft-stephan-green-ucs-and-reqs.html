@@ -1764,7 +1764,7 @@ The working status of the AP can be break down into 3 modes as follows:
  o Hibernation mode: Only low power consumption is used to protect key hardware such as the CPU, and other components are shut down.
  o Low power consumption mode: Compared with the hibernation mode, the low power consumption mode maintains a certain communication capability. For example, the AP retains only the 2.4 GHz band and disables other radio bands.<a href="#section-2.9-1" class="pilcrow">¶</a></p>
 <p id="section-2.9-2">In energy saving deployment, after the surrounding energy saving APs are shut down, the Working AP automatically adjusts their transmit power to increase the coverage of the entire area at specific energy saving period. In such case, energy saving APs can freely choose to switch to any mode we described above.<a href="#section-2.9-2" class="pilcrow">¶</a></p>
-<span id="name-low-power-consumption-mode"></span><div id="low-power-consumption">
+<span id="name-poe-power-off-mode"></span><div id="poe-power-off">
 <figure id="figure-1">
           <div class="alignLeft art-text artwork" id="section-2.9-3.1">
 <pre>
@@ -1780,54 +1780,43 @@ The working status of the AP can be break down into 3 modes as follows:
    \---/
          Figure 1: PoE Power Off Mode
 
-                 4                         4
- +----------+   \|/        +----------+   \|/
- |          |    |         |          |    |
- |   +----+ |    |         |   +----+ |    |
- |   |5GHz+-+----+         |   |5GHz+-+-X--+
- |   | RF | |    2         |   | RF | |    2
- |   +----+ |   \|/    \   |   +----+ |   \|/
- |   +----+ |    |   ---\  |   +----+ |    |
- |  2.4GHz| |    |       \ |  2.4GHz| |    |
- |   | RF +-+----+       / |   | RF +-+-X--+
- |   +----+ |    2   ---/  |   +----+ |    2
- |   +----+ |   \|/    /   |   +----+ |   \|/
- |  2.4GHz| |    |         |  2.4GHz| |    |
- |   | RF |-+----+         |   | RF +-+----+
- |   +----+ |              |   +----+ |
- +----------+              +----------+
-         Figure 2: Low Power Consumption Mode
-
 </pre>
 </div>
 <figcaption><a href="#figure-1" class="selfRef">Figure 1</a>:
-<a href="#name-low-power-consumption-mode" class="selfRef">Low Power Consumption Mode</a>
+<a href="#name-poe-power-off-mode" class="selfRef">PoE Power Off Mode</a>
           </figcaption></figure>
+</div>
+<div class="alignLeft art-text artwork" id="section-2.9-4">
+<pre>
+             4                         4  +----------+   \|/        +----------+   \|/  |          |    |         |          |    |  |   +----+ |    |         |   +----+ |    |  |   |5GHz+-+----+         |   |5GHz+-+-X--+  |   | RF | |    2         |   | RF | |    2  |   +----+ |   \|/    \   |   +----+ |   \|/  |   +----+ |    |   ---\  |   +----+ |    |  |  2.4GHz| |    |       \ |  2.4GHz| |    |  |   | RF +-+----+       / |   | RF +-+-X--+  |   +----+ |    2   ---/  |   +----+ |    2  |   +----+ |   \|/    /   |   +----+ |   \|/  |  2.4GHz| |    |         |  2.4GHz| |    |  |   | RF |-+----+         |   | RF +-+----+  |   +----+ |              |   +----+ |  +----------+              +----------+
+</pre><a href="#section-2.9-4" class="pilcrow">¶</a>
+</div>
+<div class="alignLeft art-text artwork" id="section-2.9-5">
+<pre>
+{: #low-power-consumption title="Low Power Consumption Mode"}
+
+</pre><a href="#section-2.9-5" class="pilcrow">¶</a>
 </div>
 <span id="name-wireless-resource-managemen"></span><div id="wireless-resource-management">
 <figure id="figure-2">
-          <div class="alignLeft art-text artwork" id="section-2.9-4.1">
+          <div class="alignLeft art-text artwork" id="section-2.9-6.1">
 <pre>
-     +--+  +--+    +--+
-     |AP|--|AP|--- |AP|      ------------------------------
-     +--+  +--+   \+--+      Grouping  Recommended
-     /               \        Area     Energy Saving Period
-  +--+     +--+      +--+    ------------------------------
-  |AP|     |AP|      |AP|    XED01-1  01:00:00,06:30:00
-  +--+     +--+      +--+
-    |                 |      ------------------------------
-     +--+          +--+
-     |AP|  +--+   /|AP|      XED01-2  01:30:00,06:30:00
-     +--+--|AP|--- +--+     --------------------------------
-           +--+
-          Figure 3: Wireless Resource Management on APs
+ +--+  +--+    +--+
+ |AP|--|AP|--- |AP|      ------------------------------
+ +--+  +--+   \+--+      Grouping  Recommended
+ /               \        Area     Energy Saving Period   +--+     +--+      +--+    ------------------------------   |AP|     |AP|      |AP|    XED01-1  01:00:00,06:30:00   +--+     +--+      +--+
+|                 |      ------------------------------
+ +--+          +--+
+ |AP|  +--+   /|AP|      XED01-2  01:30:00,06:30:00
+ +--+--|AP|--- +--+     --------------------------------
+       +--+ ~~~~
 </pre>
 </div>
 <figcaption><a href="#figure-2" class="selfRef">Figure 2</a>:
 <a href="#name-wireless-resource-managemen" class="selfRef">Wireless Resource Management on APs</a>
           </figcaption></figure>
 </div>
-<p id="section-2.9-5">For this use case, the following requirements apply:<a href="#section-2.9-5" class="pilcrow">¶</a></p>
+<p id="section-2.9-7">For this use case, the following requirements apply:<a href="#section-2.9-7" class="pilcrow">¶</a></p>
 <table class="center" id="table-3">
           <caption><a href="#table-3" class="selfRef">Table 3</a></caption>
 <thead>
