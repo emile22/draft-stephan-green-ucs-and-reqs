@@ -5,13 +5,13 @@
 Getting Ready for Energy-Efficient Networking                 E. Stephan
 Internet-Draft                                                    Orange
 Intended status: Informational                                M. Palmero
-Expires: 22 June 2025                                Cisco Systems, Inc.
+Expires: 25 July 2025                                Cisco Systems, Inc.
                                                                B. Claise
                                                                    Q. Wu
                                                                   Huawei
                                                          L. M. Contreras
                                                               Telefonica
-                                                        19 December 2024
+                                                         21 January 2025
 
 
              Requirements for Energy Efficiency Management
@@ -73,11 +73,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 June 2025.
+   This Internet-Draft will expire on 25 July 2025.
 
 Copyright Notice
 
-   Copyright (c) 2024 IETF Trust and the persons identified as the
+   Copyright (c) 2025 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -622,15 +622,199 @@ Table of Contents
 
 2.9.  WLAN Network Energy Saving
 
-   As per slide 11 of [UC_Interim18Dec24]
+   In a WLAN network, The AP is usually powered by a PoE switch.  AP
+   nodes are network devices with the largest number and consuming most
+   of energy.  Therefore, the working status of the AP is the core of
+   the energy saving solution.  The working status of the AP can be
+   break down into 3 modes as follows: o PoE power-off mode: In this
+   mode, the PoE switch shuts down the port and stops supplying power to
+   the AP.  The AP does not consume power at all.  When the AP wakes up,
+   the port provides power again.  In this mode, it usually takes a few
+   minutes for the AP to recover.  o Hibernation mode: Only low power
+   consumption is used to protect key hardware such as the CPU, and
+   other components are shut down.  o Low power consumption mode:
+   Compared with the hibernation mode, the low power consumption mode
+   maintains a certain communication capability.  For example, the AP
+   retains only the 2.4 GHz band and disables other radio bands.
+
+   In energy saving deployment, after the surrounding energy saving APs
+   are shut down, the Working AP automatically adjusts their transmit
+   power to increase the coverage of the entire area at specific energy
+   saving period.  In such case, energy saving APs can freely choose to
+   switch to any mode we described above.
+
+      /---\
+     |     +-----+
+     | AP  |     |
+      \---/      |      +------------+
+                 |      |            |
+                 |------+     PoE    |
+      /---\      |      |   Switch   |
+     |     |     |      +------------+
+     | AP  +-----+
+      \---/
+            Figure 1: PoE Power Off Mode
+
+                    4                         4
+    +----------+   \|/        +----------+   \|/
+    |          |    |         |          |    |
+    |   +----+ |    |         |   +----+ |    |
+    |   |5GHz+-+----+         |   |5GHz+-+-X--+
+    |   | RF | |    2         |   | RF | |    2
+    |   +----+ |   \|/    \   |   +----+ |   \|/
+    |   +----+ |    |   ---\  |   +----+ |    |
+    |  2.4GHz| |    |       \ |  2.4GHz| |    |
+    |   | RF +-+----+       / |   | RF +-+-X--+
+    |   +----+ |    2   ---/  |   +----+ |    2
+    |   +----+ |   \|/    /   |   +----+ |   \|/
+    |  2.4GHz| |    |         |  2.4GHz| |    |
+    |   | RF |-+----+         |   | RF +-+----+
+    |   +----+ |              |   +----+ |
+    +----------+              +----------+
+            Figure 2: Low Power Consumption Mode
+
+                    Figure 1: Low Power Consumption Mode
+
+        +--+  +--+    +--+
+        |AP|--|AP|--- |AP|      ------------------------------
+        +--+  +--+   \+--+      Grouping  Recommended
+        /               \        Area     Energy Saving Period
+     +--+     +--+      +--+    ------------------------------
+     |AP|     |AP|      |AP|    XED01-1  01:00:00,06:30:00
+     +--+     +--+      +--+
+       |                 |      ------------------------------
+        +--+          +--+
+        |AP|  +--+   /|AP|      XED01-2  01:30:00,06:30:00
+        +--+--|AP|--- +--+     --------------------------------
+              +--+
+             Figure 3: Wireless Resource Management on APs
+
+               Figure 2: Wireless Resource Management on APs
+
+   For this use case, the following requirements apply:
+
+   +=============+==========+====================+=========+==========+
+   | id          | category | requirements       | note    | Priority |
+   +=============+==========+====================+=========+==========+
+   | Req01-UCWES | Control& | Ability to switch  | Network | 1        |
+   |             | Mgmt     | on or off to power | Level   |          |
+   |             |          | the L2 network     | Mgmt    |          |
+   |             |          | device at specific |         |          |
+   |             |          | time period        |         |          |
+   +-------------+----------+--------------------+---------+----------+
+   | Req02-UCWES | Control& | Ability to         | Network | 1        |
+   |             | Mgmt     | reconfigure        | Level   |          |
+   |             |          | various different  | Mgmt    |          |
+   |             |          | energy saving mode |         |          |
+   |             |          | to adapt to        |         |          |
+   |             |          | network change     |         |          |
+   +-------------+----------+--------------------+---------+----------+
+   | Req03-UCWES | Control& | Ability to         | Network | 1        |
+   |             | Mgmt     | optimize wireless  | Level   |          |
+   |             |          | resource           | Mgmt    |          |
+   |             |          | management to      |         |          |
+   |             |          | support dynamic    |         |          |
+   |             |          | energy saving      |         |          |
+   +-------------+----------+--------------------+---------+----------+
+   | Req04-UCWES | Control& | Ability to         | Network | 1        |
+   |             | Mgmt     | schedule wireless  | Level   |          |
+   |             |          | resource           | Mgmt    |          |
+   |             |          | management to      |         |          |
+   |             |          | support dynamic    |         |          |
+   |             |          | energy saving      |         |          |
+   +-------------+----------+--------------------+---------+----------+
+
+                                 Table 3
 
 2.10.  Fixed Network Energy Saving
 
-   As per slide 12 of [UC_Interim18Dec24]
+   Traffic on the Tidal network has an obvious tidal period, including
+   heavy-traffic periods and light-traffic periods: The time duration of
+   heavy traffic load and light traffic load are clearly distinguished,
+   The switching time between the heavy-traffic period and the light-
+   traffic period is quite fixed and cyclic.  In a tidal network, some
+   network devices can be shut down or sleep during low-traffic periods
+   to save energy.  In the metro or backbone network, the routers
+   support various different speed interfaces, e.g., the gigabit level
+   to 10GE/50GE, or 100G to 400G Routers might choose to adjust speed of
+   the interface or downgrade from high speed interface to low speed
+   interface based on network traffic load changes to save the energy.
+   In addition, the routers can adjust the number of working network
+   processor cores and clock frequency of chipsets and the number of
+   SerDes buses based on network traffic load changes to save the
+   energy.  For this use case, the following requirements apply:
+
+   +=============+==========+====================+=========+==========+
+   | id          | category | requirements       | note    | Priority |
+   +=============+==========+====================+=========+==========+
+   | Req01-UCFES | Control& | Ability to         | Network | 1        |
+   |             | Mgmt     | shutdown devices   | Level   |          |
+   |             |          | during low traffic | Mgmt    |          |
+   |             |          | period             |         |          |
+   +-------------+----------+--------------------+---------+----------+
+   | Req02-UCFES | Control& | Ability to restart | Network | 1        |
+   |             | Mgmt     | devices during     | Level   |          |
+   |             |          | high traffic       | Mgmt    |          |
+   |             |          | period             |         |          |
+   +-------------+----------+--------------------+---------+----------+
+   | Req03-UCFES | Control& | Ability to adjust  | Network | 1        |
+   |             | Mgmt     | interface speed to | Level   |          |
+   |             |          | adapt to network   | Mgmt    |          |
+   |             |          | traffic change     |         |          |
+   +-------------+----------+--------------------+---------+----------+
+   | Req04-UCFES | Control& | Ability to adjust  | Network | 1        |
+   |             | Mgmt     | working component  | Level   |          |
+   |             |          | such as SerDes to  | Mgmt    |          |
+   |             |          | adapt to network   |         |          |
+   |             |          | traffic change     |         |          |
+   +-------------+----------+--------------------+---------+----------+
+
+                                 Table 4
 
 2.11.  Energy Efficiency Network Management
 
-   As per slide 13 of [UC_Interim18Dec24]
+   Network level Energy Efficiency allows network operators not only see
+   real time energy consumption in the network devices of large scale
+   network, but also allow you see o which network devices enable energy
+   saving, which devices not,which are legacy ones, o The total energy
+   consumption changing trend over the time of the day, for all network
+   devices, o Energy efficiency changing trend over the time of the day
+   for the whole network.  With the better observability to energy
+   consumption statistics data and energy efficiency statistics data,
+   the network operators can know which part of the network need to be
+   adjusted or optimized based on network status change.  For this use
+   case, the following requirements apply:
+
+   +=============+===============+===============+=========+==========+
+   | id          | category      | requirements  | note    | Priority |
+   +=============+===============+===============+=========+==========+
+   | Req01-UCEEM | Discovery     | Ability to    | Network | 1        |
+   |             |               | provide       | Level   |          |
+   |             |               | observability | Mgmt    |          |
+   |             |               | to Network    |         |          |
+   |             |               | wide Energy   |         |          |
+   |             |               | Efficiency    |         |          |
+   |             |               | Statistics    |         |          |
+   |             |               | Data          |         |          |
+   +-------------+---------------+---------------+---------+----------+
+   | Req02-UCEEM | Observability | Ability to    | Network | 1        |
+   |             |               | provide       | Level   |          |
+   |             |               | observability | Mgmt    |          |
+   |             |               | to Network    |         |          |
+   |             |               | Wide Energy   |         |          |
+   |             |               | Consumption   |         |          |
+   |             |               | Statistics    |         |          |
+   |             |               | data          |         |          |
+   +-------------+---------------+---------------+---------+----------+
+   | Req03-UCEEM | Observability | Ability to    | Network | 1        |
+   |             |               | discover      | Level   |          |
+   |             |               | energy saving | Mgmt    |          |
+   |             |               | capability    |         |          |
+   |             |               | for each      |         |          |
+   |             |               | device type   |         |          |
+   +-------------+---------------+---------------+---------+----------+
+
+                                 Table 5
 
 3.  Requirements Extracted from Proponents Documents
 
@@ -787,7 +971,7 @@ Table of Contents
    |        |              |                   |package)      |        |
    +--------+--------------+-------------------+--------------+--------+
 
-                                  Table 3
+                                  Table 6
 
    The table below groups requirements from [rf988bis-green] draft Open
    Issues.
@@ -829,7 +1013,7 @@ Table of Contents
    |           |               | used           |             |        |
    +-----------+---------------+----------------+-------------+--------+
 
-                                  Table 4
+                                  Table 7
 
    (i) It is crucial to know when a device is powered by a backup source
    for many obvious reasons
@@ -888,7 +1072,7 @@ Table of Contents
    |         |               | granularity    |              |        |
    +---------+---------------+----------------+--------------+--------+
 
-                                 Table 5
+                                 Table 8
 
 4.  EMAN Requirements from RFC6988bis
 
@@ -1790,7 +1974,7 @@ Table of Contents
 
 5.  Framework Discussed During the BoF
 
-   The overall framework is shown in Figure 1.
+   The overall framework is shown in Figure 3.
 
          What needs to be standardized for Framework
 
@@ -1840,7 +2024,7 @@ Table of Contents
   (*) Energy Efficiency Management Function is implemented inside the
   device or in a controller
 
-               Figure 1: Framework discussed during the BoF
+               Figure 3: Framework discussed during the BoF
 
    The main elements in the framework are as follows:
 
