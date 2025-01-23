@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-01-21T00:57:03.466452+00:00",
+  "timestamp": "2025-01-23T00:57:31.177514+00:00",
   "repo": "emile22/draft-stephan-green-ucs-and-reqs",
   "labels": [
     {
@@ -556,26 +556,42 @@
       "id": "PR_kwDONBw63s6F5Xxh",
       "title": "Add 3 new use cases based on GREEN interim meeting discussion",
       "url": "https://github.com/emile22/draft-stephan-green-ucs-and-reqs/pull/16",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "billwuqin",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "1. Wireless Network Energy Saving\r\n2. Fixed Network Energy Saving\r\n3. Energy Efficiency Network Management",
       "createdAt": "2024-12-20T10:20:26Z",
-      "updatedAt": "2024-12-20T10:22:01Z",
+      "updatedAt": "2025-01-21T10:31:20Z",
       "baseRepository": "emile22/draft-stephan-green-ucs-and-reqs",
       "baseRefName": "main",
       "baseRefOid": "43630e46b4b663075b523f92c7bf2fe9fc9ccd3c",
       "headRepository": "billwuqin/draft-stephan-green-ucs-and-reqs",
       "headRefName": "patch-2",
       "headRefOid": "8b8c81f54af756edf6cec33ec5a7802c9fe714c1",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-01-21T10:31:20Z",
+      "mergedAt": "2025-01-21T10:31:20Z",
+      "mergedBy": "emile22",
+      "mergeCommit": {
+        "oid": "86ab9f32246154f6eecc0b639075bcc707904578"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDONBw63s6Y1i4b",
+          "commit": {
+            "abbreviatedOid": "8b8c81f"
+          },
+          "author": "emile22",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "great",
+          "createdAt": "2025-01-21T10:30:52Z",
+          "updatedAt": "2025-01-21T10:30:52Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
