@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-01T01:11:28.524204+00:00",
+  "timestamp": "2025-04-06T01:07:43.513038+00:00",
   "repo": "emile22/draft-stephan-green-ucs-and-reqs",
   "labels": [
     {
@@ -86,6 +86,22 @@
       "body": "",
       "createdAt": "2024-10-29T18:10:58Z",
       "updatedAt": "2024-10-29T18:14:28Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 17,
+      "id": "I_kwDONBw63s6w_Umt",
+      "title": "Section 2.1 incr steps",
+      "url": "https://github.com/emile22/draft-stephan-green-ucs-and-reqs/issues/17",
+      "state": "OPEN",
+      "author": "emile22",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "I propose to replace the ref to a framework with manual steps to capture the baseline, change of legacy hw (discuss sub case of changing sw only too) with green wg, then capturing raw metrics, then measuring things that can be compared with baseline information. ",
+      "createdAt": "2025-04-03T12:13:13Z",
+      "updatedAt": "2025-04-03T12:13:13Z",
       "closedAt": null,
       "comments": []
     }
